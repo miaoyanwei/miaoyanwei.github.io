@@ -33,9 +33,10 @@ p {
 .btn { 
     font-family: Lora, serif;
     border-radius: 0px;
+    width: 200px;
     box-shadow: none !important;
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 
