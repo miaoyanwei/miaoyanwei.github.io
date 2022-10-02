@@ -1,0 +1,45 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+/* BOOTSTRAP ICONS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+/* PAGE */
+body {
+    background-color: #fff;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* INTRODUCTION */
+header {
+    margin-bottom: 10%;
+}
+
+h1 {
+    font-family: Lora, serif; 
+    font-size: 2.5em; /* 40px/16=2.5em */
+    color: #4a4a4a;
+}
+
+p {
+    font-family: Lora, serif; 
+    font-size: 0.875em; /* 14px/16=0.875em */
+    color: #4a4a4a;
+}
+
+/* BUTTON */
+.btn { 
+    font-family: Lora, serif;
+    border-radius: 0px;
+    box-shadow: none !important;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+
+/* FOOTER */
+footer {
+    height: 50px;
+}
