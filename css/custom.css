@@ -104,7 +104,7 @@
 }
   
 #timeOut {
-    display: none;
+    visibility: hidden;
 }
   
 

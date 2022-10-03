@@ -7,5 +7,5 @@ function myFunction() {
 
 function showPage() {
   document.getElementById("loader").style.display = "none"; 
-  document.getElementById("timeOut").style.display = "initial"; // show page after the loading animation
+  document.getElementById("timeOut").style.visibility = "visible"; // show page after the loading animation
 }
