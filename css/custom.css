@@ -91,7 +91,7 @@
     animation-delay: .3s;
 }
 
-#loader span {
+#loader span { /* loading text */
     position: absolute;
     top: 75px;
     font-family: Poppins, 'sans serif';
@@ -116,7 +116,7 @@ body {
     padding-right: 10%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) { /* change page padding on small screen */
     body {
         padding-top: 8px;
         padding-left: 8px;
@@ -238,7 +238,7 @@ i {
 
 @media screen and (max-width: 800px) {
     .intro p {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      width: 100%; /* The text width is 100%, when the viewport is 800px or smaller */
     }
 }
 
@@ -285,7 +285,7 @@ i {
     transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) { /* change font size on small screen */
     .contact p {
         font-size: 0.75em; /* 12px/16=0.75em */
     }
