@@ -5,6 +5,7 @@
 /* BOOTSTRAP ICONS */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
+
 /* PAGE */
 body {
     background-color: #fff;
@@ -13,31 +14,130 @@ body {
     padding-right: 10%;
 }
 
-/* INTRODUCTION */
-header {
-    margin-bottom: 10%;
-}
 
+/* INTRODUCTION */
 h1 {
     font-family: Lora, serif; 
+    font-weight: medium; 
     font-size: 2.5em; /* 40px/16=2.5em */
-    color: #4a4a4a;
+    color: #000;
+}
+
+h2 {
+    font-family: Lora, serif; 
+    font-weight: normal; 
+    font-size: 2.5vw; /* set the size to % of the viewport width */
+    color: #000;
+}
+
+h5 {
+    font-family: Poppins, 'sans serif';
+    font-weight: normal; 
+    font-size: 1.25vw; /* set the size to % of the viewport width */
+    color: #000;
+    margin-top: 40px;
 }
 
 p {
     font-family: Poppins, 'sans serif'; 
+    font-weight: regular;
     font-size: 0.875em; /* 14px/16=0.875em */
-    color: #4a4a4a;
+    line-height: 2;
+    width: 50%;
+    color: #000;
 }
 
-/* BUTTON */
+@media screen and (max-width: 767px) {
+    p {
+        width: 100%; /* The text width is 100%, when the viewport is 800px or smaller */
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h5 {
+        font-size: 20px;
+    }
+}
+
+i {
+    margin-right: 10px; /* space between icon and text */
+}
+
+.intro {
+    position: relative;
+}
+
+.text {
+    text-align: left;
+    display: inline;
+}
+
 .btn { 
     font-family: Poppins, 'sans serif';
     border-radius: 0px;
-    width: 200px;
-    box-shadow: none !important;
-    margin-right: 10px;
-    margin-top: 10px;
+    width: auto;
+}
+
+.download {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .download {
+      position: relative; /* Button goes down when the viewport is 800px or smaller */
+    }
+}
+
+
+/* HOVER */
+.col-md:hover .experience img { 
+    opacity: 1;
+}
+.col-md:hover .content h2 {
+    color: #fff;
+}
+.col-md:hover .content h5 {
+    color: #fff;
+}
+.col-md:hover .content p {
+    color: #fff;
+}
+
+
+/* DETAIL */
+.container {
+    width: 100%;
+}
+
+.row {
+    margin-top: 5%;
+}
+
+.experience {
+    width: 100%;
+    position: relative;
+}
+
+.experience img {
+    position: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.content { /* centre text */
+    position: absolute;
+    top: 25%;
+    left: 20%;
 }
 
 
