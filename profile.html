@@ -9,26 +9,84 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- override Bootstrap style -->
     <link rel="stylesheet" type="text/css" href="css/profile.css">
+
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <!-- page title -->
-    <title>Profile</title>
+    <title>Miao's Profile</title>
 </head>
 
 <body>
-    <!-- TITLE -->
+    <!-- HEADER -->
     <header></header>
 
     <main>
-        <h1>&#129318; Tada!</h1>
-        <p>You see... it's a <em>beta version</em> of my website, as I already mentioned.<br>
-            I've not been able to put together this page. Tja...<br>
-            However, you could download my CV by pressing the button below &#11015; 
-        </p>
+        <!-- INTRO -->
+        <div class="intro">
+            <h1>Yanwei Miao</h1>
+            <p>I have a bachelor of engineering in Industrial Design and a master of arts in User Experience. Currently, I am pursuing my second Master in Human Computer Interaction at Siegen University.</p>
+            <div class="download">
+                <a href="assets/YanweiMiao_CV2022.pdf" target="_blank">
+                    <button type="button" class="btn btn-dark"><i class="bi bi-file-earmark-arrow-down"></i>Download my CV</button>
+                </a>
+            </div>
+        </div>
 
-        <a href="assets/YanweiMiao_CV2022.pdf" target="_blank"><button type="button" class="btn btn-dark">Download my CV</button></a>
-        <a href="index.html"><button type="button" class="btn btn-outline-dark">Back to homepage</button></a>
+        <!-- DETAIL -->
+        <div class="container">
+            <div class="row">
+                <!-- 1 -->
+                <div class="col-md px-0">
+                    <div class="experience">
+                        <div class="overlay">
+                            <img alt="Max-Planck-Institut" src="assets/img/maxplanck.png">
+                        </div>
+                        <div class="content">
+                            <p>2022</p>
+                            <h2>I offer <br>counsel.</h2>
+                            <h5>Max-Planck-Institut</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="col-md px-0">
+                    <div class="experience">
+                        <div class="overlay">
+                            <img alt="Favorite Medium" src="assets/img/fm.png">
+                        </div>
+                        <div class="content">
+                            <p>2022</p>
+                            <h2>I do <br>research.</h2>
+                            <h5>Favorite Medium</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="col-md px-0">
+                    <div class="experience">
+                        <img alt="uCloudlink" src="assets/img/ucl.png">
+                        <div class="content">
+                            <p>2017-2021</p>
+                            <h2>I create <br>interaction.</h2>
+                            <h5>uCloudlink</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="col-md px-0">
+                    <div class="experience">
+                        <img alt="Viva City" src="assets/img/vivacity.png">
+                        <div class="content">
+                            <p>2016-2017</p>
+                            <h2>I design <br>interfaces.</h2>
+                            <h5>Viva City</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
 
     <!-- FOOTER -->
     <footer></footer>

@@ -155,7 +155,7 @@ i {
     height: 100%;
     width: 100%;
     transition: .5s ease;
-  }
+}
 
 .btn { /* hover button */
     font-family: Poppins, 'sans serif';
