@@ -9,8 +9,9 @@
 /* LOADING */
 .girl {
     width: 200px;
+    height: 200px;
     position: relative;
-    top: 20px;
+    top: 40px;
     left: 0;
     margin: auto;
 }
@@ -24,8 +25,8 @@
 .mouth {
     box-sizing: content-box;
     position: relative;
-    top: -100px;
-    left: 54%;
+    top: -102px;
+    left: 52%;
     animation: 3s rotate linear infinite;
 }
 .mouth:before {
