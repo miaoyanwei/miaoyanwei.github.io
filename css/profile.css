@@ -34,6 +34,7 @@ h5 {
     font-family: Poppins, 'sans serif';
     font-weight: normal; 
     font-size: 1.25vw; /* set the size to % of the viewport width */
+    line-height: 1.5;
     color: #000;
     margin-top: 40px;
 }
@@ -76,6 +77,7 @@ i {
 .btn { 
     font-family: Poppins, 'sans serif';
     border-radius: 0px;
+    box-shadow: none !important;
     width: auto;
 }
 
@@ -85,7 +87,7 @@ i {
     right: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .download {
       position: relative; /* Button goes down when the viewport is 800px or smaller */
     }
