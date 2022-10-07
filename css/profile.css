@@ -69,6 +69,10 @@ i {
     position: relative;
 }
 
+.intro mark {
+    background: linear-gradient(#ffec77, 60%, #fff);
+}
+
 .text {
     text-align: left;
     display: inline;
