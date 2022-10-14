@@ -48,6 +48,12 @@ p {
     color: #000;
 }
 
+hr {
+    height: 4px;
+    background-color: #000;
+    margin-left: 0;
+}
+
 @media screen and (max-width: 767px) {
     p {
         width: 100%; /* The text width is 100%, when the viewport is 800px or smaller */
@@ -111,6 +117,9 @@ i {
 .col-md:hover .content p {
     color: #fff;
 }
+.col-md:hover .content hr {
+    background-color:#fff;
+}
 
 
 /* DETAIL */
@@ -142,7 +151,7 @@ i {
 
 .content { /* centre text */
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 20%;
 }
 
