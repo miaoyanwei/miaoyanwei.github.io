@@ -14,6 +14,7 @@ body {
     padding-top: 10%;
     padding-left: 10%;
     padding-right: 10%;
+    min-height: 100vh;
 }
 
 @media screen and (max-width: 767px) { /* change page padding on small screen */
@@ -76,6 +77,10 @@ p.chinese {
     color: #4a4a4a;
 }
 
+mark {
+    background: linear-gradient(#f2de76, 60%, #f0f0f0);
+}
+
 
 /* Icon */
 i {
@@ -92,12 +97,4 @@ i {
     border-width: 0;
     border-radius: 0;
     box-shadow: none !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    transition: .8s ease;
-    opacity: 0;
 }
