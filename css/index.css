@@ -66,6 +66,19 @@
 /* CARDS */
 
 
+/* Button */
+.btn { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: .8s ease;
+    opacity: 0;
+}
+
+
 /* Tag */
 .tag {
     position: absolute;
@@ -73,7 +86,7 @@
 }
 
 .tag mark {
-    background-color: #fff;
+    background: #fff;
     opacity: .8;
     border-radius: 40px;
     padding: 10px;
@@ -131,8 +144,8 @@
     opacity: 0;
 }
 
-/* Intro */
-.intro {
+/* Welcome */
+.welcome {
     background-color:#f0f0f0;
     width: 100%;
     height: auto;
@@ -140,19 +153,16 @@
     padding: 10%;
 }
 
-.intro p {
+.welcome p {
     width: 50%;
 }
 
 @media screen and (max-width: 800px) {
-    .intro p {
+    .welcome p {
       width: 100%; /* The text width is 100%, when the viewport is 800px or smaller */
     }
 }
 
-.intro mark {
-    background: linear-gradient(#f2de76, 60%, #f0f0f0);
-}
 
 /* Projects */
 .project {
