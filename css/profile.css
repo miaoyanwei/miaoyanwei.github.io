@@ -15,7 +15,7 @@ h3 {
     margin: 28% 0px;
 }
 
-p {
+.introduction p {
     width: 50%;
 }
 
@@ -41,7 +41,7 @@ p.year {
     h3 {
         font-size: 1.25em;
     }
-    p {
+    .introduction p {
         width: 100%; /* The text width is 100%, when the viewport is 800px or smaller */
     }
     p.year {

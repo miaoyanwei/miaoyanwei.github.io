@@ -10,7 +10,8 @@
     <!-- override Bootstrap style -->
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/profile.css">
-
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <!-- page title -->
@@ -29,12 +30,21 @@
 
 <body>
     <!-- HEADER -->
-    <header></header>
+    <header>
+        <!-- Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+            $.get("navbar.html", function(data){
+                $("#nav-placeholder").replaceWith(data);
+            });
+        </script>
+        <!-- end of Navigation bar-->
+    </header>
 
     <main>
         <!-- INTRODUCTION -->
         <div class="introduction">
-            <h1 class="chinese">苗颜炜</h1>
+            <h1 class="chinese">苗</h1>
             <p>I wanted to be an inventor like <b>Thomas Edison</b> when I was little. So, I become a designer!</p>
             <a class="btn btn-dark" href="assets/YanweiMiao_CV.pdf" target="_blank">
                 <i class="bi bi-file-earmark-arrow-down"></i>Download my CV

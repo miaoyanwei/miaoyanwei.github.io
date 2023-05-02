@@ -15,6 +15,9 @@
     <script type="text/javascript" src="js/loading.js"></script>
     -->
 
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <!-- page title -->
@@ -33,7 +36,16 @@
 
 <body> <!-- onload="myFunction()" show loading animation -->
     <!-- HEADER -->
-    <header></header>
+    <header>
+        <!-- Navigation bar-->
+        <div id="nav-placeholder"></div>
+        <script>
+            $.get("navbar.html", function(data){
+                $("#nav-placeholder").replaceWith(data);
+            });
+        </script>
+        <!-- end of Navigation bar-->
+    </header>
 
 
     <!-- LOADING 
