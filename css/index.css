@@ -131,7 +131,7 @@
 
 .text { /* hover text */
     font-family: Lora, serif;
-    font-size: 0.875em;
+    font-size: 1.25em;
     color: #424c50;
     position: absolute;
     top: 50%;
