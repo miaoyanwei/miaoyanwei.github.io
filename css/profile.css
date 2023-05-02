@@ -12,11 +12,15 @@ h2 {
 
 h3 {
     font-size: 1.25vw; /* set the size to % of the viewport width */
-    margin: 40px 0px;
+    margin: 28% 0px;
 }
 
 p {
     width: 50%;
+}
+
+p.year {
+    font-size: 0.875vw; /* set the size to % of the viewport width */
 }
 
 .introduction {
@@ -40,8 +44,14 @@ p {
     p {
         width: 100%; /* The text width is 100%, when the viewport is 800px or smaller */
     }
+    p.year {
+        font-size: 0.875em;
+    }
     .btn {
         position: relative; /* Button goes down when the viewport is 800px or smaller */
+    }
+    .introduction {
+        margin: 40px;
     }
 }
 
