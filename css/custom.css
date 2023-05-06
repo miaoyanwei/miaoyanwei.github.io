@@ -26,6 +26,12 @@ main {
 }
 
 
+/* navigation bar */
+.navbar {
+    background-color: #f0f0f0;
+}
+
+
 /* font */
 h1 {
     font-family: Lora, serif;
