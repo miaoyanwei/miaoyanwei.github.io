@@ -56,8 +56,10 @@
 }
 
 .picture h3 {
-    margin: 10px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 
 /* project card */
 .project {
