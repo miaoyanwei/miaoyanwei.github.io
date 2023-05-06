@@ -59,6 +59,7 @@ h3 {
     font-family: Lora, serif;
     font-weight: bold;
     font-size: 1em; 
+    line-height: 1.5;
     margin-bottom: 0;
     color: #4a4a4a;
 }
@@ -66,6 +67,7 @@ h3.chinese {
     font-family: 'ZCOOL XiaoWei', sans-serif;
     font-weight: bold;
     font-size: 1em; 
+    line-height: 1.5;
     margin-bottom: 0;
     color: #4a4a4a;
 }
@@ -74,14 +76,12 @@ h4 {
     font-family: Lora, serif;
     font-weight: regular;
     font-size: 1em; /* 16px/16=1em */
-    line-height: 1.5;
     margin-bottom: 0;
     color: #4a4a4a;
 }
 h4.chinese {
     font-family: 'ZCOOL XiaoWei', sans-serif;
     font-size: 1em; /* 16px/16=1em */
-    line-height: 1.5;
     margin-bottom: 0;
     color: #4a4a4a;
 }
