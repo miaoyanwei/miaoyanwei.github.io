@@ -1,72 +1,111 @@
-/* LOADING 
-.girl {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    top: 40px;
-    left: 0;
-    margin: auto;
+/* col space between */
+
+.col-md {
+    padding: 10px;
+    margin-top: 8vh;
 }
 
-.face {
+
+/* welcome card */
+
+.welcome {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    line-height: 2;
+}
+
+
+/* contact card */
+
+.contact {
+    background-color: #4a4a4a;
+    padding: 40px;
+}
+
+.contact p {
+    font-size: 1vw;    /* set the size to 1% of the viewport width */
+    line-height: 2;
+    color: #f0f0f0;
+}
+
+.contact a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+.contact a:hover { color: #fff; }
+
+@media screen and (max-width: 767px) {    /* change font size on small screen */
+    .contact p {
+        font-size: 0.875em;
+    }
+}
+
+
+/* picture card */
+.picture {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.picture img {
+    width: 100%;
+}
+
+.picture h3 {
+    margin: 10px 0;
+}
+
+/* project card */
+.project {
+    margin-bottom: 20px;
+    padding: 24px;
+    border-style: solid;
+    border-color: #222;
+}
+
+.image {
     position: relative;
+}
+
+.project img {
+    width: 100%;
+}
+
+.introduction {
+    margin: 20px 0;
+}
+
+.introduction h3 {
+    margin-bottom: 10px;
+}
+
+.introduction a {
+    text-decoration: none;
+}
+
+
+/* overlay layer */
+
+.img_overlay { 
+    position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    opacity: 0;
 }
 
-.mouth {
-    box-sizing: content-box;
-    position: relative;
-    top: -102px;
-    left: 52%;
-    animation: 3s rotate linear infinite;
-}
-.mouth:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    border-radius: 100%;
-    width: 12px;
-    height: 12px;
-    box-sizing: content-box;
-}
-.mouth:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 100%;
-    width: 12px;
-    height: 12px;
-    box-sizing: content-box;
-}
-@keyframes rotate {
-    100%{transform: rotate(360deg)}
+.img_overlay:hover {
+    opacity: 0.8;
 }
 
-.girl span {
-    position: absolute;
-    margin-top: 20px;
-    font-family: Poppins, 'sans serif';
-    font-size: 16px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #4a4a4a;
-    padding: 10px;
-}
-  
-#timeOut {
-    visibility: hidden;
-}
-*/
+/* overlay button */
 
-
-/* CARDS */
-
-
-/* Button */
 .btn { 
     position: absolute;
     top: 50%;
@@ -78,144 +117,7 @@
     opacity: 0;
 }
 
-
-/* Tag */
-.tag {
-    position: absolute;
-    width: 100%;
-}
-
-.tag mark {
-    background: #fff;
-    opacity: .8;
-    border-radius: 40px;
-    padding: 10px;
-    color: #4a4a4a;
-}
-
-/* Cards hover */
-.col-md:hover .overlay { 
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.col-md:hover .btn { 
-    opacity: 1;
-}
-.col-md:hover .text { 
+.img_overlay:hover .btn {
     opacity: 1;
 }
 
-.col-md-4:hover .overlay { 
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.col-md-4:hover .text { 
-    opacity: 1;
-}
-
-.col-md-8:hover .overlay { 
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.col-md-8:hover .text { 
-    opacity: 1;
-}
-
-.overlay { /* hover layer */
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; 
-    height: 100%;
-    width: 100%;
-    transition: .5s ease;
-}
-
-.text { /* hover text */
-    font-family: Lora, serif;
-    font-size: 1.25em;
-    color: #424c50;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    transition: .8s ease;
-    opacity: 0;
-}
-
-/* Welcome */
-.welcome {
-    background-color:#f0f0f0;
-    width: 100%;
-    height: auto;
-    text-align: left;
-    padding: 10%;
-}
-
-.welcome p {
-    width: 50%;
-}
-
-@media screen and (max-width: 800px) {
-    .welcome p {
-      width: 100%; /* The text width is 100%, when the viewport is 800px or smaller */
-    }
-}
-
-
-/* Projects */
-.project {
-    background-color:#f0f0f0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.project p {
-    padding: 40px;
-}
-
-.project img {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Contact */
-.contact {
-    background-color:#4a4a4a;
-    text-align: left;
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    padding-left: 10%;
-}
-
-.contact p { /* contact text */
-    font-size: 1vw; /* set the size to 1% of the viewport width */
-    line-height: 2;
-    color: #f0f0f0;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-}
-
-@media screen and (max-width: 767px) { /* change font size on small screen */
-    .contact p {
-        font-size: 0.75em; /* 12px/16=0.75em */
-    }
-}
-
-.contact a { /* contact link */
-    color: #f0f0f0;
-}
-.contact a:hover { color: #fff; }
-
-
-/* FOOTER */
-footer {
-    height: 50px;
-}
