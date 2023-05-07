@@ -32,6 +32,10 @@ main {
     padding: 10px 0;
 }
 
+.nav-link {
+    display: flex;
+}
+
 
 /* font */
 h1 {
