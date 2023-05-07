@@ -14,7 +14,7 @@ body {
 }
 
 main {
-    padding: 0 4vw;
+    padding: 0 10vw;
 }
 
 @media screen and (max-width: 767px) { /* change page padding on small screen */
@@ -29,6 +29,7 @@ main {
 /* navigation bar */
 .navbar {
     background-color: #f0f0f0;
+    padding: 10px 0;
 }
 
 
