@@ -100,6 +100,22 @@
 }
 
 
+/* paper card */
+.paper {
+    background-color: #206864;
+    padding: 20px 40px 40px 40px;
+    margin-bottom: 20px;
+}
+
+.paper h3 {
+    color: #fff;
+}
+
+.paper p {
+    color: #f0f0f0;
+}
+
+
 /* overlay layer */
 
 .img_overlay { 
@@ -113,6 +129,10 @@
 }
 
 .img_overlay:hover {
+    opacity: 0.8;
+}
+
+.paper:hover {
     opacity: 0.8;
 }
 
