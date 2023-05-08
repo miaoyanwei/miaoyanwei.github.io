@@ -128,9 +128,9 @@ i {
     margin-right: 12px; /* space between icon and text */
 }
 
-/* button */
+
 .btn { 
-    font-family: 'ZCOOL XiaoWei', sans-serif;
+    font-family: Lora, serif;
     font-size: 0.875em; /* 14px/16=0.875em */
     color: #4a4a4a;
     border-style: solid;
@@ -139,4 +139,21 @@ i {
     border-radius: 0;
     background-color: transparent;
     height: max-content;
+}
+
+
+.badge {
+    background-color: #4a4a4a;
+    border-radius: 0;
+    font-family: Lora, serif;
+    color: #fff;
+    margin-top: 10px;
+}
+
+
+hr {
+    height: 4px;
+    border-width: 0;
+    background-color: #f0f0f0;
+    color: #f0f0f0;
 }
