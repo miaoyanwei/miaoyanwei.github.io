@@ -99,6 +99,10 @@
     text-decoration: none;
 }
 
+.list {
+    margin-top: 10px;
+}
+
 
 /* paper card */
 .paper {
