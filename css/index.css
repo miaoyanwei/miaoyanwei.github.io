@@ -4,7 +4,7 @@
     margin-top: 4vw;
 }
 
-.col-md {
+.col-lg {
     padding: 0 10px;
 }
 
@@ -41,7 +41,7 @@
 }
 .contact a:hover { color: #fff; }
 
-@media screen and (max-width: 767px) {    /* change font size on small screen */
+@media screen and (max-width: 990px) {    /* change font size on small screen */
     .contact p {
         font-size: 0.875em;
     }
