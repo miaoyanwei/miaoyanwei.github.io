@@ -122,6 +122,16 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+    font-family: Lora, serif; 
+    font-weight: regular;
+    font-size: 0.875em; 
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: #4a4a4a;
+}
+
 
 /* icon */
 i {
