@@ -17,14 +17,18 @@ body {
 .navbar {
     background-color: #f0f0f0;
     padding-top: 20px;
-}
-
-.nav-link {
-    display: flex;
+    font-family: Lora, serif;
+    font-weight: regular;
+    font-size: 1em; /* 16px/16=1em */
+    color: #4a4a4a;
 }
 
 .navbar .container {
     align-items: baseline;
+}
+
+.nav-link p {
+    margin-left: 20px;
 }
 
 
@@ -172,4 +176,5 @@ i {
     border-radius: 40px;
     border-style: solid;
     border-color: #4a4a4a;
+    border-width: 1px;
 }
