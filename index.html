@@ -28,14 +28,16 @@
     
     <main>
 
-        <div class="container" id="work">
+        <div class="container" id="content">
 
             <div class="row g-2">
+
+                <!-- About me -->
 
                 <div class="col-md-8">
                     <div class="p-3">
                         <div class="welcome">
-                            <h1 class="chinese">嗨，</h1>
+                            <h1>Hi,</h1>
                             <p>welcome to my <em>beta</em> site! I'm' Miao (She/Her), 
                                 I am a <mark>UX designer</mark> and an <mark>HCI researcher</mark>. 
                                 I've been working in the design industry for 6 years now, 
@@ -48,16 +50,20 @@
 
                 <div class="col-md-4">
                     <div class="p-3">
-                        <div class="picture" id="me">
-                            <div class="image">
-                            <img src="/assets/img/profile.jpg" alt="me">
+                        <div class="picture" id="chineseintro">
+                            <div class="image" style="background-color:rgb(88, 88, 88); width:100%; height:400px; padding-top: 40px; writing-mode:vertical-rl; text-align: start;">
+                                <h1 class="chinese" style="color:white; ">嗨<br></h1>
+                                    <p class="chinese" style="color:white; ">我是苗，<br>是一个用户体验设计师，<br>很高兴认识你！</p>
                                 <div class="img_overlay">
-                                    <p>Yes it's me &#10084;</p>
+                                    <p>&#10084;</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <!-- Projects -->
 
                 <div class="col-md-4">
                     <div class="p-3">
@@ -81,7 +87,7 @@
                             <div class="image">
                                 <img src="assets/img/auto.gif" alt="Autonomous driving">
                                 <div class="img_overlay">
-                                    <a href="https://issuu.com/yanweimiao/docs/booklet_blu.telescope_group_3" target="_blank">
+                                    <a href="https://www.behance.net/gallery/38197819/Autonomous-Driving" target="_blank">
                                         <button type="button" class="btn btn-dark">Check it out</button>
                                     </a>
                                 </div>
@@ -102,7 +108,7 @@
                             <div class="image">
                                 <img src="assets/img/pepper.png" alt="Pepper">
                                 <div class="img_overlay">
-                                    <a href="project.html">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#nolinkModal">
                                         <button type="button" class="btn btn-dark">Check it out</button>
                                     </a>
                                 </div>
@@ -117,7 +123,7 @@
                             <div class="image">
                                 <img src="assets/img/heuristics.png" alt="Heuristics">
                                 <div class="img_overlay">
-                                    <a href="project.html">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#nolinkModal">
                                         <button type="button" class="btn btn-dark">Check it out</button>
                                     </a>
                                 </div>
@@ -147,7 +153,7 @@
                                     <p>The aim of this study is to address the information gap and support home owners in their decision-making process regarding the adoption of clean energy and energy-efficient technologies.</p>
                                 </div>
                                 <div class="img_overlay">
-                                    <a href="project.html">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#nolinkModal">
                                         <button type="button" class="btn btn-dark">Check it out</button>
                                     </a>
                                 </div>
@@ -162,7 +168,7 @@
                                     <p>Our review aimed to summarise the current literature on the social digital interventions for alleviating loneliness and social isolation among older people.</p>
                                 </div>
                                 <div class="img_overlay">
-                                    <a href="project.html">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#nolinkModal">
                                         <button type="button" class="btn btn-dark">Check it out</button>
                                     </a>
                                 </div>
@@ -177,6 +183,21 @@
         </div>
 
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="nolinkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">My bad..</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>Sorry, I'm still working on it</p>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <div class="anime">
         <h4>I <span class="type"></span></h4>
