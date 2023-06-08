@@ -57,7 +57,7 @@
 }
 
 .introduction p {
-    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .list {
@@ -89,6 +89,7 @@ hr {
 
 
 /* Badge Spacing */
+
 .badge {
     margin-top: 10px;
 }
