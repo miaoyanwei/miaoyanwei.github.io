@@ -8,6 +8,10 @@
 
 body {
     min-height: 100vh;
+    background: #4a4a4a;
+}
+
+main {
     background: #f0f0f0;
 }
 
@@ -40,7 +44,6 @@ body {
     color: #f0f0f0;
     background-color: #4a4a4a;
     text-align: left;
-    margin-top: 80px;
     padding: 40px;
 }
 
