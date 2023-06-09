@@ -40,23 +40,28 @@ body {
     color: #f0f0f0;
     background-color: #4a4a4a;
     text-align: left;
+    margin-top: 80px;
     padding: 40px;
+}
+
+.footer h1 {
+    color: #f0f0f0;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .footer a {
     color: #f0f0f0;
-    margin: 10px;
 }
 
 
 /* Animation */
 
 .anime {
-    text-align: center;
-    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
-.anime h4, span {
+.anime h2, span {
     color: #a4a4a4;
 }
 
