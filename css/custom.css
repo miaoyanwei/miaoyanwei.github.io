@@ -13,10 +13,11 @@ body {
 
 main {
     background: #f0f0f0;
+    padding: 120px 0;
 }
 
 #top, #bottom, #left, #right {
-	background: #b0c7dd;
+	background: #fbe647;
 	position: fixed;
 	}
 	#left, #right {
@@ -46,7 +47,7 @@ main {
     border-top: solid;
     border-left: solid;
     border-right: solid;
-    border-color: #b0c7dd;
+    border-color: #fbe647;
     border-width: 8px;
 }
 
@@ -70,7 +71,7 @@ main {
     text-align: left;
     padding: 40px;
     border-top: solid;
-    border-color: #b0c7dd;
+    border-color: #fbe647;
     border-width: 8px;
 }
 
@@ -163,7 +164,8 @@ p.chinese {
 }
 
 mark {
-    background: linear-gradient(#ffe991, 60%, #ffffff00);
+    background: linear-gradient(#fbe647, 40%, #ffffff00);
+    color: #4a4a4a;
 }
 
 a {
