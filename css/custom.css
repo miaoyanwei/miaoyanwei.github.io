@@ -17,19 +17,19 @@ main {
 }
 
 #top, #bottom, #left, #right {
-	background: #fbe647;
+	background: #4a4a4a;
 	position: fixed;
 	}
 	#left, #right {
 		top: 0; bottom: 0;
-		width: 8px;
+		width: 1px;
 		}
 		#left { left: 0; }
 		#right { right: 0; }
 		
 	#top, #bottom {
 		left: 0; right: 0;
-		height: 8px;
+		height: 1px;
 		}
 		#top { top: 0; }
 		#bottom { bottom: 0; }
@@ -47,8 +47,8 @@ main {
     border-top: solid;
     border-left: solid;
     border-right: solid;
-    border-color: #fbe647;
-    border-width: 8px;
+    border-color: #4a4a4a;
+    border-width: 1px;
 }
 
 .navbar .container {
@@ -71,8 +71,8 @@ main {
     text-align: left;
     padding: 40px;
     border-top: solid;
-    border-color: #fbe647;
-    border-width: 8px;
+    border-color: #4a4a4a;
+    border-width: 1px;
 }
 
 .footer h1 {
@@ -164,7 +164,7 @@ p.chinese {
 }
 
 mark {
-    background: linear-gradient(#fbe647, 40%, #ffffff00);
+    background: linear-gradient(#fbe647, 40%, #fbe64700);
     color: #4a4a4a;
 }
 
@@ -206,7 +206,6 @@ i {
 /* Badge Style */
 .badge {
     font-family: Lora, serif;
-
     font-size: 0.625em; /* 10px/16=0.625em */
     color: #4a4a4a;
     background-color: transparent;
