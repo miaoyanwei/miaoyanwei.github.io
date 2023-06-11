@@ -8,11 +8,14 @@
 
 body {
     min-height: 100vh;
-    background: #f0f0f0;
+    background-color: #f0f0f0;
+    opacity: 0.8;
+    background-image:  radial-gradient(#ffffff 0.4px, transparent 0.4px), radial-gradient(#ffffff 0.4px, #f0f0f0 0.4px);
+    background-size: 16px 16px;
+    background-position: 0 0,8px 8px;
 }
 
 main {
-    background: #f0f0f0;
     padding: 120px 0;
 }
 
@@ -44,9 +47,7 @@ main {
     color: #4a4a4a;
     --bs-navbar-padding-y: 0;
     background-color: #f0f0f0;
-    border-top: solid;
-    border-left: solid;
-    border-right: solid;
+    border: solid;
     border-color: #4a4a4a;
     border-width: 1px;
 }
@@ -158,13 +159,8 @@ p {
 }
 p.chinese {
     font-family: 'ZCOOL XiaoWei', sans-serif;
-    font-size: 0.875em; /* 14px/16=0.875em */
+    font-size: 1em; /* 16px/16=1.0em */
     line-height: 1.5;
-    color: #4a4a4a;
-}
-
-mark {
-    background: linear-gradient(#fbe647, 40%, #fbe64700);
     color: #4a4a4a;
 }
 
