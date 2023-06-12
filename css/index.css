@@ -1,3 +1,14 @@
+/* Cards spacing */
+
+.pp {
+    padding: 0rem 1rem 0rem 1rem;
+    margin-bottom: 40px;
+}
+
+.g-2, .gy-2 {
+    --bs-gutter-y: 0rem; 
+}
+
 /* Welcome Card */
 
 .welcome {
