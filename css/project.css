@@ -1,0 +1,40 @@
+
+#projectTitle {
+    margin-bottom: 40px; 
+}
+
+#authorName {
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+#abstract {
+    text-align: justify;
+}
+
+#chapterTitle {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#mainText {
+    text-align: justify;
+}
+
+#reference {
+    font-size: 0.625em; /* 10px/16=0.625em */
+    font-style: italic;
+}
+
+#imageTitle {
+    text-align: center;
+    font-style: italic;
+}
+
+hr {
+    margin: 40px 0;
+}
+
+.projectImage img {
+    width: -webkit-fill-available;
+}

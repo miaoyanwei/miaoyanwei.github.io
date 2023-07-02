@@ -210,13 +210,13 @@ i {
     border-style: solid;
     border-color: #4a4a4a;
     border-width: 1px;
+    margin-right: 10px;
 }
 
 
 /* Decoration Line Style */
 hr {
     background: #4a4a4a;
-    margin: 0;
     opacity: 1;
     border: none;
     height: 1px;
