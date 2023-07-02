@@ -38,3 +38,11 @@ hr {
 .projectImage img {
     width: -webkit-fill-available;
 }
+
+#table {
+    padding: 4px;
+    border:1px solid #4a4a4a;
+    font-family: Lora, serif;
+    font-size: 0.625em; /* 10px/16=0.625em */
+    color: #4a4a4a;
+}
