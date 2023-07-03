@@ -53,6 +53,10 @@ main {
     border-width: 1px;
 }
 
+.navbar-brand {
+    color: #4a4a4a;
+}
+
 .navbar .container {
     align-items: baseline;
     padding-top: 10px;
@@ -170,6 +174,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    padding-inline-start: 16px;
+}
+
 li {
     list-style: square;
     font-family: Lora, serif; 
@@ -216,6 +224,7 @@ i {
 
 /* Decoration Line Style */
 hr {
+    margin: 0;
     background: #4a4a4a;
     opacity: 1;
     border: none;
