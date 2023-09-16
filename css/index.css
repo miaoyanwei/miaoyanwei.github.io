@@ -1,98 +1,57 @@
-/* Cards spacing */
-
-.pp {
-    padding: 0rem 1rem 0rem 1rem;
-    margin-bottom: 40px;
+/* About card */
+#about {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 400px;
 }
 
-.g-2, .gy-2 {
-    --bs-gutter-y: 0rem; 
+/* About card footer */
+.card-footer {
+    background-color: transparent;
+    border-top: none;
 }
 
-/* Welcome Card */
 
-.welcome {
+/* Poster card */
+#poster {
     background-color: #fff;
-    padding: 40px;
+    border-radius: 4px;
     height: 400px;
+    text-align: right;
+    justify-content: center;
 }
 
-.welcome p {
-    line-height: 2;
-    max-width: 400px;
+/* Remove default margin by Bootstrap in order to set the same margins to all cards */
+.g-5 {
+    --bs-gutter-y: 0; 
 }
-
-
-/* Picture Card */
-
-.picture {
-    text-align: center;
-    overflow: hidden;
-}
-
-.picture img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    transition: transform .5s ease;
-}
-
-.picture:hover img {
-    transform: scale(1.5);
-}
-
 
 /* Project Card */
-
-.project {
-    margin-bottom: 40px;
+#project, #poster, #about {  /* Set the margins between cards */
+    margin-bottom: 3rem;
 }
 
-.image {
+.project-cover {
     position: relative;
 }
 
-.project img {
+.project-cover img {
     width: 100%;
+    border-radius: 4px;
 }
 
-.introduction {
-    margin-top: 20px;
+.project-title {
+    margin-top: 1rem;
 }
 
-.introduction p {
-    margin-bottom: 0;
-}
-
-.list {
-    margin-top: 10px;
-}
-
-
-/* Paper Card */
-
-.paper {
-    background-color: transparent;
-    margin-bottom: 40px;
-}
-
-
-/* Badge Spacing */
-
-.badge {
-    margin-top: 10px;
-}
-
-
-/* Overlay Layer */
-
+/* Overlay layer */
 .img_overlay { 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #fff;
     opacity: 0;
 }
 
@@ -100,11 +59,8 @@
     opacity: 0.8;
 }
 
-.paper:hover {
-    opacity: 0.8;
-}
-
-.btn { 
+/* Block button on the overlay layer */
+.img_overlay .btn { 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -119,7 +75,9 @@
     opacity: 1;
 }
 
+/* Text on the overlay layer */
 .img_overlay p {
+    width: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
