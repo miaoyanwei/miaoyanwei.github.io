@@ -11,6 +11,12 @@
     border-top: none;
 }
 
+/* when smaller screen, change the font sizes smaller on About card */
+@media screen and (max-width : 700px) {
+    #about h2, a {
+        font-size: 36px;
+    }
+}
 
 /* Poster card */
 #poster {
