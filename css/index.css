@@ -17,6 +17,11 @@
         font-size: 36px;
     }
 }
+@media screen and (max-width : 490px) {
+    #about h2, a {
+        font-size: 32px;
+    }
+}
 
 /* Poster card */
 #poster {
