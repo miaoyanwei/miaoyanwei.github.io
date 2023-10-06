@@ -1,3 +1,9 @@
+/* Project year text */
+#projectYear {
+    text-align: right;
+    color: #fff;
+}
+
 /* Project images */
 .projectImg img {
     width: 100%;
