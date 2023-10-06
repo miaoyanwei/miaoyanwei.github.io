@@ -10,12 +10,9 @@ body {
 }
 
 /* Navigation bar */
-.navbar {
+#navbar {
     font-family: 'Poppins', sans-serif;
     padding: 80px 0px;
-}
-
-#navbar {
     align-items: normal;
 }
 
@@ -25,7 +22,7 @@ body {
 }
 
 /* Footer */
-.footer {
+#footer {
     padding-top: 80px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -37,6 +34,7 @@ body {
     cursor: pointer;
 }
 
+/* Space between social icons in the footer */
 .socialAccount i {
     margin-left: 20px;
 }
@@ -72,10 +70,10 @@ h3 {
 h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: normal;
     text-decoration: dotted;
-    color: #666;
+    color: #aaa;
 }
 
 /* Project titles in homepage & Description text */
