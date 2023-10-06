@@ -6,19 +6,13 @@
 /* Page display */
 body {
     min-height: 100vh;
-    background-color: #fff;
-}
-
-/* Content display */
-main {
-    padding-top: 120px;
+    background-color: #e1dfde;
 }
 
 /* Navigation bar */
 .navbar {
     font-family: 'Poppins', sans-serif;
-    background-color: #fff;
-    padding: 40px 0px;
+    padding: 80px 0px;
 }
 
 #navbar {
@@ -74,22 +68,23 @@ h3 {
     color: #000;
 }
 
-/* Project titles in homepage */
+/* Keywords style */
 h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: normal;
-    color: #000;
+    text-decoration: dotted;
+    color: #666;
 }
 
-/* Description text */
+/* Project titles in homepage & Description text */
 p {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: normal;
-    color: #666;
+    color: #000;
 }
 
 /* Link */
@@ -146,6 +141,7 @@ a {
     border: none;           /* No border line for all cards */
     --bs-card-spacer-y: 0;  /* align text from the y0 of the card */
     --bs-card-spacer-x: 0;  /* align text from the x0 of the card */
+    --bs-card-bg: none;     /* Remove the default background color of Bootstrap card element */
 }
 
 /* Remove default padding in card footer */

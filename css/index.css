@@ -23,15 +23,6 @@
     }
 }
 
-/* Poster card */
-#poster {
-    background-color: #fff;
-    border-radius: 4px;
-    height: 400px;
-    text-align: right;
-    justify-content: center;
-}
-
 /* Remove default margin by Bootstrap in order to set the same margins to all cards */
 .g-5 {
     --bs-gutter-y: 0; 
@@ -62,7 +53,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #e1dfde;
     opacity: 0;
 }
 
