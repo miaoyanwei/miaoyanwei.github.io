@@ -67,17 +67,16 @@ h3 {
     color: #000;
 }
 
-/* Keywords style */
+/* Project titles in homepage */
 h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: normal;
-    text-decoration: dotted;
-    color: #aaa;
+    color: #000;
 }
 
-/* Project titles in homepage & Description text */
+/* Descriptive text */
 p {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
