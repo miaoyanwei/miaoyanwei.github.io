@@ -13,6 +13,10 @@
     object-position: center;
 }
 
+#projectCard img {
+    margin-bottom: 20px;
+}
+
 /* Project infomation table */
 .infoTable {
     font-family: 'Poppins', sans-serif;
