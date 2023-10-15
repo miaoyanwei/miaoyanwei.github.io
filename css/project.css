@@ -4,6 +4,11 @@
     color: #fff;
 }
 
+/* Space below the project brief */
+#brief {
+    margin-bottom: 3rem;
+}
+
 /* Project images */
 .projectImg img {
     width: 100%;
@@ -14,7 +19,28 @@
 }
 
 #projectCard img {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space between image and title */
+    border-radius: 4px;
+}
+
+/* Technique name float on the image */
+#technique {
+    position: relative;
+    text-align: center;
+}
+
+#technique img {
+    width: 100%;
+    border-radius: 4px;
+    opacity: .6;
+}
+
+/* Technique name float at the center */
+.technique-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Project infomation table */
