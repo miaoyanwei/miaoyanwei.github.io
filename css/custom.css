@@ -114,6 +114,15 @@ a {
     text-decoration: none;
 }
 
+/* List */
+ul.list {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    color: #000;
+}
+
 /* Caption of image */
 #caption {
     font-family: 'Poppins', sans-serif;
