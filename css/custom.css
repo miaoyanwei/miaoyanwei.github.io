@@ -121,6 +121,14 @@ ul.list {
     font-size: 16px;
     line-height: normal;
     color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Marker of list */
+li::marker {
+    content: '·    ';
+    font-size: 18px;
 }
 
 /* Caption of image */
