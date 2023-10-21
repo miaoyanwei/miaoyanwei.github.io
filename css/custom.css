@@ -78,10 +78,11 @@ h4 {
 /* Subtitle for project details */
 h5 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 20px;
     line-height: normal;
     color: #000;
+    opacity: .4;
 }
 
 /* Deliverable text style */
