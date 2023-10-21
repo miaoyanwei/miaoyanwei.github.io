@@ -4,6 +4,13 @@
     color: #fff;
 }
 
+/* when smaller screen, change the font alignment of project year */
+@media screen and (max-width : 768px) {
+    #projectYear {
+        text-align: left;
+    }
+}
+
 /* Space below the project brief */
 #brief {
     margin-bottom: 3rem;
