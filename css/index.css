@@ -11,14 +11,9 @@
 }
 
 /* when smaller screen, change the font sizes smaller on About card */
-@media screen and (max-width : 700px) {
+@media screen and (max-width : 375px) {
     #about h2 {
-        font-size: 36px;
-    }
-}
-@media screen and (max-width : 440px) {
-    #about h2 {
-        font-size: 8vw;
+        font-size: 9vw;
     }
 }
 
