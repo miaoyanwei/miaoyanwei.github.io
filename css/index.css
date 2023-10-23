@@ -1,32 +1,50 @@
-/* About card */
+/***********************************
+************************************
+    Homepage Reset
+************************************
+***********************************/
+
+
+/*========All Cards=========*/
+
+/* remove default margin by Bootstrap in order to set the same margins to all cards */
+.g-5 {
+    --bs-gutter-y: 0; 
+}
+
+/* set margin below every card */
+#project, #about {  
+    margin-bottom: 3rem;
+}
+
+/* style card footer */
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+    font-family: 'Sometype Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    color: #000;
+    margin-top: 1rem;
+}
+
+/*========About Card=========*/
 #about {
     background-color: transparent;
     border-radius: 4px;
 }
 
-/* About card footer */
-.card-footer {
-    background-color: transparent;
-    border-top: none;
-}
-
-/* when smaller screen, change the font sizes smaller on About card */
+/* change font size on About card when screen is small */
 @media screen and (max-width : 375px) {
     #about h2 {
         font-size: 9vw;
     }
 }
 
-/* Remove default margin by Bootstrap in order to set the same margins to all cards */
-.g-5 {
-    --bs-gutter-y: 0; 
-}
+/*========Project Card=========*/
 
-/* Project Card */
-#project, #poster, #about {  /* Set the margins between cards */
-    margin-bottom: 3rem;
-}
-
+/* set project cover image */
 .project-cover {
     position: relative;
 }
@@ -36,21 +54,12 @@
     border-radius: 4px;
 }
 
+/* set space between project image and title */
 .project-title {
     margin-top: 1rem;
 }
 
-/* Tag of project in homepage */
-.project-title #tag {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: normal;
-    color: #000;
-    opacity: .4;
-}
-
-/* Overlay layer */
+/*------Overlay-------*/
 .img_overlay { 
     position: absolute;
     top: 0;
@@ -61,11 +70,12 @@
     opacity: 0;
 }
 
+/* show overlay when hover */
 .img_overlay:hover {
     opacity: 0.8;
 }
 
-/* Block button on the overlay layer */
+/* position overlay button in center */
 .img_overlay .btn { 
     position: absolute;
     top: 50%;
@@ -77,19 +87,7 @@
     opacity: 0;
 }
 
+/* show overlay button when hover */
 .img_overlay:hover .btn {
     opacity: 1;
 }
-
-/* Text on the overlay layer */
-.img_overlay p {
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    transition: .8s ease;
-}
-

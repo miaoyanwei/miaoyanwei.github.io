@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;600;700&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
+/***********************************
+************************************
+    Global Reset
+************************************
+***********************************/
 
-/* Page display */
+/*========Page Display=========*/
+
 body {
     min-height: 100vh;
     background-color: #e1dfde;
 }
 
-/* Navigation bar */
+/*========Navigation Bar=========*/
+
 #navbar {
     font-family: 'Poppins', sans-serif;
     padding-top: 80px;
@@ -16,12 +24,12 @@ body {
     align-items: normal;
 }
 
+/* set resume button on end */
 #resume-btn {
-    opacity: 1;
     position: relative;
 }
 
-/* Footer */
+/*========Footer=========*/
 #footer {
     padding-top: 80px;
     font-family: 'Poppins', sans-serif;
@@ -30,16 +38,19 @@ body {
     color: #000;
 }
 
-#topBtn {
+/* set cursor of back to top button */
+#top-btn {
     cursor: pointer;
 }
 
-/* Space between social icons in the footer */
-.socialAccount i {
+/* set space between social icons */
+.social-account  i {
     margin-left: 20px;
 }
 
-/* Title of projects */
+/*========Fonts=========*/
+
+/* project title in project page */
 h1 { 
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -48,7 +59,7 @@ h1 {
     color: #000;
 }
 
-/* Message on About card in homepage */
+/* text on About card in homepage */
 h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -57,7 +68,7 @@ h2 {
     color: #000;
 }
 
-/* Text button on About card */
+/* get to know me more button in homepage & emphasized text in project page */
 h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -66,7 +77,7 @@ h3 {
     color: #000;
 }
 
-/* Project titles in homepage */
+/* name of project in homepage */
 h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -75,7 +86,7 @@ h4 {
     color: #000;
 }
 
-/* Subtitle for project details */
+/* subtitles in project page */
 h5 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -85,9 +96,9 @@ h5 {
     opacity: .4;
 }
 
-/* Deliverable text style */
+/* deliverables in project page */
 h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sometype Mono', monospace;
     font-weight: 400;
     font-size: 14px;
     line-height: normal;
@@ -100,7 +111,7 @@ h6 {
     padding: 4px 8px;
 }
 
-/* Descriptive text */
+/* descriptive text */
 p {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -109,15 +120,9 @@ p {
     color: #000;
 }
 
-/* Link */
-a {
-    color: #000;
-    text-decoration: none;
-}
-
-/* Caption of image */
+/* caption of image */
 #caption {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sometype Mono', monospace;
     font-weight: 400;
     font-size: 14px;
     line-height: normal;
@@ -126,7 +131,17 @@ a {
     text-align: center;
 }
 
-/* Block button */
+/*========Links=========*/
+
+/* remove link style */
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*========Buttons=========*/
+
+/* outlined button */
 .btn { 
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -140,18 +155,20 @@ a {
     height: max-content;
 }
 
+/* outlined button when hover */
 .btn:hover {
     color: #fff;
     background-color: #000;
 }
 
-/* Text button hover animation */
-.textBtn {
+/* text button */
+.text-btn {
     display: inline-block;
     position: relative;
 }
-  
-.textBtn::after {
+
+/* text button hover animation */
+.text-btn::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -163,21 +180,24 @@ a {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-  
-.textBtn:hover::after {
+
+/* text button hover animation */
+.text-btn:hover::after {
     transform: scaleX(0);
     transform-origin: bottom left;
 }
 
-/* Remove default styles by Bootstrap of card element */
+/*========Bootstrap Style Reset=========*/
+
+/* remove default styles of Bootstrap card */
 .card {
-    border: none;           /* No border line for all cards */
+    border: none;           /* no border line for all cards */
     --bs-card-spacer-y: 0;  /* align text from the y0 of the card */
     --bs-card-spacer-x: 0;  /* align text from the x0 of the card */
-    --bs-card-bg: none;     /* Remove the default background color of Bootstrap card element */
+    --bs-card-bg: none;     /* remove the default background color of Bootstrap card */
 }
 
-/* Remove default padding in card footer */
+/* remove default padding in Bootstrap card footer */
 .card-footer {
     padding: inherit;
 }
