@@ -6,10 +6,13 @@
 
 /*========Project Title=========*/
 
-/* align project year text */
+/* style project year text */
 #project-year {
-    text-align: right;
-    color: #fff;
+    font-family: 'Sometype Mono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: normal;
+    color: #000;
 }
 
 /* when smaller screen, change the font alignment of project year */
