@@ -110,21 +110,6 @@ h5 {
     opacity: .4;
 }
 
-/* deliverables in project page */
-h6 {
-    font-family: 'Sometype Mono', monospace;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: normal;
-    color: #000;
-    opacity: .6;
-    background-color: #fff;
-    height: fit-content;
-    width: fit-content;
-    border-radius: 4px;
-    padding: 4px 8px;
-}
-
 /* descriptive text */
 p {
     font-family: 'Poppins', sans-serif;
@@ -141,8 +126,9 @@ p {
     font-size: 14px;
     line-height: normal;
     color: #000;
-    opacity: .4;
+    opacity: .6;
     text-align: center;
+    text-transform: uppercase;
 }
 
 /*========Links=========*/
