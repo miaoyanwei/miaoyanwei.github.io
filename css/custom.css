@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;600;700&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
-
 /***********************************
 ************************************
     Global Reset
 ************************************
 ***********************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 /*========Page Display=========*/
 
@@ -36,6 +36,20 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: #000;
+}
+
+/* my name shown on small screens */
+@media screen and (max-width: 460px) {
+    #my-name:before {
+      content: "@YW Miao";
+    }
+  }
+
+/* my name shown on big screens */
+@media screen and (min-width : 461px) {
+    #my-name:before {
+        content: "@Yanwei Miao";
+    }
 }
 
 /* set cursor of back to top button */
