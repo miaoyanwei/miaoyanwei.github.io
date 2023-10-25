@@ -131,6 +131,12 @@ p {
     text-transform: uppercase;
 }
 
+/*========Mark=========*/
+/* 50% transparent color */
+mark { 
+    background-color: #A8CBC180; 
+}
+
 /*========Links=========*/
 
 /* remove link style */
