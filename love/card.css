@@ -1,0 +1,149 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #A39DB1;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .birthdayCard {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+  }
+  
+  .birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(68, 61, 81, 0.2),
+      0 10px 100px rgba(68, 61, 81, 0.5);
+  }
+  
+  .birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+  }
+  
+  .birthdayCard:hover .happy {
+    visibility: hidden;
+  }
+  
+  .cardFront {
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+      30px 0 50px rgba(68, 61, 81, 0.4);
+    transition: 0.6s;
+  }
+  
+  .happy {
+    font-family: "Delicious Handrawn", cursive;
+    text-align: center;
+    margin: 30px;
+    transition: 0.1s;
+    background: -webkit-linear-gradient(45deg, #AD6388, #443D51);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .photo {
+    position: absolute;
+  }
+
+  img {
+    max-width: 140%;
+    height: auto;
+  }
+  
+  .cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(68, 61, 81, 0.2);
+  }
+  
+  p {
+    font-family: "Delicious Handrawn", cursive;
+    margin: 40px;
+    /* background: -webkit-linear-gradient(45deg, #AD6388, #443D51);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #443D51;
+  }
+  
+  .name {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    color: #443D51;
+  }
+
+
+
+
+  :root {
+    --border-color: #D7DBE3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+    --rotation: 0deg;
+    }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  
+  @keyframes scaleCup {
+    0% {
+      transform: scale(0.6);
+    } 
+    
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes confettiRain {
+    0% {
+      opacity: 1;
+      margin-top: -100vh;
+      margin-left: -200px;
+    } 
+    
+    100% {
+      opacity: 1;
+      margin-top: 100vh;
+      margin-left: 200px;
+    }
+  }
+  
+  .confetti {
+    opacity: 0;
+    position: absolute;
+    width: 1rem;
+    height: 1.5rem;
+    transition: 500ms ease;
+    animation: confettiRain 5s infinite;
+  }
+  
+  #confetti-wrapper {
+     overflow: hidden !important;
+  }
+  
