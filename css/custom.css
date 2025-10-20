@@ -118,7 +118,7 @@ h5 {
 p {
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.5rem;
     color: #000;
 }
 
@@ -168,8 +168,8 @@ a {
 
 /* outlined button when hover */
 .btn:hover {
-    color: #000;
-    background: #fff;
+    color: #fff;
+    background: #000;
 }
 
 /* text button */
