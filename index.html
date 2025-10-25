@@ -36,9 +36,9 @@
     <main>
 
         <!-- Info box section -->
-        <div class="container-xl" style="margin-top: 80px; margin-bottom: 80px;">
+        <div class="container-md" style="margin-top: 80px; margin-bottom: 80px;">
             
-            <p style="background-color: #485C1120; padding: 20px; border-radius: 10px;">
+            <p class="p-4 rounded-3" style="background-color: #485C1120;">
                 Welcome to my crappy site. 
                 I’m trying to upgrade it to version 2.0, to showcase more of myself and my stuff. 
                 If you run into some 🚧 construction sites, please don’t be surprised, come back every week to see updates. 
@@ -47,79 +47,128 @@
 
         </div>
 
+        <!-- Preload popover image -->
+        <img src="/assets/img/shenzhen.png" width="1" height="1" alt="Preload Shenzhen" style="display:none;">
+
         <!-- About me section-->
-        <div class="container-sm" style="margin-bottom: 80px;">
-            <div class="row g-5">
-                <div class="col-md-4">
-         
-                    <!-- Welcome text -->
-                    <h2>Hi, I’m Miao, a 
-                        <span style="background: -webkit-linear-gradient(#485C11, #485C11); 
-                                    background-clip: text; 
-                                    -webkit-background-clip: text; 
-                                    -webkit-text-fill-color: transparent;">
-                        product and user experience designer</span> with 
-                        <span style="background: -webkit-linear-gradient(#485C11, #485C11); 
-                                    background-clip: text; 
-                                    -webkit-background-clip: text; 
-                                    -webkit-text-fill-color: transparent;">
-                        6+ years of experience and a solid background in design</span>.
-                    </h2>
+        <div class="container-md" style="margin-bottom: 80px;">
+            
+            <div style="max-width: 400px;">
 
-                    <br>
+                <h2>Hi, I’m Miao, a 
+                    <span style="background: -webkit-linear-gradient(#485C11, #485C11); 
+                                background-clip: text; 
+                                -webkit-background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+                    product and user experience designer</span> with 
+                    <span style="background: -webkit-linear-gradient(#485C11, #485C11); 
+                                background-clip: text; 
+                                -webkit-background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+                    6+ years</span>
+                    of experience and a 
+                    <span style="background: -webkit-linear-gradient(#485C11, #485C11); 
+                                background-clip: text; 
+                                -webkit-background-clip: text; 
+                                -webkit-text-fill-color: transparent;">
+                    solid background </span>
+                    in design.
+                </h2>
 
-                    <p>
-                        Currently I’m in Berlin. 
-                        However, sometimes I run away from German winter for some vitamin D. 
-                        Then you can find me in China, Thailand, or other sunnier places.
-                    </p>
+                <br>
 
-                    <br>
+                <p>
+                    Currently I’m in 
+                    <span style="text-decoration: underline; cursor: pointer;"
+                          tabindex="0"
+                          data-bs-placement="top"
+                          data-bs-toggle="popover"
+                          data-bs-trigger="hover focus"
+                          data-bs-html="true"
+                          data-bs-content="<img src='/assets/img/berlin.png' class='img-fluid rounded' alt='Berlin TV tower'>">
+                    Berlin</span>. 
+                    However, sometimes I run away from German winter for some vitamin D. 
+                    Then you can find me in 
+                    <span style="text-decoration: underline; cursor: pointer;"
+                          tabindex="0"
+                          data-bs-placement="top"
+                          data-bs-toggle="popover"
+                          data-bs-trigger="hover focus"
+                          data-bs-html="true"
+                          data-bs-content="<img src='/assets/img/shenzhen.png' class='img-fluid rounded' alt='Shenzhen Tanglang mountain'>">
+                    China</span>, 
+                    <span style="text-decoration: underline; cursor: pointer;"
+                          tabindex="0"
+                          data-bs-placement="right"
+                          data-bs-toggle="popover"
+                          data-bs-trigger="hover focus"
+                          data-bs-html="true"
+                          data-bs-content="<img src='/assets/img/thailand.png' class='img-fluid rounded' alt='A street in Bangkok'>">
+                    Thailand</span>, or other sunnier places.
+                </p>
 
-                    <h2>What have I been doing?</h2>
+                <br>
 
-                    <br>
+                <h2>What have I been doing?</h2>
 
-                    <p>
-                        I’m working at Law & Innovation, a Berlin start-up company. 
-                        We are a small team background in legal, tech, and design and we are building a novel product ecosystem from 0 to 1. 
-                        Prior, I was an in-house designer for uCloudlink, a telecommunication company in Shenzhen. 
-                        I led the mobile applications and their derivatives, I also had hands-on experience with web and SaaS. 
-                    </p>
+                <br>
 
-                    <br>
+                <p>
+                    I’m working at 
+                    <a title="Go to Law & Innovation website" href="https://www.law-innovation.tech/" target="_blank" style="text-decoration: underline;">Law & Innovation</a>, 
+                    a Berlin start-up company. 
+                    We are a small team background in legal, tech, and design and we are building a novel product ecosystem from 0 to 1. 
+                    Prior, I was an in-house designer for 
+                    <a title="Go to uCloudlink website" href="https://www.ucloudlink.com/" target="_blank" style="text-decoration: underline;">uCloudlink</a>, 
+                    a telecommunication company in Shenzhen. 
+                    I led the mobile applications and their derivatives, I also had hands-on experience with web and SaaS. 
+                </p>
 
-                    <p>
-                        I was also involved in some short-term projects. 
-                        At Fraunhofer ISI, I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems. 
-                        I consulted on user-centred design approaches to the high performance comupting team at Max Planck Institute for Meteorology. 
-                        I also assessed and identified UX and cultural issues for Ableton’s checkout flows together with great people from Favorite Medium. 
-                    </p>
+                <br>
 
-                    <br>
+                <p>
+                    I was involved in some short-term projects too. 
+                    At 
+                    <a title="Go to Fraunhofer Institute for Systems and Innovation Research website" href="https://www.isi.fraunhofer.de/" target="_blank" style="text-decoration: underline;">Fraunhofer ISI</a>, 
+                    I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems. 
+                    I consulted on user-centred design approaches to the high performance comupting team at 
+                    <a title="Go to Max Planck Institute for Meteorology website" href="https://mpimet.mpg.de/en/homepage" target="_blank" style="text-decoration: underline;">Max Planck Institute for Meteorology</a>. 
+                    I also assessed and identified UX and cultural issues for 
+                    <a title="Go to Ableton website" href="https://www.ableton.com/en/" target="_blank" style="text-decoration: underline;">Ableton</a>
+                    ’s checkout flows together with great people from 
+                    <a title="Go to Favorite Medium website" href="https://www.favoritemedium.com/" target="_blank" style="text-decoration: underline;">Favorite Medium</a>. 
+                </p>
 
-                    <p>
-                        Other than above, being heavily benefited from generous designers, I also want to contribute to open source community. 
-                        Recently, I’ve been working on Giraffe, a Figma plugin for exporting frames as GIFs, with @Raphael. 
-                        He’s the real code master, I’m more like vibe coding. 
-                        Together with him, we are building Cow Defense as well, a small tower defense game. 
-                        I’m responsible for all the visual elements. 
-                        Meanwhile, I’ve just started to manage @Miaoblabla, an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. 
-                        This will be forever an on-going project. 
-                    </p>
+                <br>
 
-                </div>
+                <p>
+                    Other than above, being heavily benefited from generous designers, I also want to contribute to open source community. 
+                    Recently, I’ve been working on 
+                    <a title="Ops, no link yet" href="#" target="_blank" style="text-decoration: underline;">Giraffe</a>, 
+                    a Figma plugin for exporting frames as GIFs, with 
+                    <a title="Go to Raphael's Github" href="https://github.com/RaphiaRa" target="_blank" style="text-decoration: underline;">@Raphael</a>. 
+                    He’s the real code master, I’m more like vibe coding. 
+                    Together with him, we are building 
+                    <a title="Ops, no link yet" href="#" target="_blank" style="text-decoration: underline;">Cow Defense</a> 
+                    as well, a small tower defense game. 
+                    I’m responsible for all the visual elements. 
+                    Meanwhile, I’ve just started to manage 
+                    <a title="Go to Miaoblabla's Instagram" href="https://www.instagram.com/miaoblabla/" target="_blank" style="text-decoration: underline;">@Miaoblabla</a>, 
+                    an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. 
+                    This will be forever an on-going project. 
+                </p>
+
             </div>
 
-            <!-- Button to About page -->
+            <!-- Button to About page 
             <a href="/about.html" style="display: flow-root; max-width: fit-content; margin-top: 40px;">
                 <h3 class="text-btn" style="max-width: fit-content;">Get to know me more</h3>
-            </a>
+            </a> -->
                         
         </div>
 
         <!-- Projects section -->
-        <div class="container-xl">
+        <div class="container-md">
 
             <div class="row g-5">
 

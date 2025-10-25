@@ -8,6 +8,10 @@ $.get("/html/footer.html", function(data){
     $("#footer-placeholder").replaceWith(data);
 });
 
+// Initialize all popovers on the page
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
 // Google Analytics
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}

@@ -212,3 +212,16 @@ a {
 .card-footer {
     padding: inherit;
 }
+
+/* Remove all popover default styles */
+.popover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+.popover-body {
+    padding: 0;
+}
+.popover-arrow {
+    display: none !important; /* hides the arrow completely */
+}
