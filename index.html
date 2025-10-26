@@ -27,6 +27,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
+    <!-- Include AOS to enable Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 </head>
 
 <body>
@@ -36,7 +40,7 @@
     <main>
 
         <!-- Info box section -->
-        <div class="container-md" style="margin-top: 80px; margin-bottom: 80px;">
+        <div class="container-md" style="margin-top: 40px; margin-bottom: 100px;">
             
             <p class="p-4 rounded-3" style="background-color: #485C1120;">
                 Welcome to my crappy site. 
@@ -48,7 +52,7 @@
         </div>
 
         <!-- About me section-->
-        <div class="container-md" style="margin-bottom: 80px;">
+        <div class="container-md" style="margin-bottom: 100px;">
 
             <!-- Preload popover image -->
             <img src="/assets/img/berlin.png" width="1" height="1" alt="Preload Shenzhen" style="display:none;">
@@ -58,7 +62,7 @@
             <!-- Text -->
             <div style="max-width: 440px;">
 
-                <h2>Hi, I’m Miao, a 
+                <h2 data-aos="fade-up" data-aos-delay="0">Hi, I’m Miao, a 
                     <span style="background: -webkit-linear-gradient(#485C11, #485C11); 
                                 background-clip: text; 
                                 -webkit-background-clip: text; 
@@ -80,7 +84,7 @@
 
                 <br>
 
-                <p>
+                <p data-aos="fade-up" data-aos-delay="200">
                     Currently I’m in 
                     <span style="text-decoration: underline; cursor: pointer;"
                           tabindex="0"
@@ -112,12 +116,13 @@
 
                 <br>
                 <br>
+                <br>
 
-                <h2>What have I been doing?</h2>
+                <h2 data-aos="fade-up" data-aos-delay="400">What have I been doing?</h2>
 
                 <br>
 
-                <p>
+                <p data-aos="fade-up" data-aos-delay="600">
                     I’m working at 
                     <a title="Go to Law & Innovation website" href="https://www.law-innovation.tech/" target="_blank" style="text-decoration: underline;">Law & Innovation</a>, 
                     a Berlin start-up company. 
@@ -133,7 +138,7 @@
 
                 <br>
 
-                <p>
+                <p data-aos="fade-up" data-aos-delay="800">
                     I was involved in some short-term projects too. 
                     At 
                     <a title="Go to Fraunhofer Institute for Systems and Innovation Research website" href="https://www.isi.fraunhofer.de/" target="_blank" style="text-decoration: underline;">Fraunhofer ISI</a>, 
@@ -148,7 +153,7 @@
 
                 <br>
 
-                <p>
+                <p data-aos="fade-up" data-aos-delay=1200">
                     Other than above, being heavily benefited from generous designers, I also want to contribute to open source community. 
                     Recently, I’ve been working on 
                     <a title="Ops, no link yet" href="#" target="_blank" style="text-decoration: underline;">Giraffe</a>, 
@@ -278,6 +283,15 @@
 
     <!-- Show navbar and footer -->
     <script src="/js/main.js"></script>
+
+    <!-- Fly in anmiation -->
+    <script>
+        AOS.init({
+        duration: 800,  // animation duration (ms)
+        once: true      // whether animation should happen only once
+        });
+    </script>
+
 
 </body>
 
