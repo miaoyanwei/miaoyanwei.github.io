@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;600;700&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
+/*========Crimson Text & DM Sans fonts=========*/
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 /*========Page Display=========*/
@@ -20,50 +21,19 @@ body {
 /*========Navigation Bar=========*/
 
 #navbar {
-    font-family: 'Crimson Text', serif;
-    font-weight: 400;
-    font-style: normal;
     padding-top: 40px;
     padding-bottom: 40px;
     align-items: normal;
 }
 
-/* set resume button on end */
-#resume-btn {
-    position: relative;
-}
-
 /*========Footer=========*/
 #footer {
     padding-top: 80px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #000;
-}
-
-/* my name shown on small screens */
-@media screen and (max-width: 460px) {
-    #my-name:before {
-      content: "@YW Miao";
-    }
-  }
-
-/* my name shown on big screens */
-@media screen and (min-width : 461px) {
-    #my-name:before {
-        content: "@Yanwei Miao";
-    }
 }
 
 /* set cursor of back to top button */
 #top-btn {
     cursor: pointer;
-}
-
-/* set space between social icons */
-.social-account  i {
-    margin-left: 20px;
 }
 
 /*========Fonts=========*/
@@ -79,7 +49,7 @@ h1 {
 
 /* text on About card in homepage */
 h2 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 40px;
     line-height: normal;
@@ -88,7 +58,7 @@ h2 {
 
 /* get to know me more button in homepage & emphasized text in project page */
 h3 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: normal;
@@ -97,7 +67,7 @@ h3 {
 
 /* name of project in homepage */
 h4 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: normal;
@@ -106,7 +76,7 @@ h4 {
 
 /* subtitles in project page */
 h5 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: normal;
@@ -119,7 +89,7 @@ p {
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5rem;
-    color: #000;
+    color: #252621;
 }
 
 /* caption of image */
@@ -162,7 +132,7 @@ a {
     border-style: solid;
     border-width: 1px;
     border-radius: 40px;
-    background-color: #485C11;
+    background-color: #252621;
     height: max-content;
 }
 
