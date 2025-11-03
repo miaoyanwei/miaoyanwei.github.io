@@ -30,18 +30,6 @@
     margin-top: 1rem;
 }
 
-/*========About Card=========*/
-#about {
-    background-color: transparent;
-    border-radius: 4px;
-}
-
-/* change font size on About card when screen is small */
-@media screen and (max-width : 375px) {
-    #about h2 {
-        font-size: 9vw;
-    }
-}
 
 /*========Project Card=========*/
 

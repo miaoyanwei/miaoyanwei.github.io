@@ -10,7 +10,9 @@ Global Reset
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 
-/*========Page Display=========*/
+/*========
+Page Display
+=========*/
 
 body {
     min-height: 100vh;
@@ -18,7 +20,9 @@ body {
 }
 
 
-/*========Fonts=========*/
+/*========
+Fonts
+=========*/
 
 /* project title in project page */
 h1 { 
@@ -88,24 +92,6 @@ p {
 }
 
 
-/*========Mark=========*/
-/* 20% transparent color */
-mark { 
-    background: #5573C1;
-    background: linear-gradient(90deg, rgba(85, 115, 193, 0.2) 0%, rgba(155, 165, 195, 0.2) 100%);
-    border-radius: 40px;
-}
-
-
-/*========Links=========*/
-
-/* remove link style */
-a {
-    color: #000;
-    text-decoration: none;
-}
-
-
 /*======== 
 Buttons 
 =========*/
@@ -127,6 +113,36 @@ Buttons
   color: #fff;
   background: linear-gradient(to bottom right, #000000, #000000);
 }
+.primary-btn .lucide {
+  transition: transform 0.3s ease;
+}
+.primary-btn:hover .lucide {
+  transform: translateX(4px);
+}
+
+/* secondary button */
+.secondary-btn { 
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: solid 1px #000000;
+  color: #000000;
+  border-radius: 40px;
+  background: #ffffff;
+  height: max-content;
+  transition: background 0.4s ease;
+}
+/* secondary button hover effect */
+.secondary-btn:hover {
+  color: #ffffff;
+  background: #000000;
+}
+.secondary-btn .lucide {
+  transition: transform 0.3s ease;
+}
+.secondary-btn:hover .lucide {
+  transform: translateX(4px);
+}
 
 /* tertiary button */
 .tertiary-btn { 
@@ -145,31 +161,16 @@ Buttons
   color: #000000;
   background: #00000010;
 }
-
-/* text button */
-.text-btn {
-    display: inline-block;
-    position: relative;
+.tertiary-btn .lucide {
+  transition: transform 0.3s ease;
+}
+.tertiary-btn:hover .lucide {
+  transform: translateY(-4px);
 }
 
-/* text button hover animation */
-.text-btn::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(1);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-/* text button hover animation */
-.text-btn:hover::after {
-    transform: scaleX(0);
-    transform-origin: bottom left;
+/* remove link style */
+a {
+    color: #000;
 }
 
 
