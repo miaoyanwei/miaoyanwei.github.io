@@ -1,21 +1,20 @@
 /***********************************
 ************************************
-    Global Reset
+Global Reset
 ************************************
 ***********************************/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;600;700&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
-/*========Crimson Text & DM Sans fonts=========*/
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
 
 /*========Page Display=========*/
 
 body {
     min-height: 100vh;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 
@@ -23,11 +22,11 @@ body {
 
 /* project title in project page */
 h1 { 
-    font-family: 'Crimson Text', serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 60px;
     line-height: normal;
-    color: #000;
+    color: #000000;
 }
 
 /* text on About card in homepage */
@@ -36,7 +35,7 @@ h2 {
     font-weight: 400;
     font-size: 40px;
     line-height: normal;
-    color: #000;
+    color: #000000;
 }
 
 /* get to know me more button in homepage & emphasized text in project page */
@@ -45,7 +44,7 @@ h3 {
     font-weight: 400;
     font-size: 20px;
     line-height: normal;
-    color: #000;
+    color: #000000;
 }
 
 /* name of project in homepage */
@@ -54,30 +53,30 @@ h4 {
     font-weight: 400;
     font-size: 18px;
     line-height: normal;
-    color: #000;
+    color: #000000;
 }
 
 /* subtitles in project page */
 h5 {
     font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
     font-size: 20px;
-    line-height: normal;
-    color: #000;
-    opacity: .4;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #000000;
 }
 
-/* descriptive text */
+/* body text */
 p {
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     line-height: 1.5rem;
-    color: #252621;
+    color: #000000;
 }
 
 /* caption of image */
 #caption {
-    font-family: 'Sometype Mono', monospace;
+    font-family: 'DM Mono', monospace;
     font-weight: 400;
     font-size: 14px;
     line-height: normal;
@@ -88,6 +87,7 @@ p {
     margin-top: 1rem; 
 }
 
+
 /*========Mark=========*/
 /* 20% transparent color */
 mark { 
@@ -95,6 +95,7 @@ mark {
     background: linear-gradient(90deg, rgba(85, 115, 193, 0.2) 0%, rgba(155, 165, 195, 0.2) 100%);
     border-radius: 40px;
 }
+
 
 /*========Links=========*/
 
@@ -104,24 +105,45 @@ a {
     text-decoration: none;
 }
 
-/*========Buttons=========*/
 
-/* outlined button */
-.btn { 
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: hidden;
-    color: #fff;
-    border-radius: 40px;
-    background: linear-gradient(to bottom right, #000000, #00000080);
-    height: max-content;
+/*======== 
+Buttons 
+=========*/
+
+/* primary button */
+.primary-btn { 
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  border-radius: 40px;
+  background: linear-gradient(to bottom right, #000000, #00000080);
+  height: max-content;
+  transition: background 0.4s ease;
+}
+/* primary button hover effect */
+.primary-btn:hover {
+  color: #fff;
+  background: linear-gradient(to bottom right, #000000, #000000);
 }
 
-/* outlined button when hover */
-.btn:hover {
-    color: #fff;
-    background: #000;
+/* tertiary button */
+.tertiary-btn { 
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  color: #000000;
+  border-radius: 40px;
+  background: transparent;
+  height: max-content;
+  transition: background 0.4s ease;
+}
+/* tertiary button hover effect */
+.tertiary-btn:hover {
+  color: #000000;
+  background: #00000010;
 }
 
 /* text button */
@@ -150,9 +172,12 @@ a {
     transform-origin: bottom left;
 }
 
-/*========Bootstrap Style Reset=========*/
 
-/* remove default styles of Bootstrap card */
+/*========
+Card
+=========*/
+
+/* remove card default styles */
 .card {
     border: none;           /* no border line for all cards */
     --bs-card-spacer-y: 0;  /* align text from the y0 of the card */
@@ -165,7 +190,7 @@ a {
     padding: inherit;
 }
 
-/* Remove all popover default styles */
+/* remove popover default styles */
 .popover {
     background: transparent;
     border: none;
