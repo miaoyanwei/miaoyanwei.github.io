@@ -41,12 +41,21 @@
         <!-- Info box section -->
         <div class="container-md" style="margin-top: 100px; margin-bottom: 100px;">
             
-            <p class="p-4 rounded-3" style="color: #ffffff; background: linear-gradient(to bottom right, #ffffff20, #ffffff10);">
-                Welcome to my crappy site. 
-                I’m trying to upgrade it to version 2.0, to showcase more of myself and my stuff. 
-                If you run into some 🚧 construction sites, please don’t be surprised, come back every week to see updates. 
-                (Or not, if you’re a bot.)
-            </p>
+            <div class="p-4 rounded-3"
+                 style="color: #ffffff;
+                       background: linear-gradient(to bottom right, #ffffff20, #ffffff10);
+                       display: flex;
+                       align-items: center;
+                       justify-content: space-between;
+                       gap: 20px;">
+                <img src="/assets/img/eyes.gif" height="40" alt="Eyes looking around">
+                <p style="margin: 0;">
+                    Welcome to my crappy site. 
+                    I’m trying to upgrade it to version 2.0, to showcase more of myself and my stuff. 
+                    If you run into some 🚧 construction sites, please don’t be surprised, come back every week to see updates. 
+                    (Or not, if you’re a bot.)
+                </p>
+            </div>
 
         </div>
 
@@ -90,9 +99,9 @@
                     
                 <p data-aos="fade-up" data-aos-delay="400">
                     Currently I’m in 
-                    <span style="text-decoration: underline; cursor: pointer;"
+                    <span style="text-decoration: underline; cursor: default;"
                           tabindex="0"
-                          data-bs-placement="right"
+                          data-bs-placement="top"
                           data-bs-toggle="popover"
                           data-bs-trigger="hover focus"
                           data-bs-html="true"
@@ -100,22 +109,22 @@
                     Berlin</span>. 
                     However, sometimes I run away from German winter for some vitamin D. 
                     Then you can find me in 
-                    <span style="text-decoration: underline; cursor: pointer;"
+                    <span style="text-decoration: underline; cursor: default;"
                           tabindex="0"
                           data-bs-placement="top"
                           data-bs-toggle="popover"
                           data-bs-trigger="hover focus"
                           data-bs-html="true"
                           data-bs-content="<img src='/assets/img/shenzhen.png' class='img-fluid rounded' alt='View on Tanglang mountain in Shenzhen'>">
-                    China</span>, 
-                    <span style="text-decoration: underline; cursor: pointer;"
+                    Shenzhen</span>, 
+                    <span style="text-decoration: underline; cursor: default;"
                           tabindex="0"
                           data-bs-placement="right"
                           data-bs-toggle="popover"
                           data-bs-trigger="hover focus"
                           data-bs-html="true"
-                          data-bs-content="<img src='/assets/img/thailand.png' class='img-fluid rounded' alt='The street in Bangkok'>">
-                    Thailand</span>, or other sunnier places.
+                          data-bs-content="<img src='/assets/img/bangkok.png' class='img-fluid rounded' alt='The street in Bangkok'>">
+                    Bangkok</span>, or other sunnier places.
                 </p>
 
                 <br>
@@ -165,7 +174,14 @@
                     <a title="Go to Raphael's Github" href="https://github.com/RaphiaRa" target="_blank" style="text-decoration: underline;">@Raphael</a>. 
                     He’s the real code master, I’m more like vibe coding. 
                     Together with him, we are building 
-                    <a title="Ops, no link yet" href="#" target="_blank" style="text-decoration: underline;">Cow Defense</a> 
+                    <span style="text-decoration: underline; cursor: default;"
+                          tabindex="0"
+                          data-bs-placement="right"
+                          data-bs-toggle="popover"
+                          data-bs-trigger="hover focus"
+                          data-bs-html="true"
+                          data-bs-content="<img src='/assets/img/cow-defense.gif' class='img-fluid rounded' alt='Preview of Cow Defense game'>">
+                    Cow Defense</span>
                     as well, a small tower defense game. 
                     I’m responsible for all the visual elements. 
                     Meanwhile, I’ve just started to manage 
@@ -188,40 +204,21 @@
 
             <div class="row g-5">
 
-            <!-- FLEX -->
+            <!-- Consenter -->
             <div class="col-md-4">
                 <div class="card">
                     <div class="project-card-cover rounded-3">
-                        <img src="/assets/img/project_cover/flex.png" alt="FLEX Project Cover">
+                        <img src="/assets/img/project_cover/consenter.png" alt="Consenter Project Cover">
                         <div class="project-card-overlay">
-                            <a href="/projects/flex.html">
-                                <button type="button" class="secondary-btn">View project
+                            <a href="#">
+                                <button type="button" class="secondary-btn">View case
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right-icon lucide-move-up-right"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
                                 </button>
                             </a>
                         </div>
                     </div>
                     <div class="card-body mt-3">
-                        <p>Filling the information gap: a design case study of a recommender for home energy system</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pepper -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="project-card-cover rounded-3">
-                        <img src="/assets/img/project_cover/pepper.png" alt="Pepper Project Cover">
-                        <div class="project-card-overlay">
-                            <a href="/projects/pepper.html">
-                                <button type="button" class="secondary-btn">View project
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right-icon lucide-move-up-right"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-body mt-3">
-                        <p>Erinnern Sie sich noch? A storytelling game with Pepper for older adults memory training</p>
+                        <h5>Consenter: the first officially recognised consent management service in Europe</h5>
                     </div>
                 </div>
             </div>
@@ -233,14 +230,52 @@
                         <img src="/assets/img/project_cover/glocalme.png" alt="GlocalMe Project Cover">
                         <div class="project-card-overlay">
                             <a href="/projects/glocalme.html">
-                                <button type="button" class="secondary-btn">View project
+                                <button type="button" class="secondary-btn">View case
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right-icon lucide-move-up-right"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
                                 </button>
                             </a>
                         </div>
                     </div>
                     <div class="card-body mt-3">
-                        <p>GlocalMe® app helps users buy data, manage devices to stay connected easily with the GlocalMe mobile WiFi</p>
+                        <h5>GlocalMe® app helps users buy data, manage devices to stay connected easily with the GlocalMe mobile WiFi</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FLEX -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="project-card-cover rounded-3">
+                        <img src="/assets/img/project_cover/flex.png" alt="FLEX Project Cover">
+                        <div class="project-card-overlay">
+                            <a href="/projects/flex.html">
+                                <button type="button" class="secondary-btn">View case
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right-icon lucide-move-up-right"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body mt-3">
+                        <h5>Filling the information gap: a design case study of a recommender for home energy system</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pepper -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="project-card-cover rounded-3">
+                        <img src="/assets/img/project_cover/pepper.png" alt="Pepper Project Cover">
+                        <div class="project-card-overlay">
+                            <a href="/projects/pepper.html">
+                                <button type="button" class="secondary-btn">View paper
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right-icon lucide-move-up-right"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body mt-3">
+                        <h5>Erinnern Sie sich noch? A storytelling game with Pepper for older adults memory training</h5>
                     </div>
                 </div>
             </div>
@@ -252,14 +287,14 @@
                         <img src="/assets/img/project_cover/auto.gif" alt="JLR Project Cover">
                         <div class="project-card-overlay">
                             <a href="/projects/jlr.html">
-                                <button type="button" class="secondary-btn">View project
+                                <button type="button" class="secondary-btn">View demo
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right-icon lucide-move-up-right"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
                                 </button>
                             </a>
                         </div>
                     </div>
                     <div class="card-body mt-3">
-                        <p>Enable “trust” when it comes to autonomous driving</p>
+                        <h5>Enable “trust” when it comes to autonomous driving</h5>
                     </div>
                 </div>
             </div>

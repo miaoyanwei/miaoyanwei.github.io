@@ -81,81 +81,86 @@ Buttons
 
 /* primary button */
 .primary-btn { 
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  color: #000000;
-  border-radius: 40px;
-  background: linear-gradient(to bottom right, #ffffff, #ffffff);
-  height: max-content;
-  transition: background 0.4s ease;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    color: #000000;
+    border-radius: 40px;
+    background: linear-gradient(to bottom right, #ffffff, #ffffff);
+    height: max-content;
+    transition: background 0.4s ease;
 }
 /* primary button hover effect */
 .primary-btn:hover {
-  color: #000000;
-  background: linear-gradient(to bottom right, #ffffff, #ffffff);
+    color: #000000;
+    background: linear-gradient(to bottom right, #ffffff, #ffffff);
 }
 .primary-btn .lucide {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .primary-btn:hover .lucide {
-  transform: translateX(4px);
+    transform: translateX(4px);
 }
 
 /* secondary button */
 .secondary-btn { 
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  border-radius: 40px;
-  background: transparent;
-  height: max-content;
-  transition: background 0.4s ease;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 40px;
+    background: transparent;
+    height: max-content;
+    transition: background 0.4s ease;
 }
 /* secondary button hover effect */
 .secondary-btn:hover {
-  border: none;
-  color: #ffffff;
-  background: #000000;
+    border: none;
+    color: #ffffff;
+    background: #000000;
 }
 .secondary-btn .lucide {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .secondary-btn:hover .lucide {
-  transform: translateX(4px);
+    transform: translateX(4px);
 }
 
 /* tertiary button */
 .tertiary-btn { 
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  color: #ffffff;
-  border-radius: 40px;
-  background: transparent;
-  height: max-content;
-  transition: background 0.4s ease;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    color: #ffffff;
+    border-radius: 40px;
+    background: transparent;
+    height: max-content;
+    transition: background 0.4s ease;
 }
 /* tertiary button hover effect */
 .tertiary-btn:hover {
-  color: #ffffff;
-  background: #ffffff10;
+    color: #ffffff;
+    background: #ffffff10;
 }
 .tertiary-btn .lucide {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .tertiary-btn:hover .lucide {
-  transform: translateY(-4px);
+    transform: translateY(-4px);
 }
 
 /* remove link style */
 a {
     color: #ffffff;
 }
+
+
+/*========
+Popover
+=========*/
 
 /* remove popover default styles */
 .popover {
@@ -168,6 +173,9 @@ a {
 }
 .popover-arrow {
     display: none !important; /* hides the arrow completely */
+}
+.popover {
+    max-width: 600px !important; 
 }
 
 
@@ -194,40 +202,40 @@ Project Card
 
 /* project card */
 .project-card-cover {
-  position: relative; /* make overlay positionable */
-  overflow: hidden;   /* hide anything outside card bounds */
+    position: relative; /* make overlay positionable */
+    overflow: hidden;   /* hide anything outside card bounds */
 }
 
 .project-card-cover img {
-  width: 100%;
-  display: block;
-  transition: transform 0.4s ease;
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
 /* The overlay */
 .project-card-cover .project-card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
-  opacity: 0; /* hidden by default */
-  transition: opacity 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
+    opacity: 0; /* hidden by default */
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
 }
 
 /* When hover over the card, show overlay */
 .project-card-cover:hover .project-card-overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* Optional: slight zoom effect on image when hover */
 .project-card-cover:hover img {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
