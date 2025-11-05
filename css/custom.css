@@ -16,7 +16,7 @@ Page Display
 
 body {
     min-height: 100vh;
-    background-color: #BCC6C5;
+    background-color: #191919;
 }
 
 
@@ -30,43 +30,26 @@ h1 {
     font-weight: 400;
     font-size: 60px;
     line-height: normal;
-    color: #000000;
+    color: #fff;
 }
 
-/* text on About card in homepage */
-h2 {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: normal;
-    color: #000000;
-}
-
-/* get to know me more button in homepage & emphasized text in project page */
+/* emphasized text in project page */
 h3 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: normal;
-    color: #000000;
+    color: #fff;
 }
 
-/* name of project in homepage */
-h4 {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: normal;
-    color: #000000;
-}
 
-/* subtitles in project page */
+/* paragraph title in home page */
 h5 {
     font-family: 'DM Sans', sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* body text */
@@ -75,7 +58,7 @@ p {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* caption of image */
@@ -84,7 +67,7 @@ p {
     font-weight: 400;
     font-size: 14px;
     line-height: normal;
-    color: #000;
+    color: #fff;
     opacity: .6;
     text-align: center;
     text-transform: uppercase;
@@ -102,16 +85,16 @@ Buttons
   font-size: 16px;
   padding: 10px 20px;
   border: none;
-  color: #fff;
+  color: #000000;
   border-radius: 40px;
-  background: linear-gradient(to bottom right, #000000, #00000080);
+  background: linear-gradient(to bottom right, #ffffff, #ffffff);
   height: max-content;
   transition: background 0.4s ease;
 }
 /* primary button hover effect */
 .primary-btn:hover {
-  color: #fff;
-  background: linear-gradient(to bottom right, #000000, #000000);
+  color: #000000;
+  background: linear-gradient(to bottom right, #ffffff, #ffffff);
 }
 .primary-btn .lucide {
   transition: transform 0.3s ease;
@@ -125,15 +108,16 @@ Buttons
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   padding: 10px 20px;
-  border: none;
-  color: #000000;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   border-radius: 40px;
-  background: #ffffff;
+  background: transparent;
   height: max-content;
   transition: background 0.4s ease;
 }
 /* secondary button hover effect */
 .secondary-btn:hover {
+  border: none;
   color: #ffffff;
   background: #000000;
 }
@@ -150,7 +134,7 @@ Buttons
   font-size: 16px;
   padding: 10px 20px;
   border: none;
-  color: #000000;
+  color: #ffffff;
   border-radius: 40px;
   background: transparent;
   height: max-content;
@@ -158,8 +142,8 @@ Buttons
 }
 /* tertiary button hover effect */
 .tertiary-btn:hover {
-  color: #000000;
-  background: #00000010;
+  color: #ffffff;
+  background: #ffffff10;
 }
 .tertiary-btn .lucide {
   transition: transform 0.3s ease;
@@ -170,7 +154,7 @@ Buttons
 
 /* remove link style */
 a {
-    color: #000;
+    color: #ffffff;
 }
 
 /* remove popover default styles */
@@ -199,28 +183,14 @@ Card
     --bs-card-bg: none;     /* remove the default background color of Bootstrap card */
 }
 
-/* style card footer */
-.card-footer {
-    background-color: transparent;
-    border-top: none;
-    font-family: 'Sometype Mono', monospace;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: normal;
-    color: #000;
-    opacity: .6;
-    margin-top: 1rem;
-}
 
-
-/*========Project Card=========*/
-
+/*========
+Project Card
+=========*/
 
 .project-cover img {
     width: 100%;
-    border-radius: 4px;
 }
-
 
 /* project card */
 .project-card-cover {
@@ -242,7 +212,6 @@ Card
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
-  color: white;
   opacity: 0; /* hidden by default */
   transition: opacity 0.4s ease;
   display: flex;
