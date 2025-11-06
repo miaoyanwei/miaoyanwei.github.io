@@ -193,9 +193,10 @@ overflow: hidden;
 
 .scroll-row {
 display: flex;
+flex-wrap: nowrap;
 gap: 1rem;
 overflow-x: auto;
-padding: 0 1rem 1rem 1rem;
+padding: 1rem;
 scroll-behavior: smooth;
 -webkit-overflow-scrolling: touch;
 }
@@ -219,20 +220,16 @@ Cards
 =========*/
 
 .project-card {
-  width: 50vw;        /* default: for screens smaller than md */
-  min-width: 360px;   /* optional: prevent the card from shrinking too small */
-  max-width: 400px;   /* optional: prevent it from growing too big */
+    flex: 0 0 auto;
+    width: 50vw;        /* default: for screens smaller than md */
+    min-width: 280px;   /* optional: prevent the card from shrinking too small */
+    max-width: 400px;   /* optional: prevent it from growing too big */
 }
-
 /* for screens md (≥768px) and up */
 @media (min-width: 768px) {
-  .project-card {
-    width: 25vw;      /* 1/4 of viewport width */
-  }
-}
-
-.project-cover img {
-    width: 100%;
+    .project-card {
+        width: 25vw;      /* 1/4 of viewport width */
+    }
 }
 
 /* card */
@@ -243,6 +240,7 @@ Cards
 
 .project-card-cover img {
     width: 100%;
+    height: auto;
     display: block;
     transition: transform 0.4s ease;
 }
