@@ -178,6 +178,30 @@ Popover
 
 
 /*========
+Slider
+=========*/
+
+.scroll-wrapper-full {
+width: 100vw; /* full screen width */
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw; /* break out of container */
+margin-right: -50vw;
+overflow: hidden;
+}
+
+.scroll-row {
+display: flex;
+gap: 1rem;
+overflow-x: auto;
+padding: 0 1rem 1rem 1rem;
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch;
+}
+
+
+/*========
 Card
 =========*/
 
@@ -191,14 +215,27 @@ Card
 
 
 /*========
-Project Card
+Cards
 =========*/
+
+.project-card {
+  width: 50vw;        /* default: for screens smaller than md */
+  min-width: 360px;   /* optional: prevent the card from shrinking too small */
+  max-width: 400px;   /* optional: prevent it from growing too big */
+}
+
+/* for screens md (≥768px) and up */
+@media (min-width: 768px) {
+  .project-card {
+    width: 25vw;      /* 1/4 of viewport width */
+  }
+}
 
 .project-cover img {
     width: 100%;
 }
 
-/* project card */
+/* card */
 .project-card-cover {
     position: relative; /* make overlay positionable */
     overflow: hidden;   /* hide anything outside card bounds */
