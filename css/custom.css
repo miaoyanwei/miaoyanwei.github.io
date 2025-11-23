@@ -27,9 +27,9 @@ Fonts
 h1 { 
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 40px;
     line-height: normal;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* emphasized text in project page */
@@ -45,7 +45,7 @@ h3 {
 /* paragraph title in home page */
 h5 {
     font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
+    font-size: 36px;
     font-weight: 500;
     color: #ffffff;
 }
@@ -155,6 +155,30 @@ Buttons
 /* remove link style */
 a {
     color: #ffffff;
+}
+
+
+/*==============================
+================================
+Breadcrumb
+================================
+==============================*/
+
+.breadcrumb {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    --bs-breadcrumb-item-color: #E5E9F0;
+    --bs-breadcrumb-item-active-color: #E5E9F070;
+}
+
+.breadcrumb-item a {
+  text-decoration: none !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #E5E9F070 !important; /* separator color */
 }
 
 
@@ -272,4 +296,33 @@ Cards
 /* Optional: slight zoom effect on image when hover */
 .project-card-cover:hover img {
     transform: scale(1.05);
+}
+
+
+/*========
+Project 
+navigation
+=========*/
+
+.project-box {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-box:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.nav-next .lucide {
+    transition: transform 0.3s ease;
+}
+.nav-next:hover .lucide {
+    transform: translateX(4px);
+}
+
+.nav-previous .lucide {
+    transition: transform 0.3s ease;
+}
+.nav-previous:hover .lucide {
+    transform: translateX(-4px);
 }
