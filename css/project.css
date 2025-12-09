@@ -166,26 +166,26 @@ Project cover image
 ==============================*/
 
 .project-img-wrapper-full {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .project-bg {
-  width: 100%;
-  height: 360px;
-  background-color: #6E89A4; 
-  display: flex;
-  justify-content: center; /* centers horizontally */
-  align-items: center;     /* centers vertically */
+    width: 100%;
+    height: 360px;
+    background: linear-gradient(to bottom, #6E89A4, #101112);
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
 }
 
 .project-bg img {
-  max-height: 100%;   /* optional: ensures image fits height */
-  max-width: 100%;    /* optional: prevents overflow */
+    max-height: 100%;   /* optional: ensures image fits height */
+    max-width: 100%;    /* optional: prevents overflow */
 }
 
 
@@ -200,12 +200,12 @@ Breadcrumb
     margin-bottom: 2rem;
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
-    --bs-breadcrumb-item-color: #E5E9F0;
-    --bs-breadcrumb-item-active-color: #E5E9F070;
+    --bs-breadcrumb-item-color: #ffffff;
+    --bs-breadcrumb-item-active-color: #6E89A490;
 }
 
 .breadcrumb-item a {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
