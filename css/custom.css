@@ -163,30 +163,6 @@ a {
 }
 
 
-/*==============================
-================================
-Breadcrumb
-================================
-==============================*/
-
-.breadcrumb {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    --bs-breadcrumb-item-color: #E5E9F0;
-    --bs-breadcrumb-item-active-color: #E5E9F070;
-}
-
-.breadcrumb-item a {
-  text-decoration: none !important;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-    color: #E5E9F070 !important; /* separator color */
-}
-
-
 /*========
 Popover
 =========*/
@@ -213,7 +189,7 @@ Slider
 
 .scroll-wrapper-full {
   width: 100vw;
-  overflow: visible; /* important */
+  overflow: visible; 
   position: relative;
 }
 
@@ -230,7 +206,7 @@ Slider
 
 
 /*========
-Card
+Cards
 =========*/
 
 /* remove card default styles */
@@ -241,10 +217,9 @@ Card
     --bs-card-bg: none;     /* remove the default background color of Bootstrap card */
 }
 
-
-/*========
-Cards
-=========*/
+.card-body {
+    height: 100px;              /* fixed height for all card bodies */
+}
 
 .project-card {
     flex: 0 0 auto;
@@ -259,7 +234,6 @@ Cards
     }
 }
 
-/* card */
 .project-card-cover {
     position: relative; /* make overlay positionable */
     overflow: hidden;   /* hide anything outside card bounds */
@@ -298,33 +272,4 @@ Cards
 /* Optional: slight zoom effect on image when hover */
 .project-card-cover:hover img {
     transform: scale(1.05);
-}
-
-
-/*========
-Project 
-navigation
-=========*/
-
-.project-box {
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.project-box:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.nav-next .lucide {
-    transition: transform 0.3s ease;
-}
-.nav-next:hover .lucide {
-    transform: translateX(4px);
-}
-
-.nav-previous .lucide {
-    transition: transform 0.3s ease;
-}
-.nav-previous:hover .lucide {
-    transform: translateX(-4px);
 }

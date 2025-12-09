@@ -165,17 +165,78 @@ Project cover image
 ================================
 ==============================*/
 
+.project-img-wrapper-full {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
 
-.project-img {
+.project-bg {
   width: 100%;
   height: 360px;
-  background-color: #5C6B91; 
+  background-color: #6E89A4; 
   display: flex;
   justify-content: center; /* centers horizontally */
   align-items: center;     /* centers vertically */
 }
 
-.project-img img {
+.project-bg img {
   max-height: 100%;   /* optional: ensures image fits height */
   max-width: 100%;    /* optional: prevents overflow */
+}
+
+
+/*==============================
+================================
+Breadcrumb
+================================
+==============================*/
+
+.breadcrumb {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    --bs-breadcrumb-item-color: #E5E9F0;
+    --bs-breadcrumb-item-active-color: #E5E9F070;
+}
+
+.breadcrumb-item a {
+  text-decoration: none !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #E5E9F070 !important; /* separator color */
+}
+
+
+/*========
+Previous and next 
+roject navigation
+=========*/
+
+.project-box {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-box:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.nav-next .lucide {
+    transition: transform 0.3s ease;
+}
+.nav-next:hover .lucide {
+    transform: translateX(4px);
+}
+
+.nav-previous .lucide {
+    transition: transform 0.3s ease;
+}
+.nav-previous:hover .lucide {
+    transform: translateX(-4px);
 }
