@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
-
 /*==============================
 ================================
 Page Display
@@ -26,19 +25,20 @@ Fonts
 /* project title in project page */
 h1 { 
     font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 40px;
-    line-height: normal;
+    line-height: 1.5;
     color: #ffffff;
 }
 
 /* emphasized text in project page */
 h3 {
     font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
+    line-height: 1.5;
     line-height: normal;
-    color: #fff;
+    color: #ffffff;
 }
 
 
@@ -46,25 +46,27 @@ h3 {
 h5 {
     font-family: 'DM Sans', sans-serif;
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 300;
+    line-height: 1.5;
     color: #ffffff;
 }
 
 /* body text */
 p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #E5E9F0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #e8ebee;
 }
 
 /* caption of image */
 #caption {
     font-family: 'DM Mono', monospace;
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 300;
+    font-size: 11px;
     line-height: normal;
-    color: #E5E9F0;
+    color: #e8ebee;
     opacity: .6;
     text-align: center;
     text-transform: uppercase;
@@ -83,10 +85,11 @@ Buttons
 .primary-btn { 
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
+    font-weight: 300;
     padding: 10px 20px;
     border: none;
     color: #000000;
-    border-radius: 0px;
+    border-radius: 80px;
     background: linear-gradient(to bottom right, #ffffff, #ffffff);
     height: max-content;
     transition: background 0.4s ease;
@@ -94,7 +97,7 @@ Buttons
 /* primary button hover effect */
 .primary-btn:hover {
     color: #000000;
-    background: linear-gradient(to bottom right, #ffffff, #ffffff);
+    background: linear-gradient(to bottom right, #ffffff, #ffffff90);
 }
 .primary-btn .lucide {
     transition: transform 0.3s ease;
@@ -107,10 +110,11 @@ Buttons
 .secondary-btn { 
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
+    font-weight: 300;
     padding: 10px 20px;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     color: #ffffff;
-    border-radius: 0px;
+    border-radius: 80px;
     background: transparent;
     height: max-content;
     transition: background 0.4s ease;
@@ -132,10 +136,11 @@ Buttons
 .tertiary-btn { 
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
+    font-weight: 300;
     padding: 10px 20px;
     border: none;
     color: #ffffff;
-    border-radius: 0px;
+    border-radius: 80px;
     background: transparent;
     height: max-content;
     transition: background 0.4s ease;
@@ -154,7 +159,7 @@ Buttons
 
 /* remove link style */
 a {
-    color: #ffffff;
+    color: #6E89A4;
 }
 
 
@@ -207,23 +212,20 @@ Slider
 =========*/
 
 .scroll-wrapper-full {
-width: 100vw; /* full screen width */
-position: relative;
-left: 50%;
-right: 50%;
-margin-left: -50vw; /* break out of container */
-margin-right: -50vw;
-overflow: hidden;
+  width: 100vw;
+  overflow: visible; /* important */
+  position: relative;
 }
 
 .scroll-row {
-display: flex;
-flex-wrap: nowrap;
-gap: 1rem;
-overflow-x: auto;
-padding: 1rem;
-scroll-behavior: smooth;
--webkit-overflow-scrolling: touch;
+    padding-inline-start: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    align-items: flex-end; /* align all cards at the bottom */
 }
 
 
