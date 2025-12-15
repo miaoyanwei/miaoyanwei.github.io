@@ -188,6 +188,13 @@ Project cover image
     max-width: 100%;    /* optional: prevents overflow */
 }
 
+.project-title-wrapper {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
 
 /*==============================
 ================================
@@ -196,6 +203,7 @@ Breadcrumb
 ==============================*/
 
 .breadcrumb {
+    font-weight: 300;
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-family: 'DM Sans', sans-serif;
@@ -210,6 +218,12 @@ Breadcrumb
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: #E5E9F070 !important; /* separator color */
+}
+
+
+.project-title-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
 }
 
 

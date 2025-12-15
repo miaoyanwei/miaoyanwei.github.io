@@ -22,32 +22,22 @@ Fonts
 ==============================*/
 
 
-/* project title in project page */
+/* project title */
 h1 { 
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 28px;
     line-height: 1.5;
     color: #ffffff;
 }
 
-/* emphasized text in project page */
-h3 {
+/* project subtitle */
+h2 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.5;
     line-height: normal;
-    color: #ffffff;
-}
-
-
-/* paragraph title in home page */
-h5 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 1.25;
     color: #ffffff;
 }
 
@@ -57,6 +47,15 @@ p {
     font-size: 14px;
     font-weight: 300;
     line-height: 1.5;
+    color: #e8ebee;
+}
+
+/* small text */
+small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: normal;
     color: #e8ebee;
 }
 
