@@ -196,7 +196,7 @@ Project cover image
 
 /* Bottom title */
 .project-title-wrapper {
-    padding-bottom: 32px; /* space from bottom */
+    padding-bottom: 0px; /* space from bottom */
 }
 
 
