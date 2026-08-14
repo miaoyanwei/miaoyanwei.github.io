@@ -2,35 +2,33 @@
   "entries": [
   {
     "category": "Greeting",
-    "question": "Hi, hello, how are you?",
-    "answer": "Hello, hallo, nihao, servus, bonjour, ciao, konnichiwa, selamat, sawadeekap, xin chào!"
+    "question": "Hi. How are you?",
+    "answer": "Hello, servus, nihao!"
   },
   {
     "category": "About",
-    "question": "Tell me about Miao.",
-    "answer": "I’m Miao, a user experience designer with 7+ years of experience and a solid background in design. I craft digital experiences that flow."
+    "question": "Who are you? Tell me more about you and your general background.",
+    "answer": "I’m Miao, a user experience designer with many many many years of professional experience and a solid educational background in design. Now I craft digital experiences that flow."
   },
   {
     "category": "Skill",
-    "question": "What tools does Miao use?",
-    "answer": "I use a lot of tools for different purposes. My best design and prototyping companion is Figma, I also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing. I'm also a heavy user of LLMs."
+    "question": "What tools, techniques and technologies are you familiar with?",
+    "answer": "I use a lot of tools for different purposes. My best design and prototyping companion is Figma, I also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing. Like everybody now, I'm also a heavy user of LLMs, not very addicted tho."
   },
   {
     "category": "About",
-    "question": "Where is Miao based?",
+    "question": "Where are you based?",
     "answer": "Currently I’m in Berlin. However, sometimes I run away from German winter for some vitamin D. Then you can find me in Shenzhen, Bangkok, or other sunnier places."
   },
   {
-    "question": "How much UX experience does Miao have?",
-    "answer": "Miao has more than six years of experience in UX design."
+    "category": "Education",
+    "question": "What is your educational background?",
+    "answer": "I have a Master of Science in Human Computer Interaction from the Siegen University, Germany (2023), and another Master of Arts in Interaction Design from Loughborough University, UK (2016). I also have a Bachelor of Engineering in Industrial Design from Guangdong Ocean University, China (2014)."
   },
   {
-    "question": "What is Miao's professional background?",
-    "answer": "Miao has worked across UX and product design, including startup product development, mobile applications, web and SaaS, HCI research, service design and interaction design."
-  },
-  {
-    "question": "Where are Miao's recent projects?",
-    "answer": "I’m working at Law & Innovation, a Berlin start-up company. We are a small team background in legal, tech, and design. We are building a novel product ecosystem from 0 to 1. Prior, I was an in-house designer at uCloudlink, a telecommunication company in Shenzhen. I led the GlocalMe mobile applications and their derivatives, I also had hands-on experience with web and SaaS. I was involved in some short-term projects too. At Fraunhofer ISI, I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems. I consulted on user-centred design approaches to the high performance comupting team at Max Planck Institute for Meteorology. I also assessed and identified UX and cultural issues for Ableton ’s checkout flows together with great people from Favorite Medium. Other than above, being heavily benefited from generous designers, I also want to contribute to open source community. Recently, I’ve been working on Giraffe, a Figma plugin for exporting frames as GIFs, with @Raphael. He’s the real code master, I’m more like vibe coding. Together with him, we are building Cow Defense as well, a small tower defense game. I’m responsible for all the visual elements. Meanwhile, I’ve just started to manage @Miaoblabla, an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. This will be forever an on-going project."
+    "category": "Experience",
+    "question": "What are your professional experiences?",
+    "answer": "I’m working at Law & Innovation, a Berlin start-up company. We are a small team background in legal, tech, and design. We are building a novel product ecosystem from 0 to 1. Prior, I was an in-house designer at uCloudlink, a telecommunication company in Shenzhen. I led the GlocalMe mobile applications and their derivatives, I also had hands-on experience with web and SaaS. I was involved in some short-term projects too. At Fraunhofer ISI, I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems. I consulted on user-centred design approaches to the high performance comupting team at Max Planck Institute for Meteorology. I also assessed and identified UX and cultural issues for Ableton ’s checkout flows together with great people from Favorite Medium. Other than above, being heavily benefited from generous designers, I also try to contribute to open source community. Recently, I’ve been working on Giraffe, a Figma plugin for exporting frames as GIFs, with @Raphael. He’s the real code master, I’m more like vibe coding. Together with him, we are building Cow Defense as well, a small tower defense game. I’m responsible for all the visual elements. Meanwhile, I’ve just started to manage @Miaoblabla, an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. This will be forever an on-going project."
   },
   {
     "question": "What is Miao doing at Law & Innovation?",
