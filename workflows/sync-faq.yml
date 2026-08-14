@@ -1,0 +1,25 @@
+name: Sync FAQ entries
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'qna.json'
+  workflow_dispatch: {}   # lets you trigger it manually too
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Push qna.json to FAQ server
+        env:
+          FAQ_URL: https://r.eaglegang.de
+          FAQ_SET_ID: ${{ vars.FAQ_SET_ID }}
+          API_KEY: ${{ secrets.FAQ_API_KEY }}
+        run: |
+          curl -sf -X PUT "$FAQ_URL/faq/$FAQ_SET_ID/entries" \
+            -H "X-API-Key: $API_KEY" \
+            -H "Content-Type: application/json" \
+            --data-binary @qna.json
