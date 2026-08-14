@@ -1,0 +1,263 @@
+{
+  "entries": [
+  {
+    "category": "Greeting",
+    "question": "Hi, hello, how are you?",
+    "answer": "Hello, hallo, nihao, servus, bonjour, ciao, konnichiwa, selamat, sawadeekap, xin chào!"
+  },
+  {
+    "category": "About",
+    "question": "Tell me about Miao.",
+    "answer": "I’m Miao, a user experience designer with 7+ years of experience and a solid background in design. I craft digital experiences that flow."
+  },
+  {
+    "category": "Skill",
+    "question": "What tools does Miao use?",
+    "answer": "I use a lot of tools for different purposes. My best design and prototyping companion is Figma, I also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing. I'm also a heavy user of LLMs."
+  },
+  {
+    "category": "About",
+    "question": "Where is Miao based?",
+    "answer": "Currently I’m in Berlin. However, sometimes I run away from German winter for some vitamin D. Then you can find me in Shenzhen, Bangkok, or other sunnier places."
+  },
+  {
+    "question": "How much UX experience does Miao have?",
+    "answer": "Miao has more than six years of experience in UX design."
+  },
+  {
+    "question": "What is Miao's professional background?",
+    "answer": "Miao has worked across UX and product design, including startup product development, mobile applications, web and SaaS, HCI research, service design and interaction design."
+  },
+  {
+    "question": "Where are Miao's recent projects?",
+    "answer": "I’m working at Law & Innovation, a Berlin start-up company. We are a small team background in legal, tech, and design. We are building a novel product ecosystem from 0 to 1. Prior, I was an in-house designer at uCloudlink, a telecommunication company in Shenzhen. I led the GlocalMe mobile applications and their derivatives, I also had hands-on experience with web and SaaS. I was involved in some short-term projects too. At Fraunhofer ISI, I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems. I consulted on user-centred design approaches to the high performance comupting team at Max Planck Institute for Meteorology. I also assessed and identified UX and cultural issues for Ableton ’s checkout flows together with great people from Favorite Medium. Other than above, being heavily benefited from generous designers, I also want to contribute to open source community. Recently, I’ve been working on Giraffe, a Figma plugin for exporting frames as GIFs, with @Raphael. He’s the real code master, I’m more like vibe coding. Together with him, we are building Cow Defense as well, a small tower defense game. I’m responsible for all the visual elements. Meanwhile, I’ve just started to manage @Miaoblabla, an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. This will be forever an on-going project."
+  },
+  {
+    "question": "What is Miao doing at Law & Innovation?",
+    "answer": "At Law & Innovation, Miao works on a novel product ecosystem from 0 to 1, including the Consenter ecosystem and related privacy and data-protection experiences."
+  },
+  {
+    "question": "What is Consenter?",
+    "answer": "Consenter is a consent-management and privacy ecosystem intended to make digital consent more user-friendly while helping businesses and technology providers address privacy and compliance requirements."
+  },
+  {
+    "question": "What was Miao's role in Consenter?",
+    "answer": "Miao is part of the PRD team at Law & Innovation and contributes to the design of the Consenter ecosystem, including experiences around consent, privacy and data protection."
+  },
+  {
+    "question": "What is the Consent Agent?",
+    "answer": "The Consent Agent is a consumer-facing part of the Consenter ecosystem that allows people to give and manage consent across services and contexts."
+  },
+  {
+    "question": "What problem does Consenter try to solve?",
+    "answer": "Consenter addresses the difficulty of making meaningful privacy and consent decisions in digital services, including the problem of consent fatigue and the tension between user expectations, data-driven services, businesses and regulators."
+  },
+  {
+    "question": "What is Miao's previous industry experience?",
+    "answer": "Before Law & Innovation, Miao worked as an in-house designer at uCloudlink, a telecommunications company in Shenzhen."
+  },
+  {
+    "question": "What did Miao do at uCloudlink?",
+    "answer": "At uCloudlink, Miao led the GlocalMe mobile applications and their derivatives and also gained hands-on experience with web and SaaS products."
+  },
+  {
+    "question": "What is GlocalMe?",
+    "answer": "GlocalMe is a mobile connectivity service. Miao's portfolio describes the GlocalMe app as helping users buy data and manage devices to stay connected through GlocalMe mobile WiFi."
+  },
+  {
+    "question": "What is Miao's experience with mobile apps?",
+    "answer": "Miao led the GlocalMe mobile applications and related products at uCloudlink and therefore has substantial experience designing mobile product experiences."
+  },
+  {
+    "question": "Does Miao have web and SaaS experience?",
+    "answer": "Yes. Miao describes having hands-on experience with both web and SaaS products, in addition to mobile applications."
+  },
+  {
+    "question": "What did Miao do at Fraunhofer ISI?",
+    "answer": "At Fraunhofer ISI, Miao developed a web tool providing personalised recommendations and explanations for optimising household energy systems."
+  },
+  {
+    "question": "What was Miao's master's thesis about?",
+    "answer": "Miao's 2023 master's thesis at the University of Siegen was titled 'Filling the Information Gap: A Design Case Study of A Recommender for Home Energy System.' It explored the design of a recommender for household energy systems."
+  },
+  {
+    "question": "What degree did Miao complete at the University of Siegen?",
+    "answer": "Miao completed a Master of Science in Human-Computer Interaction at the University of Siegen in 2023."
+  },
+  {
+    "question": "What was the focus of Miao's HCI thesis?",
+    "answer": "The thesis focused on designing a recommender for home energy systems and on addressing information gaps between users and complex energy-system decisions."
+  },
+  {
+    "question": "What did Miao do for the Max Planck Institute for Meteorology?",
+    "answer": "Miao consulted on user-centred design approaches for the high-performance computing team at the Max Planck Institute for Meteorology."
+  },
+  {
+    "question": "What did Miao do for Ableton?",
+    "answer": "Miao worked with Favorite Medium to assess Ableton's checkout flows for APEC markets, identifying UX and cultural issues."
+  },
+  {
+    "question": "What was the Ableton project about?",
+    "answer": "The Ableton project was a heuristic evaluation of the website checkout flow for APEC markets, with a focus on UX and cultural issues."
+  },
+  {
+    "question": "Has Miao worked on international products?",
+    "answer": "Yes. Miao has worked on products and projects involving international markets, including Ableton's APEC checkout flows and GlocalMe products."
+  },
+  {
+    "question": "What projects are shown in Miao's portfolio?",
+    "answer": "The portfolio currently highlights Consenter, GlocalMe, FLEX, a Pepper storytelling game, an Ableton checkout evaluation, and an autonomous-driving interaction project."
+  },
+  {
+    "question": "What is the FLEX project?",
+    "answer": "FLEX is a design case study of a recommender for home energy systems, presented as 'Filling the information gap.'"
+  },
+  {
+    "question": "What is the Pepper project?",
+    "answer": "The Pepper project, titled 'Erinnern Sie sich noch?', explored a storytelling game with the Pepper robot for memory training among older adults."
+  },
+  {
+    "question": "Was the Pepper project published?",
+    "answer": "Yes. 'Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training' was published as a 2023 conference paper associated with EUSSET's InfraHEALTH conference."
+  },
+  {
+    "question": "Who were Miao's co-authors on the Pepper project?",
+    "answer": "The published work lists Sofía González-Villalobos, Yanwei Miao, Julia Renardias and Mehrbod Manavi as authors."
+  },
+  {
+    "question": "What was the goal of the Pepper storytelling game?",
+    "answer": "The project aimed to provide older adults with a meaningful memory-training activity while exploring how robot-based assistance could support nursing staff and caregivers."
+  },
+  {
+    "question": "What is Miao's autonomous-driving project?",
+    "answer": "It is a 2016 interaction-design project developed in collaboration with Jaguar Land Rover that explored how to enable trust in autonomous driving through interaction design."
+  },
+  {
+    "question": "Did Miao work with Jaguar Land Rover?",
+    "answer": "Yes. The portfolio and LinkedIn profile describe an autonomous-driving project developed in collaboration with Jaguar Land Rover in 2016."
+  },
+  {
+    "question": "What is Giraffe?",
+    "answer": "Giraffe is a Figma plugin that Miao is building with Raphael for exporting Figma frames as GIFs."
+  },
+  {
+    "question": "What is Miao's role in Giraffe?",
+    "answer": "Miao describes being more focused on the design and creative side of Giraffe, while Raphael is the main coding contributor."
+  },
+  {
+    "question": "What is Cow Defense?",
+    "answer": "Cow Defense is a small tower-defense game that Miao is building together with Raphael."
+  },
+  {
+    "question": "What is Miao's role in Cow Defense?",
+    "answer": "Miao is responsible for the visual elements of Cow Defense."
+  },
+  {
+    "question": "Does Miao contribute to open source?",
+    "answer": "Yes. Miao says they want to contribute to the open-source community and currently work on projects such as Giraffe and Cow Defense."
+  },
+  {
+    "question": "What is Miaoblabla?",
+    "answer": "Miaoblabla is an Instagram account Miao manages to collect psychology and behaviourism theories that are relevant to designers."
+  },
+  {
+    "question": "Why does Miao collect psychology and behaviourism theories for designers?",
+    "answer": "Miao's Miaoblabla project is intended to collect relevant psychology and behaviourism theories as an ongoing resource for designers."
+  },
+  {
+    "question": "What design background does Miao have?",
+    "answer": "Miao describes having a solid background in design alongside more than six years of UX experience. Public portfolio material also shows work spanning industrial design, interaction design and HCI."
+  },
+  {
+    "question": "What kind of products has Miao designed?",
+    "answer": "Miao has worked on mobile applications, web tools, SaaS products, consent and privacy services, energy-system recommenders, checkout experiences, robot interactions and autonomous-driving concepts."
+  },
+  {
+    "question": "Has Miao worked on B2B products?",
+    "answer": "Yes. Miao has experience with web and SaaS products and currently works on a product ecosystem serving multiple stakeholder groups at Law & Innovation."
+  },
+  {
+    "question": "Has Miao worked on B2C products?",
+    "answer": "Yes. Miao has designed consumer-facing experiences including GlocalMe mobile applications and consumer privacy and consent experiences within the Consenter ecosystem."
+  },
+  {
+    "question": "Does Miao have research experience?",
+    "answer": "Yes. Miao's work includes HCI research, a master's thesis based on a design case study, user research around energy-system recommendations, and published work involving interaction with older adults and Pepper robots."
+  },
+  {
+    "question": "Does Miao have user-centred design experience?",
+    "answer": "Yes. Miao has explicitly consulted on user-centred design approaches and has applied research and evaluation methods across product and HCI projects."
+  },
+  {
+    "question": "What does Miao seem to value in UX design?",
+    "answer": "Miao's portfolio emphasises digital experiences that flow, user-centred approaches, understanding information gaps, trust in interaction, and making complex digital services easier to understand and use."
+  },
+  {
+    "question": "What is Miao's approach to complex information?",
+    "answer": "A recurring theme in Miao's work is making complex information more understandable and actionable, as shown by the home-energy recommender and privacy and consent projects."
+  },
+  {
+    "question": "What is Miao's approach to trust?",
+    "answer": "Trust is a recurring design theme in Miao's work, including the autonomous-driving project and the Consenter ecosystem, where understandable privacy and consent experiences are intended to support user confidence."
+  },
+  {
+    "question": "What is Miao's connection to privacy UX?",
+    "answer": "Miao currently works on the Consenter ecosystem at Law & Innovation, which focuses on user-friendly privacy, consent and data-protection experiences."
+  },
+  {
+    "question": "What is Miao's experience with legal and regulatory products?",
+    "answer": "At Law & Innovation, Miao works in a cross-disciplinary environment involving legal, technology and design and contributes UX/UI work to privacy and data-protection products."
+  },
+  {
+    "question": "What kinds of teams has Miao worked with?",
+    "answer": "Miao has worked with multidisciplinary teams involving design, technology, legal, research and business stakeholders, including teams at Law & Innovation, uCloudlink, Fraunhofer ISI, Max Planck Institute for Meteorology and external consultancy collaborators."
+  },
+  {
+    "question": "Has Miao worked in startups?",
+    "answer": "Yes. Miao currently works at Law & Innovation, a Berlin startup building a novel product ecosystem from 0 to 1."
+  },
+  {
+    "question": "Has Miao worked in research institutions?",
+    "answer": "Yes. Miao has worked on projects involving Fraunhofer ISI, the Max Planck Institute for Meteorology and the University of Siegen."
+  },
+  {
+    "question": "What makes Miao's background interdisciplinary?",
+    "answer": "Miao's experience combines product and UX design with HCI research, user-centred design, technology, privacy and data protection, and work across domains such as telecommunications, energy, healthcare-related interaction and autonomous driving."
+  },
+  {
+    "question": "What are Miao's notable portfolio projects?",
+    "answer": "Notable projects include Consenter, GlocalMe, the FLEX home-energy recommender, the Pepper storytelling game, Ableton checkout evaluation, and an autonomous-driving interaction concept."
+  },
+  {
+    "question": "What is Miao currently interested in?",
+    "answer": "Miao's current work centres on digital products, privacy and consent, while side projects explore design tools, games, psychology and behaviourism for designers."
+  },
+  {
+    "question": "What does Miao do outside client or company work?",
+    "answer": "Miao works on open-source or side projects such as the Giraffe Figma plugin, Cow Defense game and Miaoblabla, an Instagram project about psychology and behaviourism for designers."
+  },
+  {
+    "question": "What languages does Miao speak?",
+    "answer": "Miao's public LinkedIn profile lists Chinese as a native or bilingual language, English at a professional level, German at a basic level, and Cantonese as fluent."
+  },
+  {
+    "question": "Where can I see Miao's portfolio?",
+    "answer": "Miao's portfolio is available at https://miaoyanwei.github.io/."
+  },
+  {
+    "question": "What is Miao's professional profile in one sentence?",
+    "answer": "Miao is a UX designer with more than six years of experience who combines product design, HCI research and a multidisciplinary background to create digital experiences that flow."
+  },
+  {
+    "question": "Why is Miao interested in UX?",
+    "answer": "Miao's portfolio shows a sustained interest in designing digital experiences that make complex information and interactions easier to understand, while creating value for both individuals and businesses."
+  },
+  {
+    "question": "What types of problems does Miao enjoy solving?",
+    "answer": "Miao's portfolio suggests a particular interest in complex problems involving information gaps, trust, privacy, consent, user decision-making and the interaction between people and emerging technology."
+  },
+  {
+    "question": "What is distinctive about Miao's portfolio?",
+    "answer": "The portfolio combines commercial product design with HCI research and experimental projects, spanning privacy, telecommunications, energy systems, social robotics, autonomous driving, design tools and games."
+  }
+]}

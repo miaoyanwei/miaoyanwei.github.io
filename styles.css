@@ -1,0 +1,223 @@
+:root{
+  --bg:#020202;
+  --bubble:#2D2D35;
+  --bubble-line:#2D2D35;
+  --accent:#B1D5E5;
+  --accent-dim:#B1D5E580;
+  --accent-soft:#B1D5E550;
+  --text:#ffffff;
+  --muted:#ffffff80;
+  --danger:#e2604f;
+  --radius-bubble:16px;
+  --radius-pill:999px;
+  --font-display:'Google Sans Flex', serif;
+  --font-body:'Google Sans Flex', sans-serif;
+  --font-mono:'Google Sans Code', monospace;
+}
+
+*{ box-sizing:border-box; }
+html,body{
+  margin:0;
+  height:100vh;
+  height:100dvh;
+  overscroll-behavior:none;
+}
+body{
+  background:var(--bg);
+  background-image: radial-gradient(circle at 50% 0%, #252C2F, var(--bg) 70%);
+  color:var(--text);
+  font-family:var(--font-body);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ---------- app shell ---------- */
+.app{
+  max-width:768px;
+  width:100%;
+  flex:1;
+  min-height:0;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  overflow:hidden;
+}
+
+/* ---------- header ---------- */
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  flex-shrink:0;
+  width:100%;
+  border-bottom:1px solid var(--bubble-line);
+}
+.brand{
+  font-family:var(--font-mono);
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+}
+.brand-name{
+  font-size:16px;
+  font-weight:400;
+  color:var(--accent);
+}
+.brand-version{
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* ---------- chat scroll ---------- */
+.chat-scroll{ 
+  flex:1; 
+  min-height:0; 
+  overflow-y:auto; 
+  padding:24px 24px 120px; /* extra space for the composer */ 
+  display:flex; 
+  flex-direction:column; 
+  gap:16px; 
+  scrollbar-width:none; 
+  -ms-overflow-style:none; 
+  overscroll-behavior:contain; 
+  position:relative; 
+} 
+.chat-scroll::-webkit-scrollbar{ 
+  display:none; 
+}
+.persona{
+  align-self:center;
+}
+.avatar-svg{
+  display:block;
+}
+
+.msg{ max-width:84%; display:flex; flex-direction:column; gap:16px; }
+.msg.user{ align-self:flex-end; align-items:flex-end; }
+.msg.bot{ align-self:flex-start; align-items:flex-start; }
+
+.bubble{
+  padding:12px 16px;
+  border-radius:var(--radius-bubble);
+  font-size:14.5px;
+  line-height:1.55;
+}
+.msg.bot .bubble{
+  background:var(--bubble);
+  color:var(--text);
+  border-bottom-left-radius:1px;
+}
+.msg.user .bubble{
+  background:var(--accent);
+  color:#000;
+  border-bottom-right-radius:1px;
+}
+
+/* quick-start suggestions rendered inside a bubble-styled box, like the reference "for example" block */
+.chip-box{
+  background:var(--bubble);
+  border-radius:var(--radius-bubble);
+  border-bottom-left-radius:1px;
+  padding:12px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.chip-box .chip-heading{
+  font-size:14.5px;
+  color:var(--text);
+}
+.chips-row{ display:flex; flex-wrap:wrap; gap:12px; }
+.chip{
+  font-family:var(--font-body);
+  font-size:13px;
+  text-align:left;
+  padding:8px 12px;
+  border-radius:var(--radius-pill);
+  cursor:pointer;
+  border:1px solid var(--accent);
+  background:transparent;
+  color:var(--text);
+  transition:background .15s ease;
+}
+.chip:hover{ background:var(--accent-soft); }
+
+/* ---------- typing indicator ---------- */
+.typing{
+  display:flex;
+  gap:4px;
+  align-items:center;
+  padding:6px 4px;
+}
+.typing span{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--accent);
+  animation:typingBounce 1.1s infinite ease-in-out;
+}
+.typing span:nth-child(2){ animation-delay:.15s; }
+.typing span:nth-child(3){ animation-delay:.3s; }
+@keyframes typingBounce{
+  0%, 60%, 100%{ transform:translateY(0); opacity:.5; }
+  30%{ transform:translateY(-4px); opacity:1; }
+}
+
+/* ---------- composer ---------- */ 
+.composer{ 
+  position:absolute; 
+  left:0; 
+  right:0; 
+  bottom:0; 
+  display:flex; 
+  gap:12px; 
+  align-items:center; 
+  padding:1px 20px calc(44px + env(safe-area-inset-bottom)); 
+  background:linear-gradient(to bottom, transparent 50%, var(--bg) 100%); 
+  backdrop-filter:blur(1px);
+  z-index:1; 
+} 
+.composer input{ 
+  flex:1; border:1px solid var(--bubble-line); 
+  background:var(--bubble); 
+  color:var(--text); 
+  border-radius:var(--radius-pill); 
+  padding:12px 16px; 
+  font-family:var(--font-body); 
+  font-size:14.5px; 
+} 
+.composer input::placeholder{ 
+  color:var(--muted); 
+} 
+.composer input:focus{ 
+  outline:none; 
+  border-color:var(--accent); 
+} 
+.composer button{ 
+  width:44px; 
+  height:44px; 
+  flex-shrink:0; 
+  border-radius:50%; 
+  border:none; 
+  background:var(--accent); 
+  color:var(--bg); 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  cursor:pointer; transition:background .15s ease; 
+} 
+.composer button svg {
+  width:22px;
+  height:22px;
+  stroke-width:1.5;
+}
+.composer button:hover{ 
+  background:var(--accent-dim); 
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ transition:none !important; animation:none !important; }
+}
