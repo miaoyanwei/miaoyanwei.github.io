@@ -12,9 +12,11 @@ const API_URL = "https://r.eaglegang.de/faq/2/ask";
 // Shown as clickable suggestions on first load. Edit freely —
 // these are just UI hints, not tied to any backend data anymore.
 const QUICK_START = [
-  "What's your background?",
-  "What have you been working on recently?",
-  "What tools do you use?"
+  "Who the hell are you?",
+  "What have you been working on?",
+  "How is your working flow like?",
+  "Why are you a designer?",
+  "Show me your doggy!"
 ];
 
 /* ---------- chat rendering ---------- */
@@ -116,7 +118,7 @@ async function handleUserInput(text){
     addBotMessage(answer);
   }catch(err){
     removeTypingIndicator();
-    addBotMessage("Sorry, I couldn't reach the server just now. Please try again in a moment.");
+    addBotMessage("Ops, I'm afraid my brain is not braining right now, ask me again later.");
     console.error("askAPI failed:", err);
   }
 }
@@ -138,5 +140,7 @@ document.getElementById("composerInput").addEventListener("keydown", (e)=>{
 });
 
 /* ---------- boot ---------- */
-addBotMessage("Ni hao, I know everything (not really) about Yanwei Miao. Ask me anything!");
+addBotMessage(
+  "Hi, I'm Miao (not really), a user experience designer, ask anything about me, my work, and my design philosophy!"
+);
 addQuickStartChips();
