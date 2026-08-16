@@ -14,7 +14,6 @@ const API_URL = "https://r.eaglegang.de/faq/2/ask";
 const QUICK_START = [
   "Who the hell are you?",
   "What have you been working on?",
-  "How is your working flow like?",
   "Why are you a designer?",
   "Show me your doggy!"
 ];

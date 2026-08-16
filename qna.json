@@ -8,7 +8,7 @@
   {
     "category": "About",
     "question": "Who are you? Tell me more about you and your general background.",
-    "answer": "I’m Miao, a user experience designer with many many many years of professional experience and a solid educational background in design. I craft digital experiences that flow."
+    "answer": "I’m Miao, a user experience designer with many many years of professional experience and a solid educational background in design. I craft digital experiences that flow."
   },
   {
     "category": "About",
@@ -23,7 +23,7 @@
   {
     "category": "Other",
     "question": "Show me your doggy!",
-    "answer": "My doggo is a lovely and fluffy chocolate toy poodle named Furball, I'll show you his pictures as soon as the API for images is ready!"
+    "answer": "My doggo is a fluffy chocolate toy poodle named Furball, he's a dumb dog, but he's brave and caring. I'll show you his pictures as soon as the API for images is ready!"
   },
   {
     "category": "Skill",
