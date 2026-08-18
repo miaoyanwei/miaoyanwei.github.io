@@ -15,7 +15,7 @@ const QUICK_START = [
   "Who the hell are you?",
   "What have you been working on?",
   "Why are you a designer?",
-  "Show me your doggy!"
+  "Show me your doggo!"
 ];
 
 /* ---------- chat rendering ---------- */
