@@ -58,12 +58,12 @@
   {
     "category": "Experience",
     "question": "How is your working flow like?",
-    "answer": "(Thinking...)"
+    "answer": "I always start with understanding the problem and the context, I believe a good design can only be made with a deep learning of the problem, the users and their needs. Then I explore the benchmarks, the competitors, and the relevant solutions. Brainstorming and ideation come afterwards. Then prototyping, testing, and iterating."
   },
   {
     "category": "Philosophy",
-    "question": "Why are you a designsr?",
-    "answer": "(Thinking...)"
+    "question": "What kind of designer are you?",
+    "answer": "I'm a designer who believes in user-centred approaches. I try to make complex information and interactions easier to understand. I also value the flow of digital experiences."
   },
   {
     "question": "What is Miao doing at Law & Innovation?",
