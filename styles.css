@@ -108,6 +108,7 @@ body{
   border-radius:var(--radius-bubble);
   font-size:14.5px;
   line-height:1.55;
+  white-space:pre-line; /* renders \n from qna.json/API answers as real line breaks */
 }
 .msg.bot .bubble{
   background:var(--bubble);
