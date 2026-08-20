@@ -18,7 +18,12 @@
   {
     "category": "About",
     "question": "Who are you? Tell me more about you and your general background.",
-    "answer": "I’m Yanwei Miao, a user experience designer with over 7 years of professional experience and a solid educational background in design.\n\n I'm familiar with common components, and also relevant psychological and behavioural theories. I craft digital experiences that flow."
+    "answer": "I’m Yanwei Miao, a user experience designer with over 7 years of professional experience and a solid educational background in design. I craft digital experiences that flow."
+  },
+  {
+    "category": "About",
+    "question": "What do you know about design?",
+    "answer": "I'm familiar with common components, design systems, relevant psychological and behavioural theories. I've also conducted qualitative research and usability testing."
   },
   {
     "category": "About",
@@ -38,7 +43,7 @@
   {
     "category": "Skill",
     "question": "What tools, techniques and technologies are you familiar with?",
-    "answer": "I use a lot of tools for different purposes. My best design and prototyping companion is Figma, I also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing. Like everybody now, I'm also a heavy user of LLMs, not very addicted tho."
+    "answer": "I use a lot of tools for different purposes. My best design and prototyping companion is Figma, I also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing. I do simple coding tasks as well, mainly frontend technologies like HTML, CSS, and JavaScript. Like everybody else, I'm a heavy user of LLMs."
   },
     {
     "category": "Education",
@@ -48,7 +53,7 @@
   {
     "category": "Experience",
     "question": "What have you been working on? What is your professional experience?",
-    "answer": "I’m working at Law & Innovation, a Berlin start-up company. We are a small team background in legal, tech, and design. We are building a novel product ecosystem from 0 to 1. Prior, I was an in-house designer at uCloudlink, a telecommunication company in Shenzhen. I led the GlocalMe mobile applications and their derivatives, I also had hands-on experience with web and SaaS. I was involved in some short-term projects too. At Fraunhofer ISI, I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems. I consulted on user-centred design approaches to the high performance comupting team at Max Planck Institute for Meteorology. I also assessed and identified UX and cultural issues for Ableton ’s checkout flows together with great people from Favorite Medium. Other than above, being heavily benefited from generous designers, I also try to contribute to open source community. Recently, I’ve been working on Giraffe, a Figma plugin for exporting frames as GIFs, with @Raphael. He’s the real code master, I’m more like vibe coding. Together with him, we are building Cow Defense as well, a small tower defense game. I’m responsible for all the visual elements. Meanwhile, I’ve just started to manage @Miaoblabla, an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. This will be forever an on-going project."
+    "answer": "I’m working at Law & Innovation, a Berlin start-up company. We are a small team background in legal, tech, and design. We are building a novel product ecosystem from 0 to 1.\nPrior, I was an in-house designer at uCloudlink, a telecommunication company in Shenzhen. I led the GlocalMe mobile applications and their derivatives, I also had hands-on experience with web and SaaS.\nI was involved in some short-term projects too. At Fraunhofer ISI, I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems. I consulted on user-centred design approaches to the high performance comupting team at Max Planck Institute for Meteorology.\n I also assessed and identified UX and cultural issues for Ableton ’s checkout flows together with great people from Favorite Medium.\nOther than above, being heavily benefited from generous designers, I also try to contribute to open source community. Recently, I’ve been working on Giraffe, a Figma plugin for exporting frames as GIFs, with Raphael. He’s the real code master, I’m more like vibe coding. Together with him, we are building Cow Defense as well, a small tower defense game. I’m responsible for all the visual elements.\n Meanwhile, I’ve just started to manage @Miaoblabla, an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. This will be forever an on-going project. \nThis mini chatbot is also one of my side projects, I’m trying to make it more useful and fun."
   },
   {
     "category": "Experience",
