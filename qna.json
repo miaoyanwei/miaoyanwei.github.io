@@ -13,12 +13,12 @@
   {
     "category": "Greeting",
     "question": "I'm good.",
-    "answer": "Glad to hear that, I don't actually care. Ask me something more useful."
+    "answer": "Glad to hear that, I don't actually care. Ask me something more useful.\n[[suggest: Show me your doggo! | What's your design philosophy? | Can I see your resume?]]"
   },
   {
     "category": "About",
     "question": "Who are you? Tell me more about you and your general background.",
-    "answer": "I’m Yanwei Miao, a user experience designer with over 7 years of professional experience and a solid educational background in design. I craft digital experiences that flow. \n[[file: Resume 2026.pdf | https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf]]"
+    "answer": "I’m Yanwei Miao, a user experience designer with over 7 years of professional experience and a solid educational background in design. I craft digital experiences that flow. \n[[file: Dummy PDF file.pdf | https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf]]"
   },
   {
     "category": "About",
