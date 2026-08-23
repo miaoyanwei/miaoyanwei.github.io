@@ -131,6 +131,18 @@ body{
   border-bottom-right-radius:1px;
 }
 
+.bubble-text{
+  display:block;
+  white-space:pre-line;
+}
+.bubble-image{
+  display:block;
+  width:100%;
+  max-width:786px;
+  border-radius:12px;
+  margin:8px 0;
+}
+
 /* quick-start suggestions rendered inside a bubble-styled box, like the reference "for example" block */
 .chip-box{
   background:var(--bubble);
@@ -159,6 +171,10 @@ body{
   transition:background .15s ease;
 }
 .chip:hover{ background:var(--accent-soft); }
+
+.chips-row--inline{
+  margin:8px 0;
+}
 
 /* ---------- typing indicator ---------- */
 .typing{
@@ -235,4 +251,90 @@ body{
 
 @media (prefers-reduced-motion: reduce){
   *{ transition:none !important; animation:none !important; }
+}
+
+/* ---------- lightbox ---------- */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(2,2,2,0.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:10;
+  cursor:zoom-out;
+}
+.lightbox[hidden]{
+  display:none;
+}
+.lightbox img{
+  max-width:90vw;
+  max-height:85vh;
+  border-radius:12px;
+  object-fit:contain;
+}
+.lightbox-close{
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:none;
+  background:var(--bubble);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:background .15s ease;
+}
+.lightbox-close:hover{
+  background:var(--accent-soft);
+}
+.lightbox-close svg{
+  width:22px;
+  height:22px;
+  stroke-width:1.5;
+}
+
+/* make it obvious the chat images are clickable */
+.bubble-image{
+  cursor:zoom-in;
+}
+
+.file-card{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  margin:8px 0;
+  border-radius:12px;
+  background:var(--bg);
+  border:1px solid var(--bubble-line);
+  text-decoration:none;
+  color:var(--text);
+  transition:border-color .15s ease;
+}
+.file-card:hover{
+  border-color:var(--accent);
+}
+.file-card-icon,
+.file-card-download{
+  display:flex;
+  color:var(--accent);
+  flex-shrink:0;
+}
+.file-card-icon svg,
+.file-card-download svg{
+  width:18px;
+  height:18px;
+  stroke-width:1.5;
+}
+.file-card-label{
+  flex:1;
+  font-size:13.5px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }

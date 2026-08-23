@@ -4,6 +4,12 @@
    whatever comes back.
    ========================================================= */
 
+/* ---------- image-aware message rendering ---------- */
+const IMAGE_MD = /!\[([^\]]*)\]\(([^)]+)\)/g;
+/* ---------- rich text pattern ---------- */
+const RICH_PATTERN = /!\[([^\]]*)\]\(([^)]+)\)|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]/g;
+
+
 lucide.createIcons();
 
 /* ---------- smiley loop ---------- */
@@ -188,3 +194,214 @@ addBotMessage(
   "Hi, I'm Miao (not really), a user experience designer with many many years of professional experience. Ask anything about me, my work, and my design philosophy!"
 );
 addQuickStartChips();
+
+/* ---------- image-aware message rendering ---------- */
+function renderRichContent(container, text){
+  const IMAGE_MD = /!\[([^\]]*)\]\(([^)]+)\)/g; // local, fresh each call
+  let lastIndex = 0;
+  let match;
+
+  while((match = IMAGE_MD.exec(text)) !== null){
+    // text before the image
+    const before = text.slice(lastIndex, match.index);
+    if(before.trim()){
+      const span = document.createElement("span");
+      span.className = "bubble-text";
+      span.textContent = before;
+      container.appendChild(span);
+    }
+
+    // the image itself
+    const img = document.createElement("img");
+    img.src = match[2];
+    img.alt = match[1] || "";
+    img.loading = "lazy";
+    img.className = "bubble-image";
+    container.appendChild(img);
+
+    lastIndex = IMAGE_MD.lastIndex;
+  }
+
+  // remaining text after the last image
+  const rest = text.slice(lastIndex);
+  if(rest.trim()){
+    const span = document.createElement("span");
+    span.className = "bubble-text";
+    span.textContent = rest;
+    container.appendChild(span);
+  }
+}
+
+function addBotMessage(text){
+  const wrap = document.createElement("div");
+  wrap.className = "msg bot";
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+  renderRichContent(bubble, text);
+  wrap.appendChild(bubble);
+  chatScroll.appendChild(wrap);
+  scrollToBottom();
+}
+
+/* ---------- lightbox ---------- */
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxClose = document.getElementById("lightboxClose");
+
+function openLightbox(src, alt){
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || "";
+  lightbox.hidden = false;
+}
+
+function closeLightbox(){
+  lightbox.hidden = true;
+  lightboxImg.src = ""; // stop loading/free memory
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", (e)=>{
+  if(e.target === lightbox) closeLightbox(); // click outside image also closes
+});
+document.addEventListener("keydown", (e)=>{
+  if(e.key === "Escape" && !lightbox.hidden) closeLightbox();
+});
+
+// event delegation: catches images even though they're added dynamically
+chatScroll.addEventListener("click", (e)=>{
+  const img = e.target.closest(".bubble-image");
+  if(img) openLightbox(img.src, img.alt);
+});
+
+
+function renderRichContent(container, text){
+  const pattern = new RegExp(RICH_PATTERN.source, "g"); // fresh instance per call
+  let lastIndex = 0;
+  let match;
+
+  while((match = pattern.exec(text)) !== null){
+    const before = text.slice(lastIndex, match.index);
+    if(before.trim()){
+      const span = document.createElement("span");
+      span.className = "bubble-text";
+      span.textContent = before;
+      container.appendChild(span);
+    }
+
+    if(match[1] !== undefined){
+      // image match: ![alt](url)
+      const img = document.createElement("img");
+      img.src = match[2];
+      img.alt = match[1] || "";
+      img.loading = "lazy";
+      img.className = "bubble-image";
+      container.appendChild(img);
+    } else {
+      // file match: [[file: label | url]]
+      const label = match[3].trim();
+      const url = match[4].trim();
+      container.appendChild(buildFileCard(label, url));
+    }
+
+    lastIndex = pattern.lastIndex;
+  }
+
+  const rest = text.slice(lastIndex);
+  if(rest.trim()){
+    const span = document.createElement("span");
+    span.className = "bubble-text";
+    span.textContent = rest;
+    container.appendChild(span);
+  }
+}
+
+function buildFileCard(label, url){
+  const card = document.createElement("a");
+  card.className = "file-card";
+  card.href = url;
+  card.download = label; // suggests filename, browser still respects Content-Disposition/type
+  card.target = "_blank";
+  card.rel = "noopener";
+
+  card.innerHTML = `
+    <span class="file-card-icon"><i data-lucide="file-text"></i></span>
+    <span class="file-card-label"></span>
+    <span class="file-card-download"><i data-lucide="download"></i></span>
+  `;
+  card.querySelector(".file-card-label").textContent = label;
+
+  return card;
+}
+
+/* ---------- suggested follow-ups ---------- */
+function extractSuggestions(text){
+  const match = text.match(/\[\[suggest:\s*([^\]]+)\]\]/i);
+  if(!match) return { text, suggestions: [] };
+
+  const suggestions = match[1].split("|").map(s => s.trim()).filter(Boolean);
+  const cleanText = (text.slice(0, match.index) + text.slice(match.index + match[0].length)).trim();
+  return { text: cleanText, suggestions };
+}
+
+function addChipBox(heading, questions){
+  const wrap = document.createElement("div");
+  wrap.className = "msg bot";
+  const box = document.createElement("div");
+  box.className = "chip-box";
+
+  if(heading){
+    const headingEl = document.createElement("div");
+    headingEl.className = "chip-heading";
+    headingEl.textContent = heading;
+    box.appendChild(headingEl);
+  }
+
+  const row = document.createElement("div");
+  row.className = "chips-row";
+  questions.forEach(question=>{
+    const chip = document.createElement("button");
+    chip.className = "chip";
+    chip.type = "button";
+    chip.textContent = question;
+    chip.addEventListener("click", ()=>handleUserInput(question));
+    row.appendChild(chip);
+  });
+  box.appendChild(row);
+
+  wrap.appendChild(box);
+  chatScroll.appendChild(wrap);
+  scrollToBottom();
+}
+
+function addBotMessage(text){
+  const { text: cleanText, suggestions } = extractSuggestions(text);
+
+  const wrap = document.createElement("div");
+  wrap.className = "msg bot";
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+  renderRichContent(bubble, cleanText);
+
+  if(suggestions.length){
+    bubble.appendChild(buildChipsRow(suggestions));
+  }
+
+  wrap.appendChild(bubble);
+  chatScroll.appendChild(wrap);
+  lucide.createIcons();
+  scrollToBottom();
+}
+
+function buildChipsRow(questions){
+  const row = document.createElement("div");
+  row.className = "chips-row chips-row--inline";
+  questions.forEach(question=>{
+    const chip = document.createElement("button");
+    chip.className = "chip";
+    chip.type = "button";
+    chip.textContent = question;
+    chip.addEventListener("click", ()=>handleUserInput(question));
+    row.appendChild(chip);
+  });
+  return row;
+}

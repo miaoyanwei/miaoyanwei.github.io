@@ -13,7 +13,7 @@
   {
     "category": "Greeting",
     "question": "I'm good.",
-    "answer": "Glad to hear that, I don't actually care. Ask me something more useful.\n[[suggest: Show me your doggo! | What's your design philosophy? | Can I see your resume?]]"
+    "answer": "Glad to hear that, I don't actually care. Ask me something more useful.\n[[suggest: What projects have you worked on? | What's your design workflow? | Can I see your dog's picture?]]"
   },
   {
     "category": "About",
