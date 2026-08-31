@@ -212,8 +212,9 @@ body{
   z-index:1; 
 } 
 .composer input{ 
-  flex:1; border:1px solid var(--bubble-line); 
+  flex:1; border:1px solid var(--accent-soft); 
   background:var(--bubble); 
+  opacity:0.8;
   color:var(--text); 
   border-radius:var(--radius-pill); 
   padding:12px 16px; 
