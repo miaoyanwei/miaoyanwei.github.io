@@ -17,8 +17,8 @@
   },
   {
     "category": "About",
-    "question": "Who are you? Tell me more about you and your general background.",
-    "answer": "I’m Yanwei Miao, a user experience designer with over 7 years of professional experience and a solid educational background in design. I craft digital experiences that flow.\n[[file: Dummy PDF file.pdf | https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf]]"
+    "question": "Who are you? Tell me about you.",
+    "answer": "I’m Yanwei Miao, a user experience designer with over 7 years of professional experience and a strong academic background in design. I have a good grounding in design principles and components, as well as psychology and behavioural theory. I take a user-centred approach to my work, and I’m keen on crafting digital experiences that flow. Here's my resume:\n[[file: Dummy PDF file.pdf | https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf]]"
   },
   {
     "category": "About",
@@ -41,9 +41,14 @@
     "answer": "I speak fluent English and Chinese, I also speak some German."
   },
   {
-    "category": "Other",
+    "category": "Dog",
     "question": "Show me your doggo!",
     "answer": "My Furball is a fluffy chocolate toy poodle, he's a dumb dog, but he's somewhat brave (reckless) and caring (meddling).\n![Furball](https://miaoyanwei.github.io/assets/furball.jpg)\n"
+  },
+  {
+    "category": "Dog",
+    "question": "Your dog is cute!",
+    "answer": "Thanks! You've got taste."
   },
   {
     "category": "Skill",
