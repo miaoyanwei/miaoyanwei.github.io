@@ -23,7 +23,7 @@ lucide.createIcons();
   </svg>`;
  
   const stage = document.getElementById('smiley');
- 
+  
   // sequence: [which svg, flipped?, hold duration in ms]
   const sequence = [
     { svg: SVG1, flip: false, duration: 4000 },

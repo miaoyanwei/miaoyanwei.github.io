@@ -77,8 +77,8 @@ body{
 
 /* ---------- smiley ---------- */
 #smiley {
-  width: min(180px, 180px);
-  height: min(180px, 180px);
+  width: min(160px, 160px);
+  height: min(160px, 160px);
   position: relative;
   align-self:center;
 }
