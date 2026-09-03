@@ -18,7 +18,7 @@
   {
     "category": "About",
     "question": "Who are you? What do you do? Tell me about you.",
-    "answer": "I’ve been a user experience designer since 2017. I craft digital experiences that flow.\nHere's my resume:\n[[file: Dummy PDF file.pdf | https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf]]"
+    "answer": "I’ve been a user experience designer since 2017. I craft digital experiences that flow. I will add some more later.\nHere's my resume:\n[[file: Dummy PDF file.pdf | https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf]]"
   },
   {
     "category": "About",
@@ -58,7 +58,7 @@
     {
     "category": "Education",
     "question": "What is your educational background?",
-    "answer": "I have ◆ a Master of Science in Human Computer Interaction from Siegen University, Germany (2023),\n◆ and another Master of Arts in Interaction Design from Loughborough University, UK (2016).\n◆ I also have a Bachelor of Engineering in Industrial Design from Guangdong Ocean University, China (2014)."
+    "answer": "I have\n◆ a Master of Science in Human Computer Interaction from Siegen University, Germany (2023),\n◆ another Master of Arts in Interaction Design from Loughborough University, UK (2016).\n◆ a Bachelor of Engineering in Industrial Design from Guangdong Ocean University, China (2014)."
   },
   {
     "category": "Experience",
