@@ -18,7 +18,7 @@
   {
     "category": "About",
     "question": "Who are you? What do you do? Tell me about you.",
-    "answer": "I’ve been a user experience designer since 2017. I craft digital experiences that flow. I will add some more later.\nHere's my resume:\n[[file: Dummy PDF file.pdf | https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf]]"
+    "answer": "I'm Yanwei Miao, I’ve been a user experience designer since 2017. I craft digital experiences that flow.\nHere's my resume:\n[[file: Yanwei Miao.pdf | https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf]]"
   },
   {
     "category": "About",
@@ -33,7 +33,7 @@
     {
     "category": "About",
     "question": "What's your contact information?",
-    "answer": "Here's my E-mail: myanwei@gmail.com."
+    "answer": "E-mail me: myanwei@gmail.com, if you've got some business to talk about. Or follow me on my Instagram: @Miaoblabla, if you want to see some fun stuff."
   },
   {
     "category": "Skill",
@@ -53,27 +53,27 @@
   {
     "category": "Skill",
     "question": "What tools, techniques and technologies are you familiar with?",
-    "answer": "I use a lot of tools for different purposes. My best design and prototyping companion is Figma, I also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing. I do simple coding tasks as well, mainly frontend technologies like HTML, CSS, and JavaScript. Like everybody else, I'm a heavy user of LLMs."
+    "answer": "I use a lot of tools for different purposes.\nMy best design and prototyping companion is Figma,\nI also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing.\nI do simple coding tasks as well, mainly frontend technologies like HTML, CSS, and JavaScript.\nLike everybody else nowadays, I'm also a heavy user of LLMs, other than coding, I also use them for research, brainstorming, ideation, and sometimes design critics. They can be very good assistants."
   },
-    {
+  {
     "category": "Education",
     "question": "What is your educational background?",
     "answer": "I have:\n◆ a Master of Science in Human Computer Interaction from Siegen University, Germany (2023),\n◆ another Master of Arts in Interaction Design from Loughborough University, UK (2016),\n◆ a Bachelor of Engineering in Industrial Design from Guangdong Ocean University, China (2014)."
   },
   {
     "category": "Experience",
-    "question": "What have you been working on? What is your professional experience?",
+    "question": "What have you been working on?",
     "answer": "I’m working at Law & Innovation, a Berlin start-up company. We are a small team background in legal, tech, and design. We are building a novel product ecosystem from 0 to 1, aimed at restoring public trust in data-driven innovation.\nPrior, I was an in-house designer at uCloudlink, a telecommunication company in Shenzhen. I led the GlocalMe mobile applications and their derivatives.\nI was involved in some short-term projects too.\nAt Fraunhofer ISI, I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems.\nI consulted on user-centred design approaches to the high performance comupting team at Max Planck Institute for Meteorology.\nI also assessed and identified UX and cultural issues for Ableton ’s checkout flows together with great people from Favorite Medium.\nOther than above, being heavily benefited from generous designers, I also try to contribute to open source community. Recently, I’ve been working on Giraffe, a Figma plugin for exporting frames as GIFs, with Raphael. He’s the real code master, I’m more like vibe coding. Together with him, we are building Cow Defense as well, a small tower defense game. I’m responsible for all the visual elements.\nMeanwhile, I’ve just started to manage @Miaoblabla, an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. This will be forever an on-going project.\nThis mini chatbot is another side projects of mine, I’m trying to make it more useful and fun.\nLearn projects:\n[[suggest: Consenter | GlocalMe | FLEX | Pepper | Ableton | Autonomous Driving]]"
   },
   {
     "category": "Experience",
-    "question": "How is your working flow like?",
-    "answer": "I always start with understanding the problem and the context, I believe a good design can only be made with a deep learning of the problem, the users and their needs. Then I explore the benchmarks, the competitors, and the relevant solutions. Brainstorming and ideation come afterwards. Then prototyping, testing, and iterating."
+    "question": "How is your work flow like?",
+    "answer": "I always start with understanding the problem, the users and their needs. I usually spend a good time making the design goals clear before I actually drafting anything. This is, in my opinion, a very efficent way to come up with a thought through design, that actually avoids unnecessary iterations, which in the end will save a lot of time.\nThen I'd like to design the interface within a user flow, this garantines a smooth and consistent experience."
   },
   {
     "category": "Philosophy",
     "question": "What kind of designer are you?",
-    "answer": "'Design is the art of creating order from chaos.' I'm a designer who believes in user-centred approaches. I try to make complex information and interactions easier to understand. I also value the flow of digital experiences."
+    "answer": "'Design is the art of creating order from chaos.' I find it so simple yet so profound.\nI always love to organise things, not only to just tidying up, but also putting every stuff at the most easily reachable places when needed. This process is my Zen moment. Similarly, I have my Zen moment while designing, and I believe in user-centred approaches, that is to let them easily find what they want at the right moment."
   },
   {
     "question": "What is Miao doing at Law & Innovation?",
