@@ -188,8 +188,9 @@
     "answer": "Miao describes being more focused on the design and creative side of Giraffe, while Raphael is the main coding contributor."
   },
   {
+    "category": "Experience",
     "question": "What is Cow Defense?",
-    "answer": "Cow Defense is a small tower-defense game that I'm building together with Raphael. Raphael is the main coding master, while I focus on all the visual elements. Here's a sneak peek of the game!\n![Cow Defense](https://miaoyanwei.github.io/assets/cow-defense.gif)"
+    "answer": "Cow Defense** is a small tower defence game I’m building with Raphael. He’d always wanted to make an old-school game, and apparently thought my drawings were “simple yet charming” enough to invite me onto the project. So Raphael does the coding magic, while I take care of all the visual bits. Here’s a little sneak peek of what we’re building!\n![Cow Defense](https://miaoyanwei.github.io/assets/cow-defense.gif)"
   },
   {
     "question": "Does Miao contribute to open source?",
