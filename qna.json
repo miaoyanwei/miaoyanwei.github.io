@@ -18,7 +18,7 @@
   {
     "category": "About",
     "question": "Who are you? What do you do? Tell me about you.",
-    "answer": "I'm Yanwei Miao, I’ve worked professionally as a User Experience Designer since 2017. I craft digital experiences that flow intuitively.\nHere's my resume:\n[[file: YanweiMiao-UX.pdf | https://miaoyanwei.github.io/assets/YanweiMiao-UX.pdf]]"
+    "answer": "I'm Yanwei Miao, I’ve worked professionally as a User Experience Designer since 2017. I craft digital experiences that flow intuitively.\n[[file: YanweiMiao-UX.pdf | https://miaoyanwei.github.io/assets/YanweiMiao-UX.pdf]]"
   },
   {
     "category": "About",
@@ -63,7 +63,7 @@
   {
     "category": "Experience",
     "question": "What have you been working on?",
-    "answer": "I’m working at Law & Innovation, a Berlin start-up company. We are a small team background in legal, tech, and design. We are building a novel product ecosystem from 0 to 1, aimed at restoring public trust in data-driven innovation.\nPrior, I was an in-house designer at uCloudlink, a telecommunication company in Shenzhen. I led the GlocalMe mobile applications and their derivatives.\nI was involved in some short-term projects too.\nAt Fraunhofer ISI, I developed a web tool, that provides personalised recommendations and explanations for optimising household energy systems.\nI consulted on user-centred design approaches to the high performance comupting team at Max Planck Institute for Meteorology.\nI also assessed and identified UX and cultural issues for Ableton ’s checkout flows together with great people from Favorite Medium.\nOther than above, being heavily benefited from generous designers, I also try to contribute to open source community. Recently, I’ve been working on Giraffe, a Figma plugin for exporting frames as GIFs, with Raphael. He’s the real code master, I’m more like vibe coding. Together with him, we are building Cow Defense as well, a small tower defense game. I’m responsible for all the visual elements.\nMeanwhile, I’ve just started to manage @Miaoblabla, an Instagram account where I try to collect relevant psychology and behaviourism theories for designers. This will be forever an on-going project.\nThis mini chatbot is another side projects of mine, I’m trying to make it more useful and fun.\nLearn projects:\n[[suggest: Consenter | GlocalMe | FLEX | Pepper | Ableton | Autonomous Driving]]"
+    "answer": "◆ Currently, I’m working as a UX designer at a Berlin-based start-up, where I’m helping build the Consenter ecosystem from 0 to 1.\n◆ Before that, I worked in-house at a telecommunications company, leading the design of GlocalMe and its mobile applications.\n◆ I’ve also worked on research and consultancy projects with organisations including Fraunhofer ISI, the Max Planck Institute for Meteorology, and Ableton.\n◆ Outside of work, I contribute to open-source projects, including Giraffe, a Figma plugin, Cow Defense, a small game project, and SmarterFAQ, an LLM-powered FAQ bot (which is what you’re talking to now).\n[[suggest: Consenter (not done) | GlocalMe (not done) | FLEX (not done) | Pepper (not done) | Ableton (not done) | Autonomous Driving (not done) | Giraffe (not done) | Cow Defense (not done) | SmarterFAQ (not done)]]"
   },
   {
     "category": "Experience",
