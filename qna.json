@@ -189,11 +189,7 @@
   },
   {
     "question": "What is Cow Defense?",
-    "answer": "Cow Defense is a small tower-defense game that Miao is building together with Raphael."
-  },
-  {
-    "question": "What is Miao's role in Cow Defense?",
-    "answer": "Miao is responsible for the visual elements of Cow Defense."
+    "answer": "Cow Defense is a small tower-defense game that I'm building together with Raphael. Raphael is the main coding master, while I focus on all the visual elements. Here's a sneak peek of the game!\n![Cow Defense](https://miaoyanwei.github.io/assets/cow-defense.gif)"
   },
   {
     "question": "Does Miao contribute to open source?",
