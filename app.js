@@ -138,6 +138,20 @@ function playLayer(ctx, master, layer, now){
     sourceNode = ctx.createOscillator();
     sourceNode.type = src.type || "sine";
     sourceNode.frequency.value = src.frequency || 440;
+
+    if(src.fm){
+      // simple FM: a modulator oscillator drives the carrier's frequency
+      const modOsc = ctx.createOscillator();
+      modOsc.type = "sine";
+      modOsc.frequency.value = (src.frequency || 440) * (src.fm.ratio ?? 1);
+
+      const modGain = ctx.createGain();
+      modGain.gain.value = src.fm.depth ?? 0;
+
+      modOsc.connect(modGain).connect(sourceNode.frequency);
+      modOsc.start(startTime);
+      modOsc.stop(startTime + estDuration + 0.15);
+    }
   }
 
   let lastNode = sourceNode;
@@ -162,39 +176,36 @@ function playLayer(ctx, master, layer, now){
 }
 
 function playSound(recipe){
-  if(!recipe || !Array.isArray(recipe.layers)) return;
+  if(!recipe) return;
+  // recipes come in two shapes: multi-layer ({layers:[...]}) or a
+  // single flat layer ({source, envelope, gain, ...}) — normalize both.
+  const layers = Array.isArray(recipe.layers) ? recipe.layers : [recipe];
+
   const ctx = getAudioContext();
   const master = ctx.createGain();
   master.gain.value = 1;
   master.connect(ctx.destination);
   const now = ctx.currentTime;
-  recipe.layers.forEach(layer => playLayer(ctx, master, layer, now));
+  layers.forEach(layer => playLayer(ctx, master, layer, now));
 }
 
 /* ---------- sound library ---------- */
-const notificationGyzgc = {
-  "layers": [
-    { "source": { "type": "noise", "color": "white" },
-      "envelope": { "attack": 0.001, "decay": 0.01282709173820562, "sustain": 0, "release": 0.004, "curve": "ramp" },
-      "gain": 0.088,
-      "filter": { "type": "bandpass", "frequency": 1477.6886544558777, "Q": 1.268 } },
-    { "source": { "type": "sine", "frequency": 603.4735632563705 },
-      "envelope": { "attack": 0.002, "decay": 0.05730557340703191, "sustain": 0, "release": 0.004, "curve": "ramp" },
-      "gain": 0.093,
-      "filter": { "type": "lowpass", "frequency": 1205.2161980471483, "Q": 0.7 } },
-    { "source": { "type": "sine", "frequency": 1226.7189944424913 },
-      "envelope": { "attack": 0.002, "decay": 0.046618365068774086, "sustain": 0, "release": 0.004, "curve": "ramp" },
-      "gain": 0.111, "delay": 0.060843077255329475,
-      "filter": { "type": "lowpass", "frequency": 1247.3467661901745, "Q": 0.7 } },
-    { "source": { "type": "sine", "frequency": 570.7346359562273 },
-      "envelope": { "attack": 0.002, "decay": 0.05173576497879957, "sustain": 0, "release": 0.004, "curve": "ramp" },
-      "gain": 0.111, "delay": 0.12168615451065895,
-      "filter": { "type": "lowpass", "frequency": 1158.1005833132347, "Q": 0.7 } },
-    { "source": { "type": "sine", "frequency": 1351.936418941284 },
-      "envelope": { "attack": 0.002, "decay": 0.2806000171103857, "sustain": 0, "release": 0.004, "curve": "ramp" },
-      "gain": 0.161, "delay": 0.18252923176598843,
-      "filter": { "type": "lowpass", "frequency": 1145.5199266366458, "Q": 0.7 } }
-  ]
+const notification3xc5w = {
+  "source": {
+    "type": "sine",
+    "frequency": 750.7493678058958,
+    "fm": {
+      "ratio": 1.9711876048091828,
+      "depth": 114.7923023043059
+    }
+  },
+  "envelope": {
+    "attack": 0,
+    "decay": 0.08564809763768039,
+    "sustain": 0,
+    "release": 0.03366587994272964
+  },
+  "gain": 0.131
 };
 
 /* ---------- chat rendering ---------- */
@@ -386,7 +397,7 @@ function addBotMessage(text){
   lucide.createIcons();
   scrollToBottom();
 
-  playSound(notificationGyzgc); // 🔔
+  playSound(notification3xc5w); // 🔔
 }
 
 /* ---------- API call ---------- */
