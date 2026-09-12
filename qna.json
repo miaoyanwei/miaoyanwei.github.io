@@ -30,10 +30,15 @@
     "question": "Where are you based?",
     "answer": "Currently I’m in Kolbermoor, a Bavarian Kabuff in Germany. However, sometimes I run away from German winter for some vitamin D. Then you can find me in Shenzhen, Bangkok, or other sunnier places."
   },
-    {
+  {
     "category": "About",
     "question": "What's your contact information?",
     "answer": "E-mail me: myanwei@gmail.com, if you've got some business to talk about. Or follow me on my Instagram: @Miaoblabla, if you want to see some fun stuff."
+  },
+  {
+    "category": "About",
+    "question": "Who is your boyfriend's brother?",
+    "answer": "Ach that lad is Stefan. Ask me something more useful please, Stefan."
   },
   {
     "category": "Skill",
