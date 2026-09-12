@@ -36,9 +36,14 @@
     "answer": "E-mail me: myanwei@gmail.com, if you've got some business to talk about. Or follow me on my Instagram: @Miaoblabla, if you want to see some fun stuff."
   },
   {
-    "category": "About",
+    "category": "Fun",
     "question": "Who is your boyfriend's brother?",
     "answer": "Ach that lad is Stefan. Ask me something more useful please, Stefan."
+  },
+  {
+    "category": "Fun",
+    "question": "Guess who I am?",
+    "answer": "You're Siggi I suppose. Ask me something more useful please, Siggi."
   },
   {
     "category": "Skill",
