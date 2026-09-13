@@ -486,6 +486,6 @@ chatScroll.addEventListener("click", (e)=>{
 
 /* ---------- boot ---------- */
 addBotMessage(
-  "Hi, I'm Miao (not really), a user experience designer. Ask anything about me, my work, and my design philosophy!"
+  "Hi, I'm Miao (not really), a User Experience Designer. Ask anything about me, my work, and my design philosophy!"
 );
 addQuickStartChips();
