@@ -18,7 +18,7 @@
   {
     "category": "About",
     "question": "Who are you? What do you do? Tell me about you.",
-    "answer": "I’m Yanwei Miao, and I’ve been working as a User Experience Designer since 2017.\nWhen I started, UX was still a relatively niche role in the IT industry. Since then, I’ve witnessed tools evolve, design styles shift, and recently, workflows change. Yet one thing has remained constant: the user-centred core of design. And that’s what I enjoy about being a UX designer: understanding complex systems in depth, making sense of them, and turning them into clear, simple, and intuitive experiences that address users' needs. Seeing users reach their goals with ease is what I find most rewarding.\n[[file: YanweiMiao-UX.pdf | https://miaoyanwei.github.io/assets/YanweiMiao-UX.pdf]]\n[[suggest: What's your educational background? | What's your professional experience? | What's your work flow like?]]"
+    "answer": "I’m Yanwei Miao, I’ve been working as a User Experience Designer since 2017.\nWhen I started, UX was still a relatively niche role in the IT industry. Since then, I’ve witnessed tools evolve, design styles shift, and recently, workflows change. Yet one thing has remained constant: the user-centred core of design. And that’s what I enjoy about being a UX designer: understanding complex systems in depth, making sense of them, and turning them into clear, simple, and intuitive experiences that address users' needs. Seeing users reach their goals with ease is what I, a people pleaser, find most rewarding.\n[[file: YanweiMiao-UX.pdf | https://miaoyanwei.github.io/assets/YanweiMiao-UX.pdf]]\n[[suggest: What's your educational background? | What's your professional experience? | What's your work flow like?]]"
   },
   {
     "category": "About",
@@ -58,7 +58,7 @@
   {
     "category": "Skill",
     "question": "What tools, techniques and technologies are you familiar with?",
-    "answer": "I use a lot of tools for different purposes.\nMy best design and prototyping companion is Figma,\nI also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing.\nI do simple coding tasks as well, mainly frontend technologies like HTML, CSS, and JavaScript.\nLike everybody else nowadays, I'm also a heavy user of LLMs, other than coding, I also use them for research, brainstorming, ideation, and sometimes design critics. They can be very good assistants."
+    "answer": "I use a lot of tools for different purposes.\nMy best design and prototyping companion is Figma,\nI also use Miro, Notion, etc. for brainstorming, planning, researching, and analysing.\nI do simple coding tasks as well, mainly frontend technologies like HTML, CSS, and JavaScript.\nAnd like everybody else nowadays, I'm also a heavy user of LLMs, other than coding, I also use them for research, brainstorming, ideation, and sometimes design critics. They can be very good assistants."
   },
   {
     "category": "Education",
@@ -177,8 +177,9 @@
     "answer": "The project aimed to provide older adults with a meaningful memory-training activity while exploring how robot-based assistance could support nursing staff and caregivers."
   },
   {
-    "question": "What is Miao's autonomous-driving project?",
-    "answer": "It is a 2016 interaction-design project developed in collaboration with Jaguar Land Rover that explored how to enable trust in autonomous driving through interaction design."
+    "category": "Experience",
+    "question": "What is the autonomous-driving project?",
+    "answer": "It is an interaction design project developed in collaboration with Jaguar Land Rover in 2016 that explored how to enable trust in autonomous driving through interaction design. Here's the booklet.\n[[file: AutonomousDriving.pdf | https://miaoyanwei.github.io/assets/jlr_booklet.pdf]]\nAnd this is a short video showing the interaction concept: [[video: AutonomousDriving.mp4 | https://www.behance.net/gallery/38197819/Autonomous-Driving]]"
   },
   {
     "question": "Did Miao work with Jaguar Land Rover?",
