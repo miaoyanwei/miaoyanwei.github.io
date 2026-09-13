@@ -162,7 +162,7 @@
   },
   {
     "question": "What is the Pepper project?",
-    "answer": "The Pepper project, titled 'Erinnern Sie sich noch?', explored a storytelling game with the Pepper robot for memory training among older adults."
+    "answer": "The Pepper project, titled 'Erinnern Sie sich noch?', explored a storytelling game with the Pepper robot for memory training among older adults.\n[Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training](https://doi.org/10.48340/ihc2023_pd026)"
   },
   {
     "question": "Was the Pepper project published?",
@@ -179,7 +179,7 @@
   {
     "category": "Experience",
     "question": "What is the autonomous-driving project?",
-    "answer": "It is a student project developed in collaboration with Jaguar Land Rover in 2016 that explored how to enable trust in autonomous driving. Here's the booklet.\n[[file: Autonomous Driving.pdf | https://miaoyanwei.github.io/assets/jlr_booklet.pdf]]"
+    "answer": "It is a student project developed in collaboration with Jaguar Land Rover in 2016 that explored how to enable trust in autonomous driving. Here's the booklet.\n[[file: Autonomous Driving.pdf | https://miaoyanwei.github.io/assets/jlr-booklet.pdf]]"
   },
   {
     "question": "Did Miao work with Jaguar Land Rover?",

@@ -5,7 +5,7 @@
    ========================================================= */
 
 /* ---------- rich text pattern ---------- */
-const RICH_PATTERN = /!\[([^\]]*)\]\(([^)]+)\)|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]/g;
+const RICH_PATTERN = /!\[([^\]]*)\]\(([^)]+)\)|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]|\[([^\]]+)\]\(([^)]+)\)/g;
 
 lucide.createIcons();
 
@@ -258,6 +258,22 @@ function buildFileCard(label, url){
   return card;
 }
 
+function buildLinkPill(label, url){
+  const pill = document.createElement("a");
+  pill.className = "link-pill";
+  pill.href = url;
+  pill.target = "_blank";
+  pill.rel = "noopener noreferrer";
+
+  pill.innerHTML = `
+    <span class="link-pill-label"></span>
+    <span class="link-pill-icon"><i data-lucide="arrow-up-right"></i></span>
+  `;
+  pill.querySelector(".link-pill-label").textContent = label;
+
+  return pill;
+}
+
 function renderRichContent(container, text){
   const pattern = new RegExp(RICH_PATTERN.source, "g"); // fresh instance per call
   let lastIndex = 0;
@@ -280,11 +296,16 @@ function renderRichContent(container, text){
       img.loading = "lazy";
       img.className = "bubble-image";
       container.appendChild(img);
-    } else {
+    } else if(match[3] !== undefined){
       // file match: [[file: label | url]]
       const label = match[3].trim();
       const url = match[4].trim();
       container.appendChild(buildFileCard(label, url));
+    } else {
+      // plain link match: [label](url)
+      const label = match[5].trim();
+      const url = match[6].trim();
+      container.appendChild(buildLinkPill(label, url));
     }
 
     lastIndex = pattern.lastIndex;
@@ -486,6 +507,6 @@ chatScroll.addEventListener("click", (e)=>{
 
 /* ---------- boot ---------- */
 addBotMessage(
-  "Hi, I'm Miao (not really), a User Experience Designer. Ask anything about me, my work, and my design philosophy!"
+  "Hi, I'm Miao (not really), a user experience designer. Ask anything about me, my work, and my design philosophy!"
 );
 addQuickStartChips();

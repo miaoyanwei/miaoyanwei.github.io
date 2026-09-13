@@ -339,3 +339,42 @@ body{
   text-overflow:ellipsis;
   white-space:nowrap;
 }
+
+/* ---------- link pill (plain markdown links: [label](url)) ---------- */
+.link-pill{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  width:max-content;
+  max-width:100%;
+  padding:10px 14px;
+  margin:8px 0;
+  border-radius:var(--radius-pill);
+  border:1px solid var(--accent-soft);
+  background:var(--bg);
+  color:var(--text);
+  text-decoration:none;
+  font-size:13.5px;
+  transition:border-color .15s ease, background .15s ease;
+}
+.link-pill:hover{
+  border-color:var(--accent);
+  background:var(--accent-soft);
+}
+.link-pill-label{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.link-pill-icon{
+  display:flex;
+  align-items:center;
+  color:var(--accent);
+  flex-shrink:0;
+}
+.link-pill-icon svg{
+  width:16px;
+  height:16px;
+  stroke-width:1.8;
+}
