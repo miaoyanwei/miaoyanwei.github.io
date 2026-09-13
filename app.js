@@ -5,7 +5,7 @@
    ========================================================= */
 
 /* ---------- rich text pattern ---------- */
-const RICH_PATTERN = /!\[([^\]]*)\]\(([^)]+)\)|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]|\[([^\]]+)\]\(([^)]+)\)/g;
+const RICH_PATTERN = /!\[([^\]]*)\]\(([^)]+)\)|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]|\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s)\]]+)/g;
 
 lucide.createIcons();
 
@@ -258,20 +258,35 @@ function buildFileCard(label, url){
   return card;
 }
 
-function buildLinkPill(label, url){
-  const pill = document.createElement("a");
-  pill.className = "link-pill";
-  pill.href = url;
-  pill.target = "_blank";
-  pill.rel = "noopener noreferrer";
+function deriveLinkLabel(url){
+  try{
+    const u = new URL(url);
+    const segments = u.pathname.split("/").filter(Boolean);
+    const last = segments[segments.length - 1];
+    if(last){
+      return decodeURIComponent(last).replace(/[-_]+/g, " ").replace(/\.\w+$/, "");
+    }
+    return u.hostname.replace(/^www\./, "");
+  }catch{
+    return url;
+  }
+}
 
-  pill.innerHTML = `
-    <span class="link-pill-label"></span>
-    <span class="link-pill-icon"><i data-lucide="arrow-up-right"></i></span>
+function buildLinkCard(label, url){
+  const card = document.createElement("a");
+  card.className = "file-card";
+  card.href = url;
+  card.target = "_blank";
+  card.rel = "noopener noreferrer";
+
+  card.innerHTML = `
+    <span class="file-card-icon"><i data-lucide="link"></i></span>
+    <span class="file-card-label"></span>
+    <span class="file-card-download"><i data-lucide="arrow-up-right"></i></span>
   `;
-  pill.querySelector(".link-pill-label").textContent = label;
+  card.querySelector(".file-card-label").textContent = label;
 
-  return pill;
+  return card;
 }
 
 function renderRichContent(container, text){
@@ -301,11 +316,15 @@ function renderRichContent(container, text){
       const label = match[3].trim();
       const url = match[4].trim();
       container.appendChild(buildFileCard(label, url));
-    } else {
+    } else if(match[5] !== undefined){
       // plain link match: [label](url)
       const label = match[5].trim();
       const url = match[6].trim();
-      container.appendChild(buildLinkPill(label, url));
+      container.appendChild(buildLinkCard(label, url));
+    } else if(match[7] !== undefined){
+      // bare URL, no markdown wrapping — strip trailing sentence punctuation
+      const rawUrl = match[7].replace(/[.,;:!?]+$/, "");
+      container.appendChild(buildLinkCard(deriveLinkLabel(rawUrl), rawUrl));
     }
 
     lastIndex = pattern.lastIndex;
