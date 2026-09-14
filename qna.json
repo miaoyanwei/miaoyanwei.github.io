@@ -18,7 +18,7 @@
   {
     "category": "About",
     "question": "Who are you? What do you do? Tell me about you.",
-    "answer": "I’m Yanwei Miao, I’ve been working as a User Experience Designer since 2017.\nWhen I started, UX was still a relatively niche role in the IT industry. Since then, I’ve witnessed tools evolve, design styles shift, and recently, workflows change. Yet one thing has remained constant: the user-centred core of design. And that’s what I enjoy about being a UX designer: understanding complex systems in depth, making sense of them, and turning them into clear, simple, and intuitive experiences that address users' needs. Seeing users reach their goals with ease is what I, a people pleaser, find most rewarding.\n[[file: YanweiMiao-UX.pdf | https://miaoyanwei.github.io/assets/YanweiMiao-UX.pdf]]\n[[suggest: What's your educational background? | What's your professional experience? | What's your work flow like?]]"
+    "answer": "I’m Yanwei Miao, I’ve been working as a User Experience Designer since 2017.\nWhen I started, UX was still a relatively niche role in the IT industry. Since then, I’ve witnessed tools evolve, design styles shift, and recently, workflows change. Yet one thing has remained constant: the user-centred core of design. And that’s what I enjoy about being a UX designer: understanding complex systems in depth, making sense of them, and turning them into clear, simple, and intuitive experiences that address users' needs. Seeing users reach their goals with ease is what I, a people pleaser, find most rewarding.\n[[file: YanweiMiao-UX.pdf | https://miaoyanwei.github.io/assets/YanweiMiao-UX.pdf]]\n[[suggest: What's your educational background? | What's your professional experience?]]"
   },
   {
     "category": "About",
@@ -78,7 +78,12 @@
   {
     "category": "Philosophy",
     "question": "What kind of designer are you?",
-    "answer": "'Design is the art of creating order from chaos.' I find it so simple yet so profound.\nI always love to organise things, not only to just tidying up, but also putting every stuff at the most easily reachable places when needed. This process is my Zen moment. Similarly, I have my Zen moment while designing, and I believe in user-centred approaches, that is to let them easily find what they want at the right moment. "
+    "answer": "'Design is the art of creating order from chaos.' I find it so simple yet so profound.\nI always love to organise things, not only to just tidying up, but also putting every stuff at the most easily reachable places when needed. This process is my Zen moment. Similarly, I have my Zen moment while designing."
+  },
+  {
+    "category": "Philosophy",
+    "question": "What is the challenge or problem of being a UX designer? Are you a people pleaser?",
+    "answer": "One challenge of being a UX designer is that we’re trained to be empathetic. We’re taught to be a good listener, understand people’s frustrations and needs, and avoid judging or dismissing their experiences. We try to see things from different perspectives so that we can design solutions that genuinely address users’ problems.\nBut I think that same quality can sometimes make designers vulnerable, especially in smaller companies. When you’re used to listening, understanding, and trying to accommodate different perspectives, it can be difficult to separate empathy from taking things personally or taking on responsibilities that are not yours.\nI’ve seen designers struggle with this, and I’m part of that group myself. I think one of the things we need to learn is how to stay empathetic and open while also maintaining professional boundaries. I’m still learning how to do that myself."
   },
   {
     "question": "What is Miao doing at Law & Innovation?",
