@@ -35,6 +35,11 @@
     "question": "What's your contact information?",
     "answer": "E-mail me: myanwei@gmail.com, if you've got some business to talk about. Or follow me on my Instagram: @Miaoblabla, if you want to see some fun stuff."
   },
+    {
+    "category": "About",
+    "question": "What's your weakness?",
+    "answer": "When I’m too excited, I sometimes want to dump all the ideas in my head at once, and I start talking a bit incoherently. Trust me, I’m just too excited and trying to express too many things in my second language at the same time. Which usually means I have a good bunch of exciting thoughts in my head. So please calm me down, or just give me a moment to organise myself. I’m usually quite self-aware of it."
+  },
   {
     "category": "Joke",
     "question": "Who is your boyfriend's brother?",
