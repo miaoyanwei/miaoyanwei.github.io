@@ -190,7 +190,7 @@
   {
     "category": "Experience",
     "question": "What is the autonomous-driving project?",
-    "answer": "It is a student project developed in collaboration with Jaguar Land Rover in 2016 that explored how to enable trust in autonomous driving. Here's the booklet.\n[[file: Autonomous Driving.pdf | https://miaoyanwei.github.io/assets/jlr-booklet.pdf]]\nAnd here's a small video showing the interaction concept.\n\n[[video: https://youtu.be/PbDz9k_xUNM?si=CJ2kQ43zCrSHH6GQ]]"
+    "answer": "It is a student project developed in collaboration with Jaguar Land Rover in 2016 that explored how to enable trust in autonomous driving. Here's the booklet.\nHere's a small video showing the interaction concept.\n[[video: https://youtu.be/PbDz9k_xUNM?si=CJ2kQ43zCrSHH6GQ]]\n[[file: Download Booklet.pdf | https://miaoyanwei.github.io/assets/jlr-booklet.pdf]]"
   },
   {
     "question": "Did Miao work with Jaguar Land Rover?",
