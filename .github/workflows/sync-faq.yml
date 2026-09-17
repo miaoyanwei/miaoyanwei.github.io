@@ -22,4 +22,4 @@ jobs:
           curl -sf -X PUT "$FAQ_URL/faq/$FAQ_SET_ID/entries" \
             -H "X-API-Key: $API_KEY" \
             -H "Content-Type: application/json" \
-            --data-binary @qna.json
+            --data-binary @data/qna.json
