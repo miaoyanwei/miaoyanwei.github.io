@@ -21,13 +21,14 @@ export const QUICK_START = [
 /**
  * Recognises rich content embedded in an answer string:
  *   ![alt](url)                    -> image
+ *   [[video: url]]                 -> video embed (YouTube/Vimeo link or direct file)
  *   [[file: label | url]]          -> downloadable file card
  *   [label](url)                   -> link card
  *   bare https://...                -> link card (auto-labelled)
  * See /data/sample-qna.json for worked examples of each.
  */
 export const RICH_PATTERN =
-  /!\[([^\]]*)\]\(([^)]+)\)|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]|\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s)\]]+)/g;
+  /!\[([^\]]*)\]\(([^)]+)\)|\[\[video:\s*([^\]]+?)\s*\]\]|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]|\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s)\]]+)/g;
 
 /** Marks the end of an answer with a row of follow-up chips: [[suggest: A | B | C]] */
 export const SUGGEST_PATTERN = /\[\[suggest:\s*([^\]]+)\]\]/i;

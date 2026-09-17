@@ -7,6 +7,42 @@
 
 import { RICH_PATTERN, SUGGEST_PATTERN } from "./config.js";
 
+/** Matches youtube.com/watch?v=ID, youtu.be/ID, and youtube.com/embed/ID. */
+const YOUTUBE_RE = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{6,})/i;
+/** Matches vimeo.com/ID (and player.vimeo.com/video/ID). */
+const VIMEO_RE = /vimeo\.com\/(?:video\/)?(\d+)/i;
+
+/** Builds a video embed for `url`: a responsive iframe for
+ *  recognised YouTube/Vimeo links, or a native <video> player
+ *  for anything else (assumed to be a direct video file). */
+function buildVideoEmbed(url){
+  const youtube = url.match(YOUTUBE_RE);
+  const vimeo = url.match(VIMEO_RE);
+
+  if(youtube || vimeo){
+    const wrap = document.createElement("div");
+    wrap.className = "video-embed";
+    const iframe = document.createElement("iframe");
+    iframe.src = youtube
+      ? `https://www.youtube.com/embed/${youtube[1]}`
+      : `https://player.vimeo.com/video/${vimeo[1]}`;
+    iframe.title = "Embedded video";
+    iframe.loading = "lazy";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    iframe.setAttribute("frameborder", "0");
+    wrap.appendChild(iframe);
+    return wrap;
+  }
+
+  const video = document.createElement("video");
+  video.className = "bubble-video";
+  video.controls = true;
+  video.preload = "metadata";
+  video.src = url;
+  return video;
+}
+
 function buildFileCard(label, url){
   const card = document.createElement("a");
   card.className = "file-card";
@@ -81,18 +117,21 @@ export function renderRichContent(container, text){
       img.className = "bubble-image";
       container.appendChild(img);
     } else if(match[3] !== undefined){
+      // video match: [[video: url]]
+      container.appendChild(buildVideoEmbed(match[3].trim()));
+    } else if(match[4] !== undefined){
       // file match: [[file: label | url]]
-      const label = match[3].trim();
-      const url = match[4].trim();
+      const label = match[4].trim();
+      const url = match[5].trim();
       container.appendChild(buildFileCard(label, url));
-    } else if(match[5] !== undefined){
+    } else if(match[6] !== undefined){
       // plain link match: [label](url)
-      const label = match[5].trim();
-      const url = match[6].trim();
+      const label = match[6].trim();
+      const url = match[7].trim();
       container.appendChild(buildLinkCard(label, url));
-    } else if(match[7] !== undefined){
+    } else if(match[8] !== undefined){
       // bare URL, no markdown wrapping — strip trailing sentence punctuation
-      const rawUrl = match[7].replace(/[.,;:!?]+$/, "");
+      const rawUrl = match[8].replace(/[.,;:!?]+$/, "");
       container.appendChild(buildLinkCard(deriveLinkLabel(rawUrl), rawUrl));
     }
 

@@ -44,6 +44,33 @@
   cursor:zoom-in; /* clickable to open the lightbox */
 }
 
+/* ---------- video embeds ---------- */
+.video-embed{
+  position:relative;
+  width:100%;
+  max-width:786px;
+  aspect-ratio:16 / 9;
+  margin:8px 0;
+  border-radius:12px;
+  overflow:hidden;
+  background:#000;
+}
+.video-embed iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+.bubble-video{
+  display:block;
+  width:100%;
+  max-width:786px;
+  border-radius:12px;
+  margin:8px 0;
+  background:#000;
+}
+
 /* ---------- chips (quick-start + suggested follow-ups) ---------- */
 .chip-box{
   background:var(--bubble);

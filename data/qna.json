@@ -171,6 +171,7 @@
     "answer": "FLEX is a design case study of a recommender for home energy systems, presented as 'Filling the information gap.'"
   },
   {
+    "category": "Experience",
     "question": "What is the Pepper project?",
     "answer": "The Pepper project, titled 'Erinnern Sie sich noch?', explored a storytelling game with the Pepper robot for memory training among older adults.\n[Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training](https://doi.org/10.48340/ihc2023_pd026)"
   },
@@ -189,7 +190,7 @@
   {
     "category": "Experience",
     "question": "What is the autonomous-driving project?",
-    "answer": "It is a student project developed in collaboration with Jaguar Land Rover in 2016 that explored how to enable trust in autonomous driving. Here's the booklet.\n[[file: Autonomous Driving.pdf | https://miaoyanwei.github.io/assets/jlr-booklet.pdf]]\nAnd here's a small video showing the interaction concept.\n[Autonomous Driving](https://www.behance.net/gallery/38197819/Autonomous-Driving)"
+    "answer": "It is a student project developed in collaboration with Jaguar Land Rover in 2016 that explored how to enable trust in autonomous driving. Here's the booklet.\n[[file: Autonomous Driving.pdf | https://miaoyanwei.github.io/assets/jlr-booklet.pdf]]\nAnd here's a small video showing the interaction concept.\n\n[[video: https://youtu.be/PbDz9k_xUNM?si=CJ2kQ43zCrSHH6GQ]]"
   },
   {
     "question": "Did Miao work with Jaguar Land Rover?",
