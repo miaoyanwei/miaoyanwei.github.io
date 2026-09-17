@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'qna.json'
+      - 'data/qna.json'
   workflow_dispatch: {}   # lets you trigger it manually too
 
 jobs:
