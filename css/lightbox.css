@@ -1,0 +1,49 @@
+/* =========================================================
+   lightbox.css — full-screen image overlay. Kept separate
+   since it's a top-level overlay rather than part of the
+   chat flow.
+   ========================================================= */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(2,2,2,0.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:10;
+  cursor:zoom-out;
+}
+.lightbox[hidden]{
+  display:none;
+}
+.lightbox img{
+  max-width:90vw;
+  max-height:85vh;
+  border-radius:12px;
+  object-fit:contain;
+}
+.lightbox-close{
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:none;
+  background:var(--bubble);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:background .15s ease;
+}
+.lightbox-close:hover{
+  background:var(--accent-soft);
+}
+.lightbox-close svg{
+  width:22px;
+  height:22px;
+  stroke-width:1.5;
+}

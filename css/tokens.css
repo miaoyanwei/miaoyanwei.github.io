@@ -1,0 +1,22 @@
+/* =========================================================
+   tokens.css — the single source of truth for colors, radii
+   and fonts. Change a value here to restyle the whole app;
+   nothing else should hardcode a color or font.
+   ========================================================= */
+
+:root{
+  --bg:#020202;
+  --bubble:#2D2D35;
+  --bubble-line:#2D2D35;
+  --accent:#B1D5E5;
+  --accent-dim:#B1D5E580;
+  --accent-soft:#B1D5E550;
+  --text:#ffffff;
+  --muted:#ffffff80;
+  --danger:#e2604f;
+  --radius-bubble:16px;
+  --radius-pill:999px;
+  --font-display:'Google Sans Flex', serif;
+  --font-body:'Google Sans Flex', sans-serif;
+  --font-mono:'Google Sans Code', monospace;
+}

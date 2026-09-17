@@ -1,0 +1,27 @@
+/* =========================================================
+   base.css — reset + document-level defaults. Requires
+   tokens.css to be loaded first.
+   ========================================================= */
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  height:100vh;
+  height:100dvh;
+  overscroll-behavior:none;
+}
+
+body{
+  background:var(--bg);
+  background-image: radial-gradient(circle at 50% 0%, #252C2F, var(--bg) 70%);
+  color:var(--text);
+  font-family:var(--font-body);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ transition:none !important; animation:none !important; }
+}

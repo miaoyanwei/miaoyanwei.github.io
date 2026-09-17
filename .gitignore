@@ -9,3 +9,7 @@
 .DS_Store
 .DS_Store?
 ._*
+
+# Support files #
+######################
+sample-qna.json

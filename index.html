@@ -21,17 +21,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
 
-<!-- styles -->
-<link rel="stylesheet" href="styles.css">
+<!-- styles: load order matters — tokens first, then base reset,
+     then layout, then the components that live inside it -->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/lightbox.css">
 </head>
-
-<!-- lightbox for images -->
-<div id="lightbox" class="lightbox" hidden>
-  <button type="button" id="lightboxClose" class="lightbox-close" aria-label="Close">
-    <i data-lucide="x"></i>
-  </button>
-  <img id="lightboxImg" src="" alt="">
-</div>
 
 <body>
 
@@ -69,10 +66,21 @@
 
 </div>
 
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>lucide.createIcons();</script>
+<!-- lightbox for images (moved inside <body> — it previously sat between
+     </head> and <body>, which browsers silently "fix" but which isn't
+     valid HTML) -->
+<div id="lightbox" class="lightbox" hidden>
+  <button type="button" id="lightboxClose" class="lightbox-close" aria-label="Close">
+    <i data-lucide="x"></i>
+  </button>
+  <img id="lightboxImg" src="" alt="">
+</div>
 
-<!-- data + logic, loaded last so all DOM elements above already exist -->
-<script src="app.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- app logic, as ES modules. main.js imports everything else and
+     boots the app; module scripts are deferred by default, so this
+     can stay at the end of <body> without extra attributes. -->
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
