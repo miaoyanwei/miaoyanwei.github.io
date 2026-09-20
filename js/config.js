@@ -25,10 +25,17 @@ export const QUICK_START = [
  *   [[file: label | url]]          -> downloadable file card
  *   [label](url)                   -> link card
  *   bare https://...                -> link card (auto-labelled)
- * See /data/sample-qna.json for worked examples of each.
+ * See BUBBLE_SPLIT_PATTERN below for splitting one answer into
+ * multiple bubbles, and /data/sample-qna.json for worked examples.
  */
 export const RICH_PATTERN =
   /!\[([^\]]*)\]\(([^)]+)\)|\[\[video:\s*([^\]]+?)\s*\]\]|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]|\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s)\]]+)/g;
 
 /** Marks the end of an answer with a row of follow-up chips: [[suggest: A | B | C]] */
 export const SUGGEST_PATTERN = /\[\[suggest:\s*([^\]]+)\]\]/i;
+
+/** Splits an answer into separate consecutive bubbles: [[bubble]] on
+ *  its own, anywhere in the text. Each side becomes its own message
+ *  bubble, rendered together as one grouped reply (one sound, one set
+ *  of trailing suggestion chips on the last bubble). */
+export const BUBBLE_SPLIT_PATTERN = /\s*\[\[bubble\]\]\s*/gi;

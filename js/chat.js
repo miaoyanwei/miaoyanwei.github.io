@@ -6,7 +6,7 @@
    ========================================================= */
 
 import { QUICK_START } from "./config.js";
-import { renderRichContent, extractSuggestions } from "./richContent.js";
+import { renderRichContent, extractSuggestions, splitBubbles } from "./richContent.js";
 import { playSound } from "./audioEngine.js";
 import { notification9agj9 } from "./soundLibrary.js";
 
@@ -88,23 +88,35 @@ export function addQuickStartChips(){
   scrollToBottom();
 }
 
-/** Renders a bot answer, including any embedded images/file cards/link
- *  cards and a trailing row of suggested follow-up questions. */
+/** Renders a bot answer as one or more consecutive bubbles — split the
+ *  text with `[[bubble]]` to send it as two (or more) grouped replies,
+ *  the way a person might follow up with a second message right after
+ *  the first. Each bubble gets its own rich content (images/file
+ *  cards/link cards); the trailing row of suggested follow-up
+ *  questions, if any, lands on the last bubble only. One notification
+ *  sound plays for the whole answer, not per bubble. */
 export function addBotMessage(text){
   const { text: cleanText, suggestions } = extractSuggestions(text);
+  const bubbleTexts = splitBubbles(cleanText);
 
-  const wrap = document.createElement("div");
-  wrap.className = "msg bot";
-  const bubble = document.createElement("div");
-  bubble.className = "bubble";
-  renderRichContent(bubble, cleanText);
+  bubbleTexts.forEach((bubbleText, index)=>{
+    const isFirst = index === 0;
+    const isLast = index === bubbleTexts.length - 1;
 
-  if(suggestions.length){
-    bubble.appendChild(buildChipsRow(suggestions));
-  }
+    const wrap = document.createElement("div");
+    wrap.className = isFirst ? "msg bot" : "msg bot msg--grouped";
+    const bubble = document.createElement("div");
+    bubble.className = "bubble";
+    renderRichContent(bubble, bubbleText);
 
-  wrap.appendChild(bubble);
-  chatScroll.appendChild(wrap);
+    if(isLast && suggestions.length){
+      bubble.appendChild(buildChipsRow(suggestions));
+    }
+
+    wrap.appendChild(bubble);
+    chatScroll.appendChild(wrap);
+  });
+
   window.lucide?.createIcons();
   scrollToBottom();
 

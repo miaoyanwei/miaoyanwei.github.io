@@ -5,7 +5,7 @@
    one worked example of each syntax.
    ========================================================= */
 
-import { RICH_PATTERN, SUGGEST_PATTERN } from "./config.js";
+import { RICH_PATTERN, SUGGEST_PATTERN, BUBBLE_SPLIT_PATTERN } from "./config.js";
 
 /** Matches youtube.com/watch?v=ID, youtu.be/ID, and youtube.com/embed/ID. */
 const YOUTUBE_RE = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{6,})/i;
@@ -156,4 +156,15 @@ export function extractSuggestions(text){
   const suggestions = match[1].split("|").map(s => s.trim()).filter(Boolean);
   const cleanText = (text.slice(0, match.index) + text.slice(match.index + match[0].length)).trim();
   return { text: cleanText, suggestions };
+}
+
+/** Splits an answer on `[[bubble]]` into the text for each separate
+ *  reply bubble. With no marker, returns the whole text as one bubble.
+ *  Empty segments (e.g. a stray marker at the very start/end) are
+ *  dropped so no blank bubble ever renders. */
+export function splitBubbles(text){
+  return text
+    .split(BUBBLE_SPLIT_PATTERN)
+    .map(part => part.trim())
+    .filter(Boolean);
 }
