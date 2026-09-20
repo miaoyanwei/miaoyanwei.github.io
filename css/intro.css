@@ -1,0 +1,41 @@
+/* =========================================================
+   intro.css — the fixed overlay the opening animation plays
+   in (see js/intro.js). Sits above the header while it
+   bounces in, then hands off to the real #smiley in-place.
+   ========================================================= */
+
+.smiley-intro{
+  position:fixed;
+  top:0;
+  left:50%;
+  z-index:20; /* above the header (2) and composer (1) it bounces over */
+  pointer-events:none; /* never blocks interaction while it plays */
+  will-change:transform, width, height;
+}
+.smiley-intro[hidden]{
+  display:none;
+}
+.smiley-intro svg{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+/* ---------- hide everything but the header (and the smiley) while the intro plays ---------- */
+/* main.js removes .pre-intro from <body> once playIntroAnimation()
+   resolves, which lets this transition ease the rest of the page in
+   — slow and smooth, rather than a quick pop.
+   Scoped to the composer and the chat messages specifically (not
+   `.app` as a whole) because a parent's opacity caps the effective
+   opacity of its entire subtree — fading `.app` would drag #smiley
+   down with it, even though the intro already handed it off at full
+   opacity and it should stay that way. */
+.composer,
+.chat-scroll > .msg{
+  transition:opacity 1600ms ease-in-out;
+}
+body.pre-intro .composer,
+body.pre-intro .chat-scroll > .msg{
+  opacity:0;
+  pointer-events:none;
+}

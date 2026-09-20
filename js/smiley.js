@@ -19,6 +19,15 @@ const SEQUENCE = [
   { svg: SVG2, flip: true,  duration: 300  }
 ];
 
+/** The idle loop's resting frame — exported so the opening intro
+ *  animation (intro.js) can reuse the exact same artwork and land
+ *  on a visually identical frame when it hands off to initSmiley(). */
+export const SMILEY_SVG = SVG1;
+
+/** The alternate ("blink") frame — exported so the intro's bottom-hold
+ *  blink can reuse the same artwork the idle loop later cycles through. */
+export const SMILEY_SVG_BLINK = SVG2;
+
 /** Starts the looping idle animation inside the given container element. */
 export function initSmiley(stageEl){
   let step = 0;
