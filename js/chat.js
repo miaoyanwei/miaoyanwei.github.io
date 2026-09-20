@@ -8,7 +8,7 @@
 import { QUICK_START } from "./config.js";
 import { renderRichContent, extractSuggestions } from "./richContent.js";
 import { playSound } from "./audioEngine.js";
-import { notification3xc5w } from "./soundLibrary.js";
+import { notification9agj9 } from "./soundLibrary.js";
 
 const chatScroll = document.getElementById("chatScroll");
 
@@ -108,5 +108,5 @@ export function addBotMessage(text){
   window.lucide?.createIcons();
   scrollToBottom();
 
-  playSound(notification3xc5w); // 🔔
+  playSound(notification9agj9); // 🔔
 }
