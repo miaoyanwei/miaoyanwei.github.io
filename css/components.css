@@ -9,11 +9,6 @@
 .msg.user{ align-self:flex-end; align-items:flex-end; }
 .msg.bot{ align-self:flex-start; align-items:flex-start; }
 
-/* a second (or third...) bubble from [[bubble]] — pulled in closer
-   than .chat-scroll's normal 16px inter-message gap, so a split
-   answer reads as one grouped reply rather than two separate ones */
-.msg--grouped{ margin-top:-10px; }
-
 .bubble{
   padding:12px 16px;
   border-radius:var(--radius-bubble);
