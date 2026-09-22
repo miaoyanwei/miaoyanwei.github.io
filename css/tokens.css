@@ -6,7 +6,7 @@
 
 :root{
   --bg:#020202;
-  --bubble:#2D2D35;
+  --bubble:#2D2D3580;
   --bubble-line:#2D2D35;
   --accent:#B1D5E5;
   --accent-dim:#B1D5E580;
@@ -14,9 +14,9 @@
   --text:#ffffff;
   --muted:#ffffff80;
   --danger:#e2604f;
-  --radius-bubble:16px;
+  --radius-bubble:10px;
   --radius-pill:999px;
-  --font-display:'Google Sans Flex', serif;
-  --font-body:'Google Sans Flex', sans-serif;
+  --font-display:'Inter', serif;
+  --font-body:'Inter', sans-serif;
   --font-mono:'Google Sans Code', monospace;
 }
