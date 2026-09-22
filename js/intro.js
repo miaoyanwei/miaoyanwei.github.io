@@ -8,18 +8,18 @@
 
 import { SMILEY_SVG, SMILEY_SVG_BLINK } from "./smiley.js";
 
-const RISE_DURATION = 750;     // bounce up from off-screen to the overshoot peak
+const RISE_DURATION = 800;     // bounce up from off-screen to the overshoot peak
 const HOLD_BEFORE_BLINK = 600; // pause at the peak before the blink
 const BLINK_DURATION = 200;    // how long the blink frame is shown
 const HOLD_AFTER_BLINK = 600;  // pause again after blinking back, before settling
-const SETTLE_DURATION = 850;   // shrink + spring down into place
+const SETTLE_DURATION = 1000;   // shrink + spring down into place
 
 const BIG_SIZE = 400; // "around 400 x 400 pixel"
 
 // "Back"-style eases: the y-control-points outside 0–1 are what
 // produce the overshoot, giving both phases a springy, lively feel.
 const RISE_EASING = "cubic-bezier(0.22, 1.6, 0.36, 1)";
-const SETTLE_EASING = "cubic-bezier(0.34, 1.56, 0.64, 1)";
+const SETTLE_EASING = "cubic-bezier(0.5, 1.1, 0.5, 1)";
 
 function sleep(ms){
   return new Promise(resolve => setTimeout(resolve, ms));
