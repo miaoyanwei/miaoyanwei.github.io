@@ -8,7 +8,7 @@
   position:fixed;
   top:0;
   left:50%;
-  z-index:20; /* above the header (2) and composer (1) it bounces over */
+  z-index:1; /* above the header (2) and composer (1) it bounces over */
   pointer-events:none; /* never blocks interaction while it plays */
   will-change:transform, width, height;
 }
