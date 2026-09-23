@@ -15,9 +15,7 @@ html,body{
 }
 
 html{
-  background:linear-gradient(279deg, #5E6E7E, #26262E, #020202, #161616, #171717, #282828);
-  background-size:300% 300%;
-  animation:gradient-animation 30s ease infinite;
+  background:#171717;
 }
 
 body{
@@ -27,6 +25,21 @@ body{
   overflow:hidden;
   display:flex;
   flex-direction:column;
+  isolation:isolate;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  top:calc(-1 * env(safe-area-inset-top));
+  right:calc(-1 * env(safe-area-inset-right));
+  bottom:calc(-1 * env(safe-area-inset-bottom));
+  left:calc(-1 * env(safe-area-inset-left));
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(279deg, #5E6E7E, #26262E, #020202, #161616, #171717, #282828);
+  background-size:300% 300%;
+  animation:gradient-animation 30s ease infinite;
 }
 
 @keyframes gradient-animation{
