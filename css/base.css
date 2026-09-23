@@ -28,21 +28,22 @@ body{
   isolation:isolate;
 }
 
-body::before{
-  content:"";
+.viewport-bg{
   position:fixed;
-  top:calc(-1 * env(safe-area-inset-top));
-  right:calc(-1 * env(safe-area-inset-right));
-  bottom:calc(-1 * env(safe-area-inset-bottom));
-  left:calc(-1 * env(safe-area-inset-left));
+  top:-120px;
+  right:-120px;
+  bottom:-120px;
+  left:-120px;
   z-index:0;
   pointer-events:none;
   background:linear-gradient(279deg, #5E6E7E, #26262E, #020202, #161616, #171717, #282828);
   background-size:300% 300%;
   animation:gradient-animation 30s ease infinite;
+  transform:translateZ(0);
+  will-change:background-position;
 }
 
-body > *{
+body > :not(.viewport-bg){
   position:relative;
   z-index:1;
 }
