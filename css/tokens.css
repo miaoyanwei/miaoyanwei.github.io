@@ -5,12 +5,12 @@
    ========================================================= */
 
 :root{
-  --bg:#020202;
-  --bubble:#2D2D3580;
-  --bubble-line:#2D2D35;
-  --accent:#B1D5E5;
-  --accent-dim:#B1D5E580;
-  --accent-soft:#B1D5E550;
+  --bg:#171717;
+  --bubble:#28282890;
+  --bubble-line:#424242;
+  --accent:#ABB1FF;
+  --accent-dim:#ABB1FF80;
+  --accent-soft:#ABB1FF20;
   --text:#ffffff;
   --muted:#ffffff80;
   --radius-bubble:1rem;
@@ -18,6 +18,6 @@
   --font-display:'Inter', serif;
   --font-body:'Inter', sans-serif;
   --font-mono:'Google Sans Code', monospace;
-  --font-bubble-size:0.875em;
-  --font-composer-size:1em;
+  --font-bubble-size:0.875rem;
+  --font-composer-size:1rem;
 }

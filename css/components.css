@@ -9,6 +9,10 @@
 .msg.user{ align-self:flex-end; align-items:flex-end; }
 .msg.bot{ align-self:flex-start; align-items:flex-start; }
 
+@media (max-width:40rem){
+  .msg{ max-width:85%; }
+}
+
 .bubble{
   padding:16px;
   border-radius:var(--radius-bubble);
@@ -20,9 +24,11 @@
   max-width:100%;
 }
 .msg.bot .bubble{
-  background:var(--bubble);
   color:var(--text);
   border-bottom-left-radius:0px;
+  background:rgba(45, 45, 53, 0.44);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  backdrop-filter:blur(18px) saturate(140%);
 }
 .msg.user .bubble{
   background:var(--accent);
@@ -73,7 +79,9 @@
 
 /* ---------- chips (quick-start + suggested follow-ups) ---------- */
 .chip-box{
-  background:var(--bubble);
+  background:rgba(45, 45, 53, 0.44);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  backdrop-filter:blur(18px) saturate(140%);
   border-radius:var(--radius-bubble);
   border-bottom-left-radius:0px;
   padding:16px;
@@ -92,10 +100,10 @@
   font-family:var(--font-body);
   font-size:var(--font-bubble-size);
   text-align:left;
-  padding:8px 12px;
+  padding:12px;
   border-radius:var(--radius-bubble);
   cursor:pointer;
-  border:transparent 1px solid;
+  border:var(--bubble-line) 1px solid;
   background:var(--accent-soft);
   color:var(--text);
   transition:background .15s ease;

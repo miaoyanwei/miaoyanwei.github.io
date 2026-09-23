@@ -14,12 +14,20 @@ html,body{
 
 body{
   background:var(--bg);
-  background-image: radial-gradient(circle at 50% 0%, #252C2F, var(--bg) 70%);
+  background:linear-gradient(279deg, #5E6E7E, #26262E, #020202, #161616, #171717, #282828);
+  background-size:300% 300%;
+  animation:gradient-animation 30s ease infinite;
   color:var(--text);
   font-family:var(--font-body);
   overflow:hidden;
   display:flex;
   flex-direction:column;
+}
+
+@keyframes gradient-animation{
+  0%{ background-position:0% 50%; }
+  50%{ background-position:100% 50%; }
+  100%{ background-position:0% 50%; }
 }
 
 @media (prefers-reduced-motion: reduce){
