@@ -13,10 +13,11 @@
   --accent-soft:#B1D5E550;
   --text:#ffffff;
   --muted:#ffffff80;
-  --danger:#e2604f;
-  --radius-bubble:10px;
+  --radius-bubble:1rem;
   --radius-pill:999px;
   --font-display:'Inter', serif;
   --font-body:'Inter', sans-serif;
   --font-mono:'Google Sans Code', monospace;
+  --font-bubble-size:0.875em;
+  --font-composer-size:1em;
 }
