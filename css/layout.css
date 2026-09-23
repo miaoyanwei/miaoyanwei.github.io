@@ -28,11 +28,7 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:
-    calc(20px + env(safe-area-inset-top))
-    calc(20px + env(safe-area-inset-right))
-    20px
-    calc(20px + env(safe-area-inset-left));
+  padding:20px;
   z-index:1;
   background:linear-gradient(
     to bottom,
@@ -82,11 +78,7 @@
   flex:1;
   min-height:0;
   overflow-y:auto;
-  padding:
-    calc(88px + env(safe-area-inset-top))
-    calc(24px + env(safe-area-inset-right))
-    calc(120px + env(safe-area-inset-bottom))
-    calc(24px + env(safe-area-inset-left)); /* clears fixed glass layers while keeping content in the safe area */
+  padding:88px 24px 120px; /* top: clears the floating header; bottom: clears the composer */
   display:flex;
   flex-direction:column;
   gap:16px;
@@ -104,8 +96,8 @@
   --composer-button-size:44px;
   --composer-gap:4px;
   position:absolute;
-  left:calc(20px + env(safe-area-inset-left));
-  right:calc(20px + env(safe-area-inset-right));
+  left:20px;
+  right:20px;
   bottom:calc(44px + env(safe-area-inset-bottom));
   display:flex;
   gap:8px;
