@@ -32,7 +32,7 @@ body{
   right:-120px;
   bottom:-120px;
   left:-120px;
-  z-index:0;
+  z-index:-1;
   pointer-events:none;
   background:linear-gradient(279deg, #5E6E7E, #26262E, #020202, #161616, #171717, #282828);
   background-size:300% 300%;
