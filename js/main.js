@@ -37,6 +37,20 @@ setSuggestionHandler(handleUserInput);
 
 initLightbox();
 
+// size on iOS Safari, independent of toolbar show/hide state
+function syncRealViewport(){
+  const h = Math.max(window.innerHeight, window.screen.height, document.documentElement.clientHeight);
+  const w = Math.max(window.innerWidth, window.screen.width, document.documentElement.clientWidth);
+  document.documentElement.style.setProperty('--vh-real', (h / 100) + 'px');
+  document.documentElement.style.setProperty('--vw-real', w + 'px');
+}
+syncRealViewport();
+window.addEventListener('resize', syncRealViewport);
+window.addEventListener('orientationchange', syncRealViewport);
+if(window.visualViewport){
+  visualViewport.addEventListener('resize', syncRealViewport);
+}
+
 /* ---------- composer ---------- */
 function submitComposer(){
   getAudioContext(); // unlock audio on the user gesture

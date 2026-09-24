@@ -5,9 +5,9 @@
 
 *{ box-sizing:border-box; }
 
+/* base.css */
 html,body{
   margin:0;
-  height:100vh;
   height:100dvh;
   overscroll-behavior:none;
 }
@@ -28,12 +28,17 @@ body{
 
 .viewport-bg{
   position:fixed;
-  inset:-120px;   /* shorthand for top/right/bottom/left: -120px — stretches to fill + overscan */
+  top:0;
+  left:0;
+  width:100vw;
+  width:calc(var(--vw-real, 100vw));
+  height:100vh;
+  height:calc(var(--vh-real, 1vh) * 100); /* JS keeps --vh-real accurate; falls back to 1vh */
   z-index:-1;
   pointer-events:none;
-  background:radial-gradient(circle at center, #26262E 0%, #171717 25%,  #020202 75%, #282828 100%);
+  background:radial-gradient(circle at center, #26262E 0%, #171717 20%, #020202 80%, #282828 100%);
   background-size:100% 100%;
-  animation:gradient-animation 30s ease infinite;
+  animation:gradient-animation 30s ease-in-out infinite;
   transform:translateZ(0);
   will-change:background-size;
 }

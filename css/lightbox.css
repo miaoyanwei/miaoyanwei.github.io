@@ -20,7 +20,7 @@
 .lightbox img{
   max-width:90vw;
   max-height:85vh;
-  border-radius:12px;
+  border-radius:var(--radius-bubble);
   object-fit:contain;
 }
 .lightbox-close{
