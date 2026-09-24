@@ -53,7 +53,7 @@
   {
     "category": "Dog",
     "question": "Show me your doggo!",
-    "answer": "My Furball is a fluffy chocolate toy poodle, he's a dumb dog, but he's somewhat brave (reckless) and caring (meddling).\n![Furball](https://miaoyanwei.github.io/assets/furball.jpg)\n[[bubble]]\nI made a whole bunch emojis based on Furball’s everyday cute little moments and published them as a WeChat emoji pack. Wanna see?\n[[suggest: Show me Furball emojis!]]"
+    "answer": "My Furball is a fluffy chocolate toy poodle, he's a dumb dog, but he's somewhat brave (reckless) and caring (meddling).\n![Furball](https://miaoyanwei.github.io/assets/furball.jpg)\n[[bubble]]\nI made a whole bunch emojis based on Furball’s everyday cute little moments and published them as an emoji pack. Wanna see?\n[[suggest: Show me Furball emojis!]]"
   },
   {
     "category": "Dog",
@@ -73,7 +73,7 @@
   {
     "category": "Education",
     "question": "What is your educational background?",
-    "answer": "I have a Master of Science in Human Computer Interaction from Siegen University, Germany (2023).\n[[bubble]]\nAnother Master of Arts in Interaction Design from Loughborough University, UK (2016).\n[[bubble]]\nA Bachelor of Engineering in Industrial Design from Guangdong Ocean University, China (2014)."
+    "answer": "have a Master of Science in Human-Computer Interaction from the University of Siegen, another Master of Arts in Interaction Design from Loughborough University, and a Bachelor of Engineering in Industrial Design from Guangdong Ocean University. \n[[bubble]]\nSo, as you can probably tell, I have a pretty solid background in design.\n[[suggest: Why did you want to be a designer?]]"
   },
   {
     "category": "Experience",
@@ -87,8 +87,13 @@
   },
   {
     "category": "Philosophy",
-    "question": "What kind of designer are you?",
-    "answer": "'Design is the art of creating order from chaos.' I find it so simple yet so profound.\nI always love to organise things, not only to just tidying up, but also putting every stuff at the most easily reachable places when needed. This process is my Zen moment. Similarly, I have my Zen moment while designing."
+    "question": "Why did you want to be a designer?",
+    "answer": "I think I’ve always had some designer traits. I was pretty good at creative stuff when I was little. Before choosing my major at university, I actually went to a career consultancy. After going through a whole bunch of questions, my top career match was designer. No joke. And if I remember correctly, journalist was second.\n[[suggest: What designer traits do you have?]]"
+  },
+  {
+    "category": "Philosophy",
+    "question": "What designer traits do you have?",
+    "answer": "'Design is the art of creating order from chaos.' to be continue..."
   },
   {
     "category": "Philosophy",
