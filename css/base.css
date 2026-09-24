@@ -13,7 +13,7 @@ html,body{
 }
 
 html{
-  background:transparent;
+  background:var(--bg);
 }
 
 body{

@@ -84,7 +84,7 @@
   backdrop-filter:blur(18px) saturate(140%);
   border-radius:var(--radius-bubble);
   border-bottom-left-radius:0px;
-  padding:16px;
+  padding:12px;
   display:flex;
   flex-direction:column;
   gap:12px;
@@ -94,7 +94,7 @@
   color:var(--text);
 }
 .chips-row{ display:flex; flex-wrap:wrap; gap:12px; }
-.chips-row--inline{ margin:8px 0; }
+.chips-row--inline{ margin:12px 0; }
 
 .chip{
   font-family:var(--font-body);
