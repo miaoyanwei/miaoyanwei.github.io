@@ -31,10 +31,12 @@
    down with it, even though the intro already handed it off at full
    opacity and it should stay that way. */
 .composer,
+.disclaimer,
 .chat-scroll > .msg{
   transition:opacity 1600ms ease-in-out;
 }
 body.pre-intro .composer,
+body.pre-intro .disclaimer,
 body.pre-intro .chat-scroll > .msg{
   opacity:0;
   pointer-events:none;
