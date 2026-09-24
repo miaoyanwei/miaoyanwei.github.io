@@ -13,7 +13,7 @@ html,body{
 }
 
 html{
-  background:#282828; /* matches the gradient's 100% stop, so any momentary sliver blends in */
+  background:var(--bg);
 }
 
 body{
