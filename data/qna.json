@@ -53,7 +53,12 @@
   {
     "category": "Dog",
     "question": "Show me your doggo!",
-    "answer": "My Furball is a fluffy chocolate toy poodle, he's a dumb dog, but he's somewhat brave (reckless) and caring (meddling).\n![Furball](https://miaoyanwei.github.io/assets/furball.jpg)\n"
+    "answer": "My Furball is a fluffy chocolate toy poodle, he's a dumb dog, but he's somewhat brave (reckless) and caring (meddling).\n![Furball](https://miaoyanwei.github.io/assets/furball.jpg)\n[suggest: Show me your Furball emojis!]"
+  },
+  {
+    "category": "Dog",
+    "question": "Show me your Furball emojis!",
+    "answer": "I made a whole bunch emojis based on Furball’s everyday cute little moments and published them as a WeChat emoji pack. If you use WeChat, you can actually use Furball in your chats.\n![Furball emojis](https://miaoyanwei.github.io/assets/furball-emojis.gif)\n[Furball emoji pack](https://sticker.weixin.qq.com/cgi-bin/mmemoticon-bin/emoticonview?oper=single&t=shop/detail&productid=aL2PCfwK/89qO7sF6/+I+UDhfwEjhec2ZNvdnLLJRd/Nq+W/62+5p/p8BshCFymX/9FjS91mXwM0K2c1UTzmbbi1aUzobf4oAMxuLd6pE2RM=)"
   },
   {
     "category": "Dog",
