@@ -37,9 +37,14 @@ body{
   opacity:0.999; /* imperceptible, but forces Safari 26 to composite this layer
                     on its transparent path instead of clipping it as an opaque
                     fill at the toolbar edge — a known iOS 26 Liquid Glass bug */
-  background:radial-gradient(circle at center, #26262E 0%, #171717 20%, #020202 80%, #282828 100%);
+  background:radial-gradient(circle at center,
+    rgba(38,38,46,0.999) 0%,
+    rgba(23,23,23,0.999) 25%,
+    rgba(2,2,2,0.999) 85%,
+    rgba(40,40,40,0.999) 100%
+  );
   background-size:100% 100%;
-  animation:gradient-animation 30s ease-in-out infinite;
+  animation:gradient-animation 8s ease-in-out infinite;
   transform:translateZ(0);
   will-change:background-size;
 }
@@ -55,7 +60,7 @@ body{
 
 @keyframes gradient-animation{
   0%, 100% { background-size: 200% 200%; }
-  50% { background-size: 100% 100%; }
+  50% { background-size: 240% 240%; }
 }
 
 @media (prefers-reduced-motion: reduce){
