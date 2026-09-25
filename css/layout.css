@@ -194,9 +194,3 @@
   color:var(--muted);
   font-size:12px;
 }
-.disclaimer svg{
-  display:block;
-  height:14px;
-  width:auto;
-  flex-shrink:0;
-}

@@ -57,6 +57,6 @@ document.getElementById("composerInput").addEventListener("keydown", (e)=>{
 
 /* ---------- boot ---------- */
 addBotMessage(
-  "Hi, I'm Miáo (not really), a User Experience Designer. Ask anything about me, my work, and my design philosophy!"
+  "Hi, I'm Miáo [svg], a User Experience Designer. Ask anything about me, my work, and my design philosophy!"
 );
 addQuickStartChips();

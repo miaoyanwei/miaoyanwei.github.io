@@ -50,6 +50,25 @@
   cursor:zoom-in; /* clickable to open the lightbox */
 }
 
+/* ---------- bubble signature ---------- */
+.bubble-text{
+  display:inline; /* lets text spans before/after the SVG flow as one
+                      continuous paragraph instead of stacking */
+  white-space:pre-line;
+  overflow-wrap:anywhere;
+}
+
+.bubble-signature{
+  display:inline-block; /* was float:right — sits inline like a word,
+                            not pulled out of the text flow */
+  height:16px;
+  width:auto;
+  vertical-align:middle; /* keeps it level with the surrounding text
+                             baseline instead of sitting low/high */
+  margin:0 4px; /* small gutter on both sides so it doesn't touch
+                    adjacent words */
+}
+
 /* ---------- video embeds ---------- */
 .video-embed{
   position:relative;
