@@ -58,7 +58,7 @@
   {
     "category": "Dog",
     "question": "Show me Furball emojis!",
-    "answer": "If you use WeChat, you can actually use Furball in your chats 🐶\n![Furball emojis](https://miaoyanwei.github.io/assets/furball-emojis.gif)\n[Furball emoji pack](https://sticker.weixin.qq.com/cgi-bin/mmemoticon-bin/emoticonview?oper=single&t=shop/detail&productid=aL2PCfwK/89qO7sF6/+I+UDhfwEjhec2ZNvdnLLJRd/Nq+W/62+5p/p8BshCFymX/9FjS91mXwM0K2c1UTzmbbi1aUzobf4oAMxuLd6pE2RM=)"
+    "answer": "If you use WeChat, you can use Furball in your chats 🐶\n![Furball emojis](https://miaoyanwei.github.io/assets/furball-emojis.gif)\n[Furball emoji pack](https://sticker.weixin.qq.com/cgi-bin/mmemoticon-bin/emoticonview?oper=single&t=shop/detail&productid=aL2PCfwK/89qO7sF6/+I+UDhfwEjhec2ZNvdnLLJRd/Nq+W/62+5p/p8BshCFymX/9FjS91mXwM0K2c1UTzmbbi1aUzobf4oAMxuLd6pE2RM=)"
   },
   {
     "category": "Dog",
@@ -146,8 +146,8 @@
     "answer": "Yes. Miao describes having hands-on experience with both web and SaaS products, in addition to mobile applications."
   },
   {
-    "question": "What did Miao do at Fraunhofer ISI?",
-    "answer": "At Fraunhofer ISI, Miao developed a web tool providing personalised recommendations and explanations for optimising household energy systems."
+    "question": "What is Home Energy Recommender System Project at Fraunhofer ISI?",
+    "answer": "It was part of the EU Horizon 2020 project newTRENDs, using the FLEX modelling suite as its data source, and it was also my Master’s project at the University of Siegen. For the project, I designed and developed a web tool that provides personalised recommendations and explanations for optimising household energy systems. Wanna see what it would recommend for your home?\n[HERS GitHub](https://github.com/miaoyanwei/HERS)\nOr wanna learn everything about this project including the research?\n[Filling the Information Gap: A Design Case Study of A Recommender for Home Energy System](https://www.wineme.uni-siegen.de/wp-content/uploads/2024/08/Yanwei-Miao_Thesis.pdf)"
   },
   {
     "question": "What was Miao's master's thesis about?",
@@ -222,7 +222,7 @@
   {
     "category": "Experience",
     "question": "What is Cow Defense?",
-    "answer": "Cow Defense is a small tower defence game I’m building with Raphael. He’d always wanted to make an old-school game, and apparently thought my drawings were “simple yet charming” enough to invite me onto the project. So Raphael does the coding magic, while I take care of all the visual bits. Here’s a little sneak peek of what we’re building!\n![Cow Defense](https://miaoyanwei.github.io/assets/cow-defense.gif)"
+    "answer": "Cow Defense is a small tower defence game I’m building with Raphael. He’d always wanted to make an old-school game, and apparently thought my drawings were “simple yet charming” enough to invite me onto the project. So Raphael does the coding magic, while I take care of all the visual bits. Here’s a little sneak peek of what we’re building!\n![Cow Defense](https://miaoyanwei.github.io/assets/cow-defense.gif)\n[[bubble]]\nWanna see another crappy drawing of mine?\n[[suggest: Show me Fullball emojis!]]"
   },
   {
     "question": "Does Miao contribute to open source?",
