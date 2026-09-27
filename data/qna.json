@@ -146,6 +146,7 @@
     "answer": "Yes. Miao describes having hands-on experience with both web and SaaS products, in addition to mobile applications."
   },
   {
+    "category": "Experience",
     "question": "What is Home Energy Recommender System Project at Fraunhofer ISI?",
     "answer": "It was part of the EU Horizon 2020 project newTRENDs, using the FLEX modelling suite as its data source, and it was also my Master’s project at the University of Siegen, and was selected as one of the university’s featured thesis projects in 2023.\n[[bubble]]\nThe project explored how to help homeowners make sense of complex energy technologies and their economic implications. I designed and developed a web tool that uses household information to provide personalised recommendations, then explains the reasoning behind them using visualised simulation data, helping people understand which energy systems might suit their home and make economic sense for them.\n![HERS Web Screenshots](https://miaoyanwei.github.io/assets/hers.png)\n[[bubble]]\nWanna see what it would recommend for your home?\n[HERS GitHub](https://github.com/miaoyanwei/HERS)\nOr wanna go deeper into the project and the research behind it?\n[Filling the Information Gap: A Design Case Study of A Recommender for Home Energy System](https://www.wineme.uni-siegen.de/wp-content/uploads/2024/08/Yanwei-Miao_Thesis.pdf)"
   },
@@ -188,7 +189,7 @@
   {
     "category": "Experience",
     "question": "What is the Pepper project?",
-    "answer": "The Pepper project, titled 'Erinnern Sie sich noch?', explored a storytelling game with the Pepper robot for memory training among older adults.\n[Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training](https://doi.org/10.48340/ihc2023_pd026)"
+    "answer": "I worked with 2 other colleagues from the University of Siegen on exploring how Pepper, a social robot, could support older adults with memory training. We came up with a storytelling game that makes memory exercises a little more engaging and meaningful. The project involved user research, concept development, interaction and interface design, prototyping, and testing.\n![Pepper Robot](https://miaoyanwei.github.io/assets/pepper.jpg)\n[Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training](https://doi.org/10.48340/ihc2023_pd026)"
   },
   {
     "question": "Was the Pepper project published?",
