@@ -167,8 +167,9 @@
     "answer": "Miao consulted on user-centred design approaches for the high-performance computing team at the Max Planck Institute for Meteorology."
   },
   {
-    "question": "What is the Ableton checkout project?",
-    "answer": "Miao worked with Favorite Medium to assess Ableton's checkout flows for APEC markets, identifying UX and cultural issues."
+    "category": "Experience",
+    "question": "What is the Ableton checkout project at Favorite Medium?",
+    "answer": "I worked with Favorite Medium on assessing, identifying issues & discovering opportunities to improve Ableton APAC site's checkout flow 🇨🇳🇯🇵🇰🇷. We looked at Ableton’s checkout experience to spot UX and cultural issues, we also identified checkout flow best practices for e-commerce sites in the region. My main focus was evaluating the experience for the Chinese market and contributing to design guidelines tailored to China."
   },
   {
     "question": "What is the Ableton checkout project?",
@@ -183,10 +184,6 @@
     "answer": "The portfolio currently highlights Consenter, GlocalMe, FLEX, a Pepper storytelling game, an Ableton checkout evaluation, and an autonomous-driving interaction project."
   },
   {
-    "question": "What is the FLEX project?",
-    "answer": "FLEX is a design case study of a recommender for home energy systems, presented as 'Filling the information gap.'"
-  },
-  {
     "category": "Experience",
     "question": "What is the Pepper project?",
     "answer": "This was a project under e-VITA, an EU-Japan research project exploring how digital technologies could support active and healthy ageing, independent living, and wellbeing for older adults. As part of the project, I worked with some colleagues from the University of Siegen to explore how Pepper, a social robot, could support older adults with memory training.\n[[bubble]]\nWe came up with a storytelling game that makes memory exercises more engaging and meaningful. The project involved user research, concept development, interaction and interface design, prototyping, and testing.\n![Pepper Robot](https://miaoyanwei.github.io/assets/pepper.png)\n[Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training](https://doi.org/10.48340/ihc2023_pd026)"
@@ -194,7 +191,7 @@
   {
     "category": "Experience",
     "question": "What is the autonomous-driving project?",
-    "answer": "This was a student group project developed in collaboration with Jaguar Land Rover in 2016. We explored how interaction design could help build trust in L3 autonomous driving in 2030. We conducted research, consulted with a Jaguar Land Rover dealership, and interviewed young people who we expected to be among the main users of autonomous cars in 2030. Based on our findings, we developed a concept.\n[[bubble]]\nHere’s a short video showing the interaction concept. You can find more details in the booklet.\n[[video: https://youtu.be/PbDz9k_xUNM?si=CJ2kQ43zCrSHH6GQ]]\n\n[Autonomous driving booklet](https://issuu.com/yanweimiao/docs/booklet_blu.telescope_group_3)"
+    "answer": "This was a student group project developed in collaboration with Jaguar Land Rover in 2016. We explored how interaction design could help build trust in L3 autonomous driving in 2030 🚙. We conducted research, consulted with a Jaguar Land Rover dealership, and interviewed young people who we expected to be among the main users of autonomous cars in 2030. Based on our findings, we developed a concept.\n[[bubble]]\nHere’s a short video showing the interaction concept. You can find more details in the booklet.\n[[video: https://youtu.be/PbDz9k_xUNM?si=CJ2kQ43zCrSHH6GQ]]\n\n[Autonomous driving booklet](https://issuu.com/yanweimiao/docs/booklet_blu.telescope_group_3)"
   },
   {
     "question": "What is Giraffe?",
