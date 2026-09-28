@@ -167,11 +167,11 @@
     "answer": "Miao consulted on user-centred design approaches for the high-performance computing team at the Max Planck Institute for Meteorology."
   },
   {
-    "question": "What did Miao do for Ableton?",
+    "question": "What is the Ableton checkout project?",
     "answer": "Miao worked with Favorite Medium to assess Ableton's checkout flows for APEC markets, identifying UX and cultural issues."
   },
   {
-    "question": "What was the Ableton project about?",
+    "question": "What is the Ableton checkout project?",
     "answer": "The Ableton project was a heuristic evaluation of the website checkout flow for APEC markets, with a focus on UX and cultural issues."
   },
   {
@@ -189,28 +189,12 @@
   {
     "category": "Experience",
     "question": "What is the Pepper project?",
-    "answer": "This was a project under e-VITA, an EU-Japan research project exploring how digital technologies could support active and healthy ageing, independent living, and wellbeing for older adults. As part of the project, I worked with 2 other colleagues from the University of Siegen to explore how Pepper, a social robot, could support older adults with memory training. We came up with a storytelling game that makes memory exercises more engaging and meaningful. The project involved user research, concept development, interaction and interface design, prototyping, and testing.\n![Pepper Robot](https://miaoyanwei.github.io/assets/pepper.png)\n[Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training](https://doi.org/10.48340/ihc2023_pd026)"
-  },
-  {
-    "question": "Was the Pepper project published?",
-    "answer": "Yes. 'Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training' was published as a 2023 conference paper associated with EUSSET's InfraHEALTH conference."
-  },
-  {
-    "question": "Who were Miao's co-authors on the Pepper project?",
-    "answer": "The published work lists Sofía González-Villalobos, Yanwei Miao, Julia Renardias and Mehrbod Manavi as authors."
-  },
-  {
-    "question": "What was the goal of the Pepper storytelling game?",
-    "answer": "The project aimed to provide older adults with a meaningful memory-training activity while exploring how robot-based assistance could support nursing staff and caregivers."
+    "answer": "This was a project under e-VITA, an EU-Japan research project exploring how digital technologies could support active and healthy ageing, independent living, and wellbeing for older adults. As part of the project, I worked with some colleagues from the University of Siegen to explore how Pepper, a social robot, could support older adults with memory training.\n[[bubble]]\nWe came up with a storytelling game that makes memory exercises more engaging and meaningful. The project involved user research, concept development, interaction and interface design, prototyping, and testing.\n![Pepper Robot](https://miaoyanwei.github.io/assets/pepper.png)\n[Erinnern Sie sich noch? A Storytelling Game with Pepper for Older Adults' Memory Training](https://doi.org/10.48340/ihc2023_pd026)"
   },
   {
     "category": "Experience",
     "question": "What is the autonomous-driving project?",
-    "answer": "It is a student project developed in collaboration with Jaguar Land Rover in 2016 that explored how to enable trust in autonomous driving.\nHere's a small video showing the interaction concept.\n[[video: https://youtu.be/PbDz9k_xUNM?si=CJ2kQ43zCrSHH6GQ]]\n[[file: Download Booklet.pdf | https://miaoyanwei.github.io/assets/jlr-booklet.pdf]]"
-  },
-  {
-    "question": "Did Miao work with Jaguar Land Rover?",
-    "answer": "Yes. The portfolio and LinkedIn profile describe an autonomous-driving project developed in collaboration with Jaguar Land Rover in 2016."
+    "answer": "This was a student group project developed in collaboration with Jaguar Land Rover in 2016. We explored how interaction design could help build trust in L3 autonomous driving in 2030. We conducted research, consulted with a Jaguar Land Rover dealership, and interviewed young people who we expected to be among the main users of autonomous cars in 2030. Based on our findings, we developed a concept.\n[[bubble]]\nHere’s a short video showing the interaction concept. You can find more details in the booklet.\n[[video: https://youtu.be/PbDz9k_xUNM?si=CJ2kQ43zCrSHH6GQ]]\n\n[Autonomous driving booklet](https://issuu.com/yanweimiao/docs/booklet_blu.telescope_group_3)"
   },
   {
     "question": "What is Giraffe?",
