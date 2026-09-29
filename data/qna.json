@@ -186,6 +186,16 @@
     "answer": "This was a student group project developed in collaboration with Jaguar Land Rover in 2016. We explored how interaction design could help build trust in L3 autonomous driving in 2030 🚙. We conducted research, consulted with a Jaguar Land Rover dealership, and interviewed young people who we expected to be among the main users of autonomous cars in 2030. Based on our findings, we developed a concept.\n[[bubble]]\nHere’s a short video showing the interaction concept. You can find more details in the booklet.\n[[video: https://youtu.be/PbDz9k_xUNM?si=CJ2kQ43zCrSHH6GQ]]\n\n[Autonomous driving booklet](https://issuu.com/yanweimiao/docs/booklet_blu.telescope_group_3)"
   },
   {
+    "category": "Experience",
+    "question": "What is the SmartQA project?",
+    "answer": "SmartQA is me, a question-answering bot. I only answer questions I’ve been prepared for. But you don’t have to ask in exactly the right way. Ask the same thing in different ways, I’m smart enough to know what you mean."
+  },
+  {
+    "category": "Experience",
+    "question": "What is the CamPlay project?",
+    "answer": "CamPlay is my most recent project. It’s a SaaS service that lets you watch IP camera streams live from anywhere. Raphael and I seriously considered turning it into a real business. Who knows… maybe you’ll see it become something real. Wait and see. 👀"
+  },
+  {
     "question": "What is Giraffe?",
     "answer": "Giraffe is a Figma plugin that Miao is building with Raphael for exporting Figma frames as GIFs."
   },
