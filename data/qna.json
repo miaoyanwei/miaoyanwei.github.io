@@ -111,19 +111,19 @@
   },
   {
     "question": "What is Consenter?",
-    "answer": "Consenter is a consent-management and privacy ecosystem intended to make digital consent more user-friendly while helping businesses and technology providers address privacy and compliance requirements."
+    "answer": "Consenter is a project about making consent simpler, clearer, and more user-friendly.\n[[bubble]]\nWe’re building an ecosystem that helps people understand why their data is being used, what they get in return, and what risks are involved, so they can make informed choices.At the same time, it helps businesses and technology providers meet privacy requirements and manage consent and privacy settings in a better way.\n[[suggest: What problems does Consenter address? | What is your role in Consenter?]]"
   },
   {
-    "question": "What was Miao's role in Consenter?",
-    "answer": "Miao is part of the PRD team at Law & Innovation and contributes to the design of the Consenter ecosystem, including experiences around consent, privacy and data protection."
+    "question": "What is your role in Consenter?",
+    "answer": "I’ve been the only UX designer on the team since the beginning. I translated Max’s conceptual ideas into concrete product structures and experiences.\n[[bubble]]\nI built the information architecture for both Consenter Agent and Consenter Manager from scratch, as well as other experience layers such as the Consenter Banner. I also defined the main user flows, interactions, and wireframes. I tried to help shape how the whole Consenter ecosystem works from a user’s perspective."
   },
   {
-    "question": "What is the Consent Agent?",
-    "answer": "The Consent Agent is a consumer-facing part of the Consenter ecosystem that allows people to give and manage consent across services and contexts."
+    "question": "What is the Consenter Agent?",
+    "answer": "The Consenter Agent is a consumer-facing part of the Consenter ecosystem that allows people to give and manage consent across services and contexts."
   },
   {
-    "question": "What problem does Consenter try to solve?",
-    "answer": "Consenter addresses the difficulty of making meaningful privacy and consent decisions in digital services, including the problem of consent fatigue and the tension between user expectations, data-driven services, businesses and regulators."
+    "question": "What problems does Consenter address?",
+    "answer": "There are three big problems we’re trying to tackle:\n[[bubble]]\nLack of transparency. People often don’t know what happens to their data or why it’s being used. Deceptive design. Consent banners can be designed to push people into saying “yes” without really understanding what they’re agreeing to. Consent fatigue. People see consent banners everywhere.\n[[bubble]]\nResearch shows that when people better understand how their data is used, consent rates actually increase. Therefore, our ultimate goal is to establish an industry standard that helps restore people’s trust in data-driven innovation and services."
   },
   {
     "question": "What is Miao's previous industry experience?",
@@ -193,7 +193,7 @@
   {
     "category": "Experience",
     "question": "What is the CamPlay project?",
-    "answer": "CamPlay is my most recent project. It’s a SaaS service that lets you watch IP camera streams live from anywhere. Raphael and I seriously considered turning it into a real business. Who knows… maybe you’ll see it become something real. Wait and see. 👀"
+    "answer": "CamPlay is my most recent project. It’s a SaaS service that lets you watch IP camera streams live from anywhere. Raphael and I seriously considered turning it into a real business. Wait and see. 👀"
   },
   {
     "question": "What is Giraffe?",
