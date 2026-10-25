@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" class="theme-light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GlocalMe · miao.ai</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/project.css">
+
+<script>
+  // .js enables the reveal animations; .is-embedded hides the home
+  // link when the page opens inside the landing-page overlay
+  document.documentElement.classList.add("js");
+  if(window.self !== window.top) document.documentElement.classList.add("is-embedded");
+</script>
+</head>
+
+<body class="project-page">
+
+<a class="project-home" href="../index.html">← miao.ai</a>
+
+<main>
+
+  <!-- 01 overview: cover image (blank without one) under a gradient, title, tags -->
+  <section class="project-section project-hero" aria-labelledby="project-title">
+    <!-- <img class="project-hero-image" src="../assets/<file>.webp" alt="Describe the preview"> -->
+    <div class="project-hero-body">
+      <div class="project-hero-text">
+        <p data-reveal>2017 – 2021</p>
+        <h1 id="project-title" class="project-title" data-reveal>GlocalMe</h1>
+        <p class="project-subtitle" data-reveal>Stay connected anywhere</p>
+      </div>
+      <ul class="project-tags" aria-label="Tags" data-reveal>
+        <li class="project-tag">User Experience Design</li>
+        <li class="project-tag">App Design</li>
+        <li class="project-tag">E-commerce</li>
+        <li class="project-tag">IoT</li>
+        <li class="project-tag">Project Management</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 02 background: context, audience, goals and constraints in one statement -->
+  <section class="project-section" aria-label="Background">
+    <p class="project-statement" data-reveal>
+      Designed in-house at uCloudlink, leading the GlocalMe mobile applications and their derivatives. A little bit e-commerce, a little bit IoT.
+      <span class="project-statement-muted">Add more background on the project.</span>
+    </p>
+  </section>
+
+  <!-- 03 problems → opportunities: one <li> per point -->
+  <section class="project-section" aria-label="Problems and opportunities">
+    <div class="project-panels">
+      <div class="project-panel" data-reveal>
+        <h2 class="project-panel-title">Problem</h2>
+        <ul class="project-items">
+          <li><span class="project-item-title">First problem</span><span class="project-item-text">What research revealed about it.</span></li>
+          <li><span class="project-item-title">Second problem</span><span class="project-item-text">What research revealed about it.</span></li>
+          <li><span class="project-item-title">Third problem</span><span class="project-item-text">What research revealed about it.</span></li>
+        </ul>
+      </div>
+      <div class="project-panel" data-reveal>
+        <h2 class="project-panel-title">Opportunity</h2>
+        <ul class="project-items">
+          <li><span class="project-item-title">First opportunity</span><span class="project-item-text">The design response to it.</span></li>
+          <li><span class="project-item-title">Second opportunity</span><span class="project-item-text">The design response to it.</span></li>
+          <li><span class="project-item-title">Third opportunity</span><span class="project-item-text">The design response to it.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 demo: feature list + interactive demo, prototype or walkthrough -->
+  <section class="project-section" aria-label="Demo">
+    <div class="project-demo">
+      <ul class="project-items" data-reveal>
+        <li><span class="project-item-title">Feature</span><span class="project-item-text">Describe the feature</span></li>
+      </ul>
+      <!-- with a prototype: <iframe src="https://embed.figma.com/proto/..." title="Project prototype" loading="lazy" allowfullscreen></iframe> -->
+      <div class="project-demo-frame" data-reveal></div>
+    </div>
+  </section>
+
+</main>
+
+<script type="module" src="../js/project.js"></script>
+</body>
+</html>

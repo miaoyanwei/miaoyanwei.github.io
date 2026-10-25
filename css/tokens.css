@@ -14,10 +14,14 @@
   --text:#ffffff;
   --muted:#ffffff80;
   --overlay-bg:rgba(2,2,2,0.92);
-  --radius-bubble:2rem;
+  --radius-bubble:1.75rem;
   --radius-pill:999px;
   --gap-s:0.875rem;
   --gap-m:1rem;
+  --gap-l:2rem;
+  --gap-xl:6rem;
+  --page-gutter:clamp(1.25rem, 7vw, 6.25rem);
+  --radius-panel:1rem;
   --font-display:'Google Sans', sans-serif;
   --font-body:'Google Sans', sans-serif;
   --font-mono:'Google Sans Code', monospace;
@@ -25,4 +29,18 @@
   --font-composer-size:1rem;
   --font-card-title-size:1rem;
   --card-width:12rem;
+  --font-item-size:1.125rem;
+  --font-subtitle-size:1.25rem;
+  --font-statement-size:clamp(1.375rem, 2.4vw, 1.75rem);
+  --font-title-size:2rem;
+}
+
+/* light theme, used by project detail pages (projects/*.html) */
+.theme-light{
+  --bg:#ffffff;
+  --bubble:#f2f2f2;
+  --bubble-line:#e5e5e5;
+  --accent-soft:#ABB1FF33;
+  --text:#111111;
+  --muted:#00000099;
 }

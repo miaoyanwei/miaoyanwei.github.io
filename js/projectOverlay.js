@@ -7,7 +7,6 @@
 
 const overlay = document.getElementById("projectOverlay");
 const panel = overlay.querySelector(".project-overlay-panel");
-const frame = document.getElementById("projectOverlayFrame");
 const closeBtn = document.getElementById("projectOverlayClose");
 const app = document.querySelector(".app");
 
@@ -20,8 +19,17 @@ function isProjectLink(link){
 }
 
 function openProject(url, title){
-  frame.src = url;
+  // a fresh iframe per opening: its first load replaces the blank page
+  // instead of adding a history entry, so one back() closes the overlay
+  const frame = document.createElement("iframe");
   frame.title = title || "Project";
+  frame.src = url;
+  // Escape inside the (same-origin) project page closes it too
+  frame.addEventListener("load", ()=>{
+    try{ frame.contentWindow.addEventListener("keydown", onKeydown); }catch{}
+  });
+  panel.replaceChildren(frame);
+
   overlay.hidden = false;
   overlay.offsetHeight; // reflow so the slide-up transition runs
   overlay.classList.add("is-open");
@@ -42,7 +50,7 @@ async function closeProject(){
   await Promise.all(panel.getAnimations().map(a => a.finished)).catch(()=>{});
   if(overlay.classList.contains("is-open")) return; // reopened meanwhile
   overlay.hidden = true;
-  frame.src = "about:blank"; // stop the page and free memory
+  panel.replaceChildren(); // drop the iframe: stops the page and frees memory
 }
 
 /** Close via history when we pushed an entry, so back/forward stay in sync. */
@@ -63,11 +71,6 @@ export function initProjectOverlay(){
   });
   document.addEventListener("keydown", onKeydown);
   window.addEventListener("popstate", closeProject);
-
-  // Escape inside the (same-origin) project page closes it too
-  frame.addEventListener("load", ()=>{
-    try{ frame.contentWindow.addEventListener("keydown", onKeydown); }catch{}
-  });
 
   document.addEventListener("click", (e)=>{
     // let ctrl/cmd/shift/middle-click open the page normally
