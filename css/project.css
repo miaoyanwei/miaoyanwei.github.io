@@ -1,0 +1,228 @@
+/* =========================================================
+   project.css — layout for project detail pages
+   (projects/*.html): hero, statement, problem/opportunity
+   and demo sections, each at least one viewport tall.
+   Loads after tokens, base and components; pages set
+   class="theme-light" on <html>.
+   ========================================================= */
+
+/* base.css locks the landing page to one screen; project pages scroll */
+html,
+body.project-page{
+  height:auto;
+  min-height:100%;
+}
+html:has(body.project-page){
+  background:var(--bg);
+  scroll-snap-type:y mandatory; /* each scroll lands on the next section */
+}
+body.project-page{
+  display:block;
+  overflow-x:hidden;
+  overflow-y:auto;
+  background:var(--bg);
+  line-height:1.5;
+}
+.project-page p,
+.project-page h1,
+.project-page h2,
+.project-page h3,
+.project-page ul{ margin:0; }
+
+/* ---------- home link (hidden inside the landing-page overlay) ---------- */
+.project-home{
+  position:absolute;
+  top:var(--gap-l);
+  left:var(--page-gutter);
+  z-index:1;
+  font-family:var(--font-mono);
+  font-size:var(--font-bubble-size);
+  color:var(--text);
+  text-decoration:none;
+}
+.project-home:hover{ text-decoration:underline; }
+.is-embedded .project-home{ display:none; }
+
+/* ---------- sections ---------- */
+/* full-height bands, separated by a gap */
+.project-page main{
+  display:flex;
+  flex-direction:column;
+  gap:var(--gap-xl);
+}
+.project-section{
+  min-height:100dvh;
+  scroll-snap-align:start;
+  scroll-snap-stop:always; /* a fast flick still stops at the next section */
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:var(--gap-xl) var(--page-gutter);
+}
+
+/* ---------- shared bits ---------- */
+.project-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--gap-s);
+  padding:0;
+  list-style:none;
+}
+.project-tag{
+  padding:calc(var(--gap-s) / 2) var(--gap-m);
+  border-radius:var(--radius-pill);
+  background:var(--bubble);
+  font-size:var(--font-bubble-size);
+}
+
+/* bulleted title + description, used in panels and the demo list */
+.project-items{
+  display:flex;
+  flex-direction:column;
+  gap:var(--gap-l);
+  padding-left:1.1em;
+}
+.project-item-title{
+  display:block;
+  font-size:var(--font-item-size);
+}
+.project-item-text{
+  display:block;
+  max-width:36ch;
+  font-size:var(--font-bubble-size);
+  color:var(--muted);
+}
+
+/* ---------- 01 hero: preview, title, tags ---------- */
+.project-hero{
+  position:relative;
+  justify-content:flex-end;
+}
+/* fades the cover into the page behind the title and tags */
+.project-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, transparent 40%, var(--bg) 100%);
+  pointer-events:none;
+}
+.project-hero-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.project-hero-body{
+  position:relative; /* above the cover image and its gradient */
+  z-index:1;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:var(--gap-l);
+}
+.project-hero-text{
+  display:flex;
+  flex-direction:column;
+  gap:calc(var(--gap-s) / 2);
+}
+.project-title{
+  font-family:var(--font-display);
+  font-size:var(--font-title-size);
+  font-weight:400;
+  line-height:1.2;
+}
+.project-subtitle{
+  font-size:var(--font-subtitle-size);
+}
+.project-hero .project-tags{
+  max-width:24rem;
+  justify-content:flex-end;
+}
+
+/* ---------- 02 background: statement ---------- */
+.project-statement{
+  max-width:52rem;
+  margin:0 auto;
+  font-family:var(--font-display);
+  font-size:var(--font-statement-size);
+  line-height:1.25;
+}
+.project-statement-muted{ color:var(--muted); }
+
+/* ---------- 03 problem / opportunity panels ---------- */
+.project-panels{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  gap:var(--gap-xl) var(--gap-xl);
+  width:100%;
+  max-width:60rem;
+  margin:0 auto;
+}
+.project-panel{
+  display:flex;
+  flex-direction:column;
+  gap:var(--gap-l);
+  padding:var(--gap-l);
+  border-radius:var(--radius-panel);
+  background:var(--accent-soft);
+}
+.project-panel-title{
+  font-family:var(--font-display);
+  font-size:var(--font-title-size);
+  font-weight:400;
+  line-height:1.2;
+}
+
+/* ---------- 04 demo: feature list + demo frame ---------- */
+.project-demo{
+  display:grid;
+  align-items:center;
+  gap:var(--gap-xl);
+  width:100%;
+  max-width:71rem;
+  margin:0 auto;
+}
+.project-demo-frame{
+  position:relative;
+  aspect-ratio:4 / 3;
+  border-radius:var(--radius-panel);
+  overflow:hidden;
+  background:var(--accent-soft);
+}
+.project-demo-frame iframe,
+.project-demo-frame img,
+.project-demo-frame video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  object-fit:cover;
+}
+
+@media (min-width:800px){
+  .project-demo{ grid-template-columns:1fr 2.4fr; }
+}
+@media (max-width:600px){
+  .project-hero .project-tags{ justify-content:flex-start; }
+}
+
+/* ---------- reveal on scroll (see js/project.js) ---------- */
+/* only hidden when JS runs (html.js), so content never stays invisible */
+.js [data-reveal]{
+  opacity:0;
+  transform:translateY(24px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay:calc(var(--reveal-index, 0) * 90ms);
+}
+.js [data-reveal].is-visible{
+  opacity:1;
+  transform:none;
+}
+@media (prefers-reduced-motion: reduce){
+  .js [data-reveal]{ opacity:1; transform:none; }
+}

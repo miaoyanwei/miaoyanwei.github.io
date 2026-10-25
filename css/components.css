@@ -6,7 +6,10 @@
 
 /* ---------- message bubbles ---------- */
 .msg{ max-width:100%; display:flex; flex-direction:column; gap:var(--gap-m); }
-.msg.user{ align-self:flex-end; align-items:flex-end; }
+.msg.user{ align-self:flex-end; align-items:flex-end; max-width:70%; }
+@media (max-width:600px){
+  .msg.user{ max-width:85%; }
+}
 .msg.bot{ align-self:flex-start; align-items:flex-start; }
 /* consecutive bot bubbles stack flush: cancel the chat-scroll gap */
 .msg.bot:has(> .bubble) + .msg.bot:has(> .bubble){ margin-top:calc(-1 * var(--chat-gap)); }
@@ -186,19 +189,10 @@
   border-radius:var(--radius-bubble);
   border:1px solid transparent;
   overflow:hidden;
-  /* loading shimmer: shows when there's no image or until it loads */
-  background:linear-gradient(110deg, var(--bubble) 20%, color-mix(in srgb, var(--bubble), var(--text) 6%) 50%, var(--bubble) 80%);
-  background-size:200% 100%;
-  animation:cardShimmer 2.4s ease-in-out infinite;
   color:var(--text);
   text-decoration:none;
   white-space:normal;
   transition:border-color .15s ease;
-}
-.project-card:has(.project-card-image.is-loaded){ animation:none; }
-@keyframes cardShimmer{
-  from{ background-position:100% 0; }
-  to{ background-position:-100% 0; }
 }
 .project-card:hover{ border-color:var(--accent); }
 .project-card::after{
@@ -231,3 +225,17 @@
   overflow:hidden;
 }
 a.project-card:focus-visible{ outline:2px solid var(--accent); outline-offset:-2px; }
+
+/* ---------- shimmer (loading / placeholder background) ---------- */
+/* used by project cards (no image, or until it loads) and by
+   placeholder media on project pages */
+.shimmer{
+  background:linear-gradient(110deg, var(--bubble) 20%, color-mix(in srgb, var(--bubble), var(--text) 6%) 50%, var(--bubble) 80%);
+  background-size:200% 100%;
+  animation:shimmer 2.4s ease-in-out infinite;
+}
+.shimmer:has(> .is-loaded){ animation:none; }
+@keyframes shimmer{
+  from{ background-position:100% 0; }
+  to{ background-position:-100% 0; }
+}

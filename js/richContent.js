@@ -97,7 +97,7 @@ function buildLinkCard(label, url){
  *  image, or until it loads, the card shows its shimmer background. */
 function buildProjectCard(title, image, url){
   const card = document.createElement(url ? "a" : "div");
-  card.className = "project-card";
+  card.className = "project-card shimmer";
   if(url){
     card.href = url;
     card.target = "_blank";

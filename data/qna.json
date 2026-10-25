@@ -18,7 +18,7 @@
   {
     "category": "About",
     "question": "Who are you? What do you do? Tell me about you.",
-    "answer": "I’m Yanwei Miao. I’m still trying to come up with a clever answer to this question. But for now, the important bit is that I’m a User Experience Designer, I’ve been doing this since 2017, and I genuinely love what I do!\n[[file: YanweiMiao-UX.pdf | https://miaoyanwei.github.io/assets/YanweiMiao-UX.pdf]]\n[[suggest: What's your educational background? | What's your professional experience?]]"
+    "answer": "I’m Yanwei Miao. I’m still trying to come up with a clever answer to this question. But for now, the important bit is that I’m a User Experience Designer, I’ve been doing this since 2017, and I genuinely love what I do!\n[[file: YanweiMiao-UX.pdf | https://miaoyanwei.github.io/assets/YanweiMiao-UX.pdf]]\n[[suggest: What's your professional experience? | What's your educational background?]]"
   },
   {
     "category": "About",
@@ -58,7 +58,7 @@
   {
     "category": "Dog",
     "question": "Show me Furball emojis!",
-    "answer": "If you use WeChat, you can use Furball in your chats 🐶\n![Furball emojis](https://miaoyanwei.github.io/assets/furball-emojis.gif)\n[Furball emoji pack](https://sticker.weixin.qq.com/cgi-bin/mmemoticon-bin/emoticonview?oper=single&t=shop/detail&productid=aL2PCfwK/89qO7sF6/+I+UDhfwEjhec2ZNvdnLLJRd/Nq+W/62+5p/p8BshCFymX/9FjS91mXwM0K2c1UTzmbbi1aUzobf4oAMxuLd6pE2RM=)"
+    "answer": "If you use WeChat, you can use Furball in your chats 🐶\n![Furball emojis](https://miaoyanwei.github.io/assets/furball-emojis.gif)\n[Furball emoji pack for Wechat](https://sticker.weixin.qq.com/cgi-bin/mmemoticon-bin/emoticonview?oper=single&t=shop/detail&productid=aL2PCfwK/89qO7sF6/+I+UDhfwEjhec2ZNvdnLLJRd/Nq+W/62+5p/p8BshCFymX/9FjS91mXwM0K2c1UTzmbbi1aUzobf4oAMxuLd6pE2RM=)"
   },
   {
     "category": "Dog",
@@ -73,17 +73,17 @@
   {
     "category": "Education",
     "question": "What is your educational background?",
-    "answer": "I have a Master of Science in Human-Computer Interaction from the University of Siegen, another Master of Arts in Interaction Design from Loughborough University, and a Bachelor of Engineering in Industrial Design from Guangdong Ocean University. \n[[bubble]]\nSo, as you can probably tell, I have a pretty solid background in design.\n[[suggest: Why designer?]]"
+    "answer": "I have 🇩🇪 a Master of Science in Human-Computer Interaction from the University of Siegen, 🇬🇧 another Master of Arts in Interaction Design from Loughborough University, and 🇨🇳 a Bachelor of Engineering in Industrial Design from Guangdong Ocean University. \n[[bubble]]\nSo, as you can probably tell, I have a pretty solid background in design.\n[[suggest: Why designer?]]"
   },
   {
     "category": "Experience",
     "question": "What have you been working on? What's your work experience?",
-    "answer": "Currently, I’m working at a Berlin-based start-up, helping build the Consenter ecosystem from 0 to 1. It’s closely connected to European data protection law ⚖️, so a big part of my work is about turning complex legal terms and processes into something everyday users can understand.\n[[bubble]]\nBefore that, I worked in-house at a telecommunications company, leading the design of GlocalMe mobile application. It’s a little bit e-commerce, a little bit IoT.\n[[bubble]]\nI’ve also worked on research and consultancy projects with organisations including Fraunhofer ISI, the Max Planck Institute for Meteorology, Favorite Medium, etc.\n[[card: Consenter | assets/pepper.png | projects/consenter.html]]\n[[card: GlocalMe | assets/pepper.png | projects/glocalme.html]]\n[[suggest: Tell me about your research and consultancy projects.]]"
+    "answer": "Currently, I’m working at a Berlin-based start-up, helping build the Consenter ecosystem from 0 to 1. It’s closely connected to European data protection law ⚖️, so a big part of my work is about turning complex legal terms and processes into something everyday users can understand.\n[[bubble]]\nBefore that, I worked in-house at a telecommunications company, leading the design of GlocalMe mobile application. It’s a little bit e-commerce, a little bit IoT.\n[[bubble]]\nI’ve also worked on research and consultancy projects with organisations including Fraunhofer ISI, the Max Planck Institute for Meteorology, Favorite Medium, etc.\n[[card: Consenter | assets/consenter-card.webp | projects/consenter.html]]\n[[card: GlocalMe | assets/glocalme-card.webp | projects/glocalme.html]]\n[[suggest: Tell me about your other projects.]]"
   },
   {
     "category": "Experience",
-    "question": "What are your research and consultancy projects?",
-    "answer": "I built a recommender system for home energy systems at Fraunhofer ISI. I provided consulting to the Max Planck Institute for Meteorology on user-centred design approaches. And with Favorite Medium, we evaluated Ableton’s checkout flows to identify UX and cultural issues, then developed design guidelines tailored to APEC markets.\n[[bubble]]\nI’ve also co-authored a publication with some great colleagues from the University of Siegen, exploring how Pepper robots could be used to support an aging society.\n[[bubble]]\nOutside of work, I have some other projects, including Cow Defense, a small game project; SmartQA, an LLM-powered question-answering bot (which is what you’re talking to now); and CamPlayer, a service that lets you play IP camera streams live from anywhere. And there’s more, go explore!\n[[suggest: Home Energy Recommender | Pepper Robot & Ageing Society | Ableton Checkout | Autonomous Driving | Cow Defense | SmartQA | CamPlayer ]]"
+    "question": "What are your other projects?",
+    "answer": "I built a recommender system for home energy systems at Fraunhofer ISI. I provided consulting to the Max Planck Institute for Meteorology on user-centred design approaches. And with Favorite Medium, we evaluated Ableton’s checkout flows to identify UX and cultural issues, then developed design guidelines tailored to APEC markets.\n[[bubble]]\nI’ve also co-authored a publication with some great colleagues from the University of Siegen, exploring how Pepper robots could be used to support an aging society.\n[[bubble]]\nOutside of work, I have some other projects, including Cow Defense, a small game project; SmartQA, an LLM-powered question-answering bot (which is what you’re talking to now); and CamPlayer, a service that lets you play IP camera streams live from anywhere. And there’s more, go explore!\n[[suggest: Home Energy Recommender | Pepper Robot & Ageing Society | Ableton Checkout | Autonomous Driving | Cow Defense | SmartQA | IPCamOnWeb ]]"
   },
   {
     "category": "Experience",
@@ -188,25 +188,21 @@
   {
     "category": "Experience",
     "question": "What is the SmartQA project?",
-    "answer": "SmartQA is me, a question-answering bot. I only answer questions I’ve been prepared for. But you don’t have to ask in exactly the right way. Ask the same thing in different ways, I’m smart enough to know what you mean."
+    "answer": "SmartQA is literally me, a question-answering bot. I only answer questions I’ve been prepared for. You don’t have to ask in exactly the way how the question is formulated. Ask in different ways, and I’m smart enough to know what you mean."
   },
   {
     "category": "Experience",
-    "question": "What is the CamPlay project?",
-    "answer": "CamPlay is my most recent project. It’s a SaaS service that lets you watch IP camera streams live from anywhere. Raphael and I seriously considered turning it into a real business. Wait and see. 👀"
+    "question": "What is the IPCamOnWeb project?",
+    "answer": "IPCamOnWeb is my most recent project. It’s a SaaS service that lets you watch IP camera streams live from anywhere. Raphael and I seriously considered turning it into a real business. Let's see. 👀"
   },
   {
     "question": "What is Giraffe?",
-    "answer": "Giraffe is a Figma plugin that Miao is building with Raphael for exporting Figma frames as GIFs."
-  },
-  {
-    "question": "What is Miao's role in Giraffe?",
-    "answer": "Miao describes being more focused on the design and creative side of Giraffe, while Raphael is the main coding contributor."
+    "answer": "Giraffe is a Figma plugin that I built for exporting Figma frames as GIFs."
   },
   {
     "category": "Experience",
     "question": "What is Cow Defense?",
-    "answer": "Cow Defense is a small tower defence game I’m building with Raphael. He’d always wanted to make an old-school game, and apparently thought my drawings were “simple yet charming” enough to invite me onto the project. So Raphael does the coding magic, while I take care of all the visual bits. Here’s a little sneak peek of what we’re building!\n![Cow Defense](https://miaoyanwei.github.io/assets/cow-defense.gif)\n[[bubble]]\nWanna see another crappy drawing of mine?\n[[suggest: Show me Fullball emojis!]]"
+    "answer": "Cow Defense is a small tower defence game I’m building with Raphael. Raphael always wanted to make an old-school game, and apparently thought my drawings were “simple yet charming” enough to invite me onto the project. So Raphael does the coding magic, while I take care of all the visual bits. Here’s a little sneak peek of what we’re building!\n![Cow Defense](https://miaoyanwei.github.io/assets/cow-defense.gif)\n[[bubble]]\nWanna see another crappy drawing of mine?\n[[suggest: Show me Fullball emojis!]]"
   },
   {
     "question": "Does Miao contribute to open source?",
