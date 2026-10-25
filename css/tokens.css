@@ -13,11 +13,15 @@
   --accent-soft:#ABB1FF20;
   --text:#ffffff;
   --muted:#ffffff80;
-  --radius-bubble:1.25rem;
+  --radius-bubble:2rem;
   --radius-pill:999px;
-  --font-display:'Inter', serif;
-  --font-body:'Inter', sans-serif;
+  --gap-s:0.875rem;
+  --gap-m:1rem;
+  --font-display:'Google Sans', sans-serif;
+  --font-body:'Google Sans', sans-serif;
   --font-mono:'Google Sans Code', monospace;
   --font-bubble-size:0.875rem;
   --font-composer-size:1rem;
+  --font-card-title-size:1.25rem;
+  --card-width:12.5rem;
 }

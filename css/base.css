@@ -26,43 +26,6 @@ body{
   isolation:isolate;
 }
 
-.viewport-bg{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  z-index:-1;
-  pointer-events:none;
-  opacity:0.999; /* imperceptible, but forces Safari 26 to composite this layer
-                    on its transparent path instead of clipping it as an opaque
-                    fill at the toolbar edge — a known iOS 26 Liquid Glass bug */
-  background:radial-gradient(circle at center,
-    rgba(38,38,46,0.999) 0%,
-    rgba(23,23,23,0.999) 25%,
-    rgba(2,2,2,0.999) 85%,
-    rgba(40,40,40,0.999) 100%
-  );
-  background-size:100% 100%;
-  animation:gradient-animation 8s ease-in-out infinite;
-  transform:translateZ(0);
-  will-change:background-size;
-}
-.viewport-bg::before {
-  position: absolute;
-  inset: 0;
-  opacity: 0.35;
-  filter: contrast(120%) brightness(100%);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
-  mix-blend-mode: overlay;
-  pointer-events: none;
-}
-
-@keyframes gradient-animation{
-  0%, 100% { background-size: 200% 200%; }
-  50% { background-size: 240% 240%; }
-}
-
 @media (prefers-reduced-motion: reduce){
   *{ transition:none !important; animation:none !important; }
 }
