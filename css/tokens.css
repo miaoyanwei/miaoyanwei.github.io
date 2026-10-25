@@ -13,6 +13,7 @@
   --accent-soft:#ABB1FF20;
   --text:#ffffff;
   --muted:#ffffff80;
+  --overlay-bg:rgba(2,2,2,0.92);
   --radius-bubble:2rem;
   --radius-pill:999px;
   --gap-s:0.875rem;
@@ -20,8 +21,8 @@
   --font-display:'Google Sans', sans-serif;
   --font-body:'Google Sans', sans-serif;
   --font-mono:'Google Sans Code', monospace;
-  --font-bubble-size:0.875rem;
+  --font-bubble-size:0.9375rem;
   --font-composer-size:1rem;
-  --font-card-title-size:1.25rem;
-  --card-width:12.5rem;
+  --font-card-title-size:1rem;
+  --card-width:12rem;
 }

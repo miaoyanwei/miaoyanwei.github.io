@@ -1,0 +1,44 @@
+/* =========================================================
+   project-overlay.css — projects/*.html pages shown in a
+   panel that slides up over the landing page (see
+   js/projectOverlay.js). The close button reuses
+   .lightbox-close from lightbox.css.
+   ========================================================= */
+
+.project-overlay{
+  /* close button: 20px from the top + 44px tall, plus the same 20px below it */
+  --overlay-top:84px;
+  position:fixed;
+  inset:0;
+  z-index:2;
+  background:var(--overlay-bg);
+  opacity:0;
+  transition:opacity .3s ease;
+}
+.project-overlay[hidden]{
+  display:none;
+}
+.project-overlay.is-open{
+  opacity:1;
+}
+.project-overlay-panel{
+  position:absolute;
+  top:var(--overlay-top);
+  left:0;
+  right:0;
+  bottom:0;
+  border-radius:var(--radius-bubble) var(--radius-bubble) 0 0;
+  overflow:hidden;
+  background:var(--bg);
+  transform:translateY(100%);
+  transition:transform .5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-overlay.is-open .project-overlay-panel{
+  transform:none;
+}
+.project-overlay-panel iframe{
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+}

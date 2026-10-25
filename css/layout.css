@@ -17,6 +17,37 @@
   position:relative;
   z-index:0;
   overflow:hidden;
+  /* where chat content starts fading out: below the header, above the composer */
+  --fade-top:88px;
+  --fade-bottom:120px;
+}
+
+/* ---------- edge fade: chat content blurs, then disappears ---------- */
+/* blur layers over the scroll edges; their own masks ramp the blur up
+   towards the header/composer, while .chat-scroll's mask fades the
+   content itself out */
+.app::before,
+.app::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  z-index:1;
+  pointer-events:none;
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+}
+.app::before{
+  top:0;
+  height:var(--fade-top);
+  -webkit-mask-image:linear-gradient(to bottom, #000, transparent);
+  mask-image:linear-gradient(to bottom, #000, transparent);
+}
+.app::after{
+  bottom:0;
+  height:var(--fade-bottom);
+  -webkit-mask-image:linear-gradient(to top, #000, transparent);
+  mask-image:linear-gradient(to top, #000, transparent);
 }
 
 /* ---------- header ---------- */
@@ -78,7 +109,7 @@
   flex:1;
   min-height:0;
   overflow-y:auto;
-  padding:88px 24px 120px; /* top: clears the floating header; bottom: clears the composer */
+  padding:var(--fade-top) 24px var(--fade-bottom); /* top: clears the floating header; bottom: clears the composer */
   --chat-gap:16px;
   display:flex;
   flex-direction:column;
@@ -87,6 +118,16 @@
   -ms-overflow-style:none;
   overscroll-behavior:contain;
   position:relative;
+  /* content at rest sits fully visible; scrolled past the padding it fades to nothing */
+  --chat-fade:linear-gradient(
+    to bottom,
+    transparent 24px,
+    #000 var(--fade-top),
+    #000 calc(100% - var(--fade-bottom)),
+    transparent calc(100% - 72px)
+  );
+  -webkit-mask-image:var(--chat-fade);
+  mask-image:var(--chat-fade);
 }
 .chat-scroll::-webkit-scrollbar{
   display:none;
@@ -112,7 +153,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
   -webkit-backdrop-filter:blur(18px) saturate(140%);
   backdrop-filter:blur(18px) saturate(140%);
-  z-index:1;
+  z-index:2; /* above the edge-fade blur layer */
 }
 .composer input{
   flex:1;
@@ -188,7 +229,7 @@
   align-items:center;
   justify-content:center;
   gap:8px;
-  z-index:1;
+  z-index:2; /* above the edge-fade blur layer */
 }
 .disclaimer p{
   margin:0;

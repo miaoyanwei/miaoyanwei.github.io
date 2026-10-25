@@ -26,12 +26,12 @@ export const QUICK_START = [
  *   [label](url)                   -> link card
  *   bare https://...                -> link card (auto-labelled)
  *   [svg]                           -> inline brand-signature SVG
- *   [[card: title | image | url]]  -> project card (url optional; consecutive cards share a row)
+ *   [[card: title | image | url]]  -> project card (image and url optional; consecutive cards share a row)
  * See BUBBLE_SPLIT_PATTERN below for splitting one answer into
  * multiple bubbles, and /data/sample-qna.json for worked examples.
  */
 export const RICH_PATTERN =
-  /!\[([^\]]*)\]\(([^)]+)\)|\[\[video:\s*([^\]]+?)\s*\]\]|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]|\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s)\]]+)|\[(svg)\]|\[\[card:\s*([^|\]]+?)\s*\|\s*([^|\]]+?)\s*(?:\|\s*([^\]]+?)\s*)?\]\]/g;
+  /!\[([^\]]*)\]\(([^)]+)\)|\[\[video:\s*([^\]]+?)\s*\]\]|\[\[file:\s*([^|]+?)\s*\|\s*([^\]]+?)\]\]|\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s)\]]+)|\[(svg)\]|\[\[card:\s*([^|\]]+?)\s*(?:\|\s*([^|\]]*?)\s*)?(?:\|\s*([^\]]+?)\s*)?\]\]/g;
 
 /** Marks the end of an answer with a row of follow-up chips: [[suggest: A | B | C]] */
 export const SUGGEST_PATTERN = /\[\[suggest:\s*([^\]]+)\]\]/i;

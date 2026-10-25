@@ -8,11 +8,13 @@
 
 import { SMILEY_SVG, SMILEY_SVG_BLINK } from "./smiley.js";
 
-const RISE_DURATION = 800;     // bounce up from off-screen to the overshoot peak
-const HOLD_BEFORE_BLINK = 600; // pause at the peak before the blink
-const BLINK_DURATION = 200;    // how long the blink frame is shown
-const HOLD_AFTER_BLINK = 600;  // pause again after blinking back, before settling
-const SETTLE_DURATION = 1000;   // shrink + spring down into place
+const INTRO_DURATION = 1000; // whole intro, rise to settle; phases below are shares of it
+
+const RISE_DURATION = INTRO_DURATION * 0.27;     // bounce up from off-screen to the overshoot peak
+const HOLD_BEFORE_BLINK = INTRO_DURATION * 0.14; // pause at the peak before the blink
+const BLINK_DURATION = INTRO_DURATION * 0.09;    // how long the blink frame is shown
+const HOLD_AFTER_BLINK = INTRO_DURATION * 0.14;  // pause again after blinking back, before settling
+const SETTLE_DURATION = INTRO_DURATION * 0.36;   // shrink + spring down into place
 
 const BIG_SIZE = 400; // "around 400 x 400 pixel"
 

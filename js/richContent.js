@@ -93,7 +93,8 @@ function buildLinkCard(label, url){
 }
 
 /** Builds a project card: a cover image with a bottom gradient and a
- *  title clamped to 2 lines. Links out when `url` is given. */
+ *  title clamped to 2 lines. Links out when `url` is given. Without an
+ *  image, or until it loads, the card shows its shimmer background. */
 function buildProjectCard(title, image, url){
   const card = document.createElement(url ? "a" : "div");
   card.className = "project-card";
@@ -103,12 +104,20 @@ function buildProjectCard(title, image, url){
     card.rel = "noopener noreferrer";
   }
 
-  card.innerHTML = `
-    <img class="project-card-image" alt="" loading="lazy">
-    <span class="project-card-title"></span>
-  `;
-  card.querySelector(".project-card-image").src = image;
+  card.innerHTML = `<span class="project-card-title"></span>`;
   card.querySelector(".project-card-title").textContent = title;
+
+  if(image){
+    const img = document.createElement("img");
+    img.className = "project-card-image";
+    img.alt = "";
+    img.loading = "lazy";
+    // listener before src, so a cached image can't load unnoticed;
+    // on error the image just stays hidden over the shimmer
+    img.addEventListener("load", ()=>img.classList.add("is-loaded"), { once:true });
+    img.src = image;
+    card.prepend(img);
+  }
 
   return card;
 }
@@ -170,8 +179,8 @@ export function renderRichContent(container, text){
       // [svg] token -> inline signature mark
       container.appendChild(buildSignatureSvg());
     } else if(match[10] !== undefined){
-      // project card match: [[card: title | image | url]]
-      const card = buildProjectCard(match[10].trim(), match[11].trim(), match[12]?.trim());
+      // project card match: [[card: title | image | url]], image/url optional
+      const card = buildProjectCard(match[10].trim(), match[11]?.trim(), match[12]?.trim());
       appendProjectCard(container, card);
     }
 
