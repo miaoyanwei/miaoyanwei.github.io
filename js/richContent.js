@@ -92,6 +92,39 @@ function buildLinkCard(label, url){
   return card;
 }
 
+/** Builds a project card: a cover image with a bottom gradient and a
+ *  title clamped to 2 lines. Links out when `url` is given. */
+function buildProjectCard(title, image, url){
+  const card = document.createElement(url ? "a" : "div");
+  card.className = "project-card";
+  if(url){
+    card.href = url;
+    card.target = "_blank";
+    card.rel = "noopener noreferrer";
+  }
+
+  card.innerHTML = `
+    <img class="project-card-image" alt="" loading="lazy">
+    <span class="project-card-title"></span>
+  `;
+  card.querySelector(".project-card-image").src = image;
+  card.querySelector(".project-card-title").textContent = title;
+
+  return card;
+}
+
+/** Appends `card` to the card row directly before it, or starts a new row,
+ *  so consecutive [[card: ...]] tags line up side by side. */
+function appendProjectCard(container, card){
+  let row = container.lastElementChild;
+  if(!row?.classList.contains("project-card-row")){
+    row = document.createElement("div");
+    row.className = "project-card-row";
+    container.appendChild(row);
+  }
+  row.appendChild(card);
+}
+
 /** Parses `text` for embedded rich content and appends the resulting
  *  DOM (text spans, images, file cards, link cards) into `container`. */
 export function renderRichContent(container, text){
@@ -136,6 +169,10 @@ export function renderRichContent(container, text){
     } else if(match[9] !== undefined){
       // [svg] token -> inline signature mark
       container.appendChild(buildSignatureSvg());
+    } else if(match[10] !== undefined){
+      // project card match: [[card: title | image | url]]
+      const card = buildProjectCard(match[10].trim(), match[11].trim(), match[12]?.trim());
+      appendProjectCard(container, card);
     }
 
     lastIndex = pattern.lastIndex;

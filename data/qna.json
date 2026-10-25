@@ -1,6 +1,11 @@
 {
   "entries": [
   {
+  "category": "Test",
+  "question": "Test cards",
+  "answer": "Here are a few projects for testing:\n[[card: Consenter | assets/pepper.png | projects/consenter.html]]\n[[card: GlocalMe | assets/pepper.png | projects/glocalme.html]]\n[[card: Project name in case of 2 lines | assets/pepper.png]]\n[[suggest: Tell me about Consenter | What's your workflow?]]"
+  },
+  {
     "category": "Greeting",
     "question": "Hi.",
     "answer": "Hello, servus, nihao!"

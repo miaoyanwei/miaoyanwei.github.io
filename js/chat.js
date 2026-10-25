@@ -65,14 +65,14 @@ export function addQuickStartChips(){
   const wrap = document.createElement("div");
   wrap.className = "msg bot";
   const box = document.createElement("div");
-  box.className = "chip-box";
+  box.className = "bubble";
   const heading = document.createElement("div");
-  heading.className = "chip-heading";
+  heading.className = "bubble-text";
   heading.textContent = "For example, you can ask me:";
   box.appendChild(heading);
 
   const row = document.createElement("div");
-  row.className = "chips-row";
+  row.className = "chips-row chips-row--inline";
   QUICK_START.forEach(question=>{
     const chip = document.createElement("button");
     chip.className = "chip";
