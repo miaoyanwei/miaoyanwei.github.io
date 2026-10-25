@@ -103,10 +103,10 @@
   cursor:pointer;
   border:var(--bubble-line) 1px solid;
   background:transparent;
-  color:var(--text);
+  color:var(--muted);
   transition:background .15s ease;
 }
-.chip:hover{ border-color:var(--accent); background:var(--accent-soft);}
+.chip:hover{ color:var(--text);border-color:var(--accent); background:var(--accent-soft);}
 
 /* ---------- typing indicator ---------- */
 .typing{
@@ -184,12 +184,23 @@
   flex:0 0 var(--card-width);
   aspect-ratio:3 / 4;
   border-radius:var(--radius-bubble);
+  border:1px solid transparent;
   overflow:hidden;
-  background:var(--bubble);
+  /* loading shimmer: shows when there's no image or until it loads */
+  background:linear-gradient(110deg, var(--bubble) 20%, color-mix(in srgb, var(--bubble), var(--text) 6%) 50%, var(--bubble) 80%);
+  background-size:200% 100%;
+  animation:cardShimmer 2.4s ease-in-out infinite;
   color:var(--text);
   text-decoration:none;
   white-space:normal;
+  transition:border-color .15s ease;
 }
+.project-card:has(.project-card-image.is-loaded){ animation:none; }
+@keyframes cardShimmer{
+  from{ background-position:100% 0; }
+  to{ background-position:-100% 0; }
+}
+.project-card:hover{ border-color:var(--accent); }
 .project-card::after{
   content:"";
   position:absolute;
@@ -201,7 +212,11 @@
   height:100%;
   object-fit:cover;
   display:block;
+  opacity:0;
+  transition:transform .3s ease, opacity .3s ease;
 }
+.project-card-image.is-loaded{ opacity:1; }
+.project-card:hover .project-card-image{ transform:scale(1.1); }
 .project-card-title{
   position:absolute;
   left:var(--gap-m);

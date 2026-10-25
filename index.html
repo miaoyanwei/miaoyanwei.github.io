@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/lightbox.css">
+<link rel="stylesheet" href="css/project-overlay.css">
 <link rel="stylesheet" href="css/intro.css">
 </head>
 
@@ -86,6 +87,16 @@
     <i data-lucide="x"></i>
   </button>
   <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- project pages (projects/*.html) open here, see js/projectOverlay.js -->
+<div id="projectOverlay" class="project-overlay" hidden role="dialog" aria-modal="true" aria-label="Project">
+  <button type="button" id="projectOverlayClose" class="lightbox-close" aria-label="Close">
+    <i data-lucide="x"></i>
+  </button>
+  <div class="project-overlay-panel">
+    <iframe id="projectOverlayFrame" title="Project"></iframe>
+  </div>
 </div>
 
 <script src="https://unpkg.com/lucide@latest"></script>

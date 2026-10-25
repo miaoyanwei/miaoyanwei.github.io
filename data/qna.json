@@ -1,11 +1,6 @@
 {
   "entries": [
   {
-  "category": "Test",
-  "question": "Test cards",
-  "answer": "Here are a few projects for testing:\n[[card: Consenter | assets/pepper.png | projects/consenter.html]]\n[[card: GlocalMe | assets/pepper.png | projects/glocalme.html]]\n[[card: Project name in case of 2 lines | assets/pepper.png]]\n[[suggest: Tell me about Consenter | What's your workflow?]]"
-  },
-  {
     "category": "Greeting",
     "question": "Hi.",
     "answer": "Hello, servus, nihao!"
@@ -83,7 +78,7 @@
   {
     "category": "Experience",
     "question": "What have you been working on? What's your work experience?",
-    "answer": "Currently, I’m working at a Berlin-based start-up, helping build the Consenter ecosystem from 0 to 1. It’s closely connected to European data protection law ⚖️, so a big part of my work is about turning complex legal terms and processes into something everyday users can understand.\n[[bubble]]\nBefore that, I worked in-house at a telecommunications company, leading the design of GlocalMe mobile application. It’s a little bit e-commerce, a little bit IoT.\n[[bubble]]\nI’ve also worked on research and consultancy projects with organisations including Fraunhofer ISI, the Max Planck Institute for Meteorology, Favorite Medium, etc.\n[[suggest: Tell me more about Consenter. | Tell me more about GlocalMe. |Tell me about your research and consultancy projects.]]"
+    "answer": "Currently, I’m working at a Berlin-based start-up, helping build the Consenter ecosystem from 0 to 1. It’s closely connected to European data protection law ⚖️, so a big part of my work is about turning complex legal terms and processes into something everyday users can understand.\n[[bubble]]\nBefore that, I worked in-house at a telecommunications company, leading the design of GlocalMe mobile application. It’s a little bit e-commerce, a little bit IoT.\n[[bubble]]\nI’ve also worked on research and consultancy projects with organisations including Fraunhofer ISI, the Max Planck Institute for Meteorology, Favorite Medium, etc.\n[[card: Consenter | assets/pepper.png | projects/consenter.html]]\n[[card: GlocalMe | assets/pepper.png | projects/glocalme.html]]\n[[suggest: Tell me about your research and consultancy projects.]]"
   },
   {
     "category": "Experience",

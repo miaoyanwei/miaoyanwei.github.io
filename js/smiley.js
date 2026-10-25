@@ -33,6 +33,7 @@ export function initSmiley(stageEl){
   let step = 0;
 
   function render(){
+    if(!stageEl.isConnected) return; // stage removed (see main.js) — stop looping
     const frame = SEQUENCE[step];
     stageEl.innerHTML = frame.svg;
     const el = stageEl.querySelector('svg');

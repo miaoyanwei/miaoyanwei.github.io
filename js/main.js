@@ -10,12 +10,19 @@ import { addBotMessage, addQuickStartChips, setSuggestionHandler } from "./chat.
 import { handleUserInput } from "./api.js";
 import { getAudioContext } from "./audioEngine.js";
 import { initLightbox } from "./lightbox.js";
+import { initProjectOverlay } from "./projectOverlay.js";
 
 window.lucide?.createIcons();
 
-// chips (quick-start + suggested follow-ups) both funnel back through
-// the same handleUserInput() the composer uses.
-setSuggestionHandler(handleUserInput);
+/** Every user turn (composer, quick-start and suggestion chips) goes
+ *  through here: the idle smiley is removed on the first one, then
+ *  the question is handed to the API. */
+function onUserInput(text){
+  document.getElementById("smiley")?.remove();
+  handleUserInput(text);
+}
+
+setSuggestionHandler(onUserInput);
 
 /* ---------- opening animation ---------- */
 // Plays the big-smiley bounce-in once, then starts the normal idle
@@ -36,6 +43,7 @@ setSuggestionHandler(handleUserInput);
 })();
 
 initLightbox();
+initProjectOverlay();
 
 /* ---------- composer ---------- */
 function submitComposer(){
@@ -44,7 +52,7 @@ function submitComposer(){
   const text = input.value;
   if(!text.trim()) return;
   input.value = "";
-  handleUserInput(text);
+  onUserInput(text);
 }
 
 document.getElementById("sendBtn").addEventListener("click", submitComposer);
