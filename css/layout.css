@@ -220,6 +220,11 @@
   cursor:help;
   text-align:center;
 }
+.disclaimer-mobile{ display:none; }
+@media (max-width:600px){
+  .disclaimer-desktop{ display:none; }
+  .disclaimer-mobile{ display:inline; }
+}
 .disclaimer-trigger:focus-visible{
   outline:2px solid var(--vbg-focus);
   outline-offset:3px;
