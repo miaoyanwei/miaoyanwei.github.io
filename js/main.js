@@ -6,7 +6,8 @@
 
 import { initSmiley } from "./smiley.js";
 import { playIntroAnimation, prefersReducedMotion } from "./intro.js";
-import { addBotMessage, addQuickStartChips, setSuggestionHandler } from "./chat.js";
+import { addBotMessage, setSuggestionHandler } from "./chat.js";
+import { QUICK_START } from "./config.js";
 import { handleUserInput } from "./api.js";
 import { getAudioContext } from "./audioEngine.js";
 import { initLightbox } from "./lightbox.js";
@@ -45,6 +46,18 @@ setSuggestionHandler(onUserInput);
 initLightbox();
 initProjectOverlay();
 
+/* ---------- disclaimer tooltip ---------- */
+const disclaimer = document.getElementById("disclaimer");
+const disclaimerTrigger = disclaimer.querySelector(".disclaimer-trigger");
+for(const event of ["pointerenter", "focus"]){
+  disclaimerTrigger.addEventListener(event, ()=>disclaimer.removeAttribute("data-tooltip-dismissed"));
+}
+document.addEventListener("keydown", event=>{
+  if(event.key === "Escape" && disclaimer.matches(":hover, :focus-within")){
+    disclaimer.setAttribute("data-tooltip-dismissed", "");
+  }
+});
+
 /* ---------- composer ---------- */
 function submitComposer(){
   getAudioContext(); // unlock audio on the user gesture
@@ -65,6 +78,6 @@ document.getElementById("composerInput").addEventListener("keydown", (e)=>{
 
 /* ---------- boot ---------- */
 addBotMessage(
-  "Hi, I'm Miáo [svg], a User Experience Designer. Ask anything about me, my work, and my design philosophy!"
+  "Hi, I'm Miáo [svg], a User Experience Designer. Ask anything about me, my work, and my design philosophy! [[bubble]] For example, you can ask me:",
+  QUICK_START
 );
-addQuickStartChips();

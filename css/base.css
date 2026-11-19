@@ -4,6 +4,12 @@
    ========================================================= */
 
 *{ box-sizing:border-box; }
+button{ border-radius:var(--radius-pill); }
+svg.lucide{
+  width:var(--icon-size);
+  height:var(--icon-size);
+  stroke-width:var(--icon-stroke-width);
+}
 
 /* base.css */
 html,body{
@@ -19,7 +25,6 @@ html{
 body{
   background:transparent;
   color:var(--text);
-  font-family:var(--font-body);
   overflow:hidden;
   display:flex;
   flex-direction:column;

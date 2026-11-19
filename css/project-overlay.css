@@ -27,7 +27,7 @@
   left:0;
   right:0;
   bottom:0;
-  border-radius:var(--radius-bubble) var(--radius-bubble) 0 0;
+  border-radius:var(--radius-panel) var(--radius-panel) 0 0;
   overflow:hidden;
   background:var(--bg);
   transform:translateY(100%);

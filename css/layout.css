@@ -18,8 +18,12 @@
   z-index:0;
   overflow:hidden;
   /* where chat content starts fading out: below the header, above the composer */
-  --fade-top:88px;
-  --fade-bottom:120px;
+  --fade-top:clamp(104px, 16dvh, 144px);
+  --fade-bottom:calc(clamp(136px, 20dvh, 176px) + env(safe-area-inset-bottom));
+  --fade-top-dark:32px;
+  --fade-bottom-dark:calc(76px + env(safe-area-inset-bottom));
+  --fade-top-span:calc(var(--fade-top) - var(--fade-top-dark));
+  --fade-bottom-span:calc(var(--fade-bottom) - var(--fade-bottom-dark));
 }
 
 /* ---------- edge fade: chat content blurs, then disappears ---------- */
@@ -34,20 +38,32 @@
   right:0;
   z-index:1;
   pointer-events:none;
-  -webkit-backdrop-filter:blur(8px);
-  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(5px);
+  backdrop-filter:blur(5px);
+  /* End the blur while the chat is still fading, away from the clear edge. */
+  --blur-fade:linear-gradient(
+    var(--blur-direction),
+    #000 var(--blur-start),
+    #0008 calc(var(--blur-start) + 0.25 * var(--blur-span)),
+    #0001 calc(var(--blur-start) + 0.45 * var(--blur-span)),
+    transparent calc(var(--blur-start) + 0.6 * var(--blur-span))
+  );
+  -webkit-mask-image:var(--blur-fade);
+  mask-image:var(--blur-fade);
 }
 .app::before{
   top:0;
   height:var(--fade-top);
-  -webkit-mask-image:linear-gradient(to bottom, #000, transparent);
-  mask-image:linear-gradient(to bottom, #000, transparent);
+  --blur-direction:to bottom;
+  --blur-start:var(--fade-top-dark);
+  --blur-span:var(--fade-top-span);
 }
 .app::after{
   bottom:0;
   height:var(--fade-bottom);
-  -webkit-mask-image:linear-gradient(to top, #000, transparent);
-  mask-image:linear-gradient(to top, #000, transparent);
+  --blur-direction:to top;
+  --blur-start:var(--fade-bottom-dark);
+  --blur-span:var(--fade-bottom-span);
 }
 
 /* ---------- header ---------- */
@@ -61,31 +77,20 @@
   justify-content:center;
   padding:20px;
   z-index:1;
-  background:linear-gradient(
-    to bottom,
-    rgba(23, 23, 23, 0.48) 0%,
-    rgba(23, 23, 23, 0.30) 56%,
-    rgba(23, 23, 23, 0) 100%
-  );
-  -webkit-backdrop-filter:blur(18px) saturate(140%);
-  backdrop-filter:blur(18px) saturate(140%);
-  -webkit-mask-image:linear-gradient(to bottom, #171717 0%, #171717 52%, transparent 100%);
-  mask-image:linear-gradient(to bottom, #171717 0%, #171717 52%, transparent 100%);
 }
 .brand{
-  font-family:var(--font-mono);
   display:flex;
   align-items:baseline;
   gap:8px;
 }
 .brand-name{
   font-size:var(--font-composer-size);
-  font-weight:400;
+  font-weight:var(--vbg-weight-medium);
   color:var(--text);
 }
 .brand-version{
-  font-size:var(--font-composer-size);
-  color:var(--text);
+  font-size:var(--vbg-type-label);
+  color:var(--muted);
 }
 
 /* ---------- smiley ---------- */
@@ -109,8 +114,8 @@
   flex:1;
   min-height:0;
   overflow-y:auto;
-  padding:var(--fade-top) 24px var(--fade-bottom); /* top: clears the floating header; bottom: clears the composer */
-  --chat-gap:16px;
+  padding:var(--fade-top) clamp(var(--vbg-space-5), 6vw, var(--vbg-space-10)) var(--fade-bottom);
+  --chat-gap:var(--gap-m);
   display:flex;
   flex-direction:column;
   gap:var(--chat-gap);
@@ -118,13 +123,27 @@
   -ms-overflow-style:none;
   overscroll-behavior:contain;
   position:relative;
-  /* content at rest sits fully visible; scrolled past the padding it fades to nothing */
+  /* Ease opacity into both ends so the mask does not show a seam. */
   --chat-fade:linear-gradient(
     to bottom,
-    transparent 24px,
+    transparent var(--fade-top-dark),
+    rgb(0 0 0 / 2%) calc(var(--fade-top-dark) + 0.08 * var(--fade-top-span)),
+    #0001 calc(var(--fade-top-dark) + 0.15 * var(--fade-top-span)),
+    #0004 calc(var(--fade-top-dark) + 0.33 * var(--fade-top-span)),
+    #0008 calc(var(--fade-top-dark) + 0.5 * var(--fade-top-span)),
+    #000b calc(var(--fade-top) - 0.33 * var(--fade-top-span)),
+    #000e calc(var(--fade-top) - 0.15 * var(--fade-top-span)),
+    rgb(0 0 0 / 98%) calc(var(--fade-top) - 0.08 * var(--fade-top-span)),
     #000 var(--fade-top),
     #000 calc(100% - var(--fade-bottom)),
-    transparent calc(100% - 72px)
+    rgb(0 0 0 / 98%) calc(100% - var(--fade-bottom) + 0.08 * var(--fade-bottom-span)),
+    #000e calc(100% - var(--fade-bottom) + 0.15 * var(--fade-bottom-span)),
+    #000b calc(100% - var(--fade-bottom) + 0.33 * var(--fade-bottom-span)),
+    #0008 calc(100% - var(--fade-bottom-dark) - 0.5 * var(--fade-bottom-span)),
+    #0004 calc(100% - var(--fade-bottom-dark) - 0.33 * var(--fade-bottom-span)),
+    #0001 calc(100% - var(--fade-bottom-dark) - 0.15 * var(--fade-bottom-span)),
+    rgb(0 0 0 / 2%) calc(100% - var(--fade-bottom-dark) - 0.08 * var(--fade-bottom-span)),
+    transparent calc(100% - var(--fade-bottom-dark))
   );
   -webkit-mask-image:var(--chat-fade);
   mask-image:var(--chat-fade);
@@ -136,7 +155,7 @@
 /* ---------- composer ---------- */
 .composer{
   --composer-button-size:44px;
-  --composer-gap:4px;
+  --composer-gap:var(--vbg-space-1);
   position:absolute;
   left:20px;
   right:20px;
@@ -145,14 +164,9 @@
   gap:8px;
   align-items:center;
   padding:var(--composer-gap);
-  border:1px solid rgba(177, 213, 229, 0.22);
-  border-radius:calc(22px + var(--composer-gap));
-  background:rgba(45, 45, 53, 0.44);
-  box-shadow:
-    0 18px 44px rgba(0, 0, 0, 0.36),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  -webkit-backdrop-filter:blur(18px) saturate(140%);
-  backdrop-filter:blur(18px) saturate(140%);
+  border:2px solid var(--vbg-border-default);
+  border-radius:var(--radius-pill);
+  background:var(--bubble);
   z-index:2; /* above the edge-fade blur layer */
 }
 .composer input{
@@ -162,8 +176,7 @@
   border:none;
   background:transparent;
   color:var(--text);
-  padding:0 12px;
-  font-family:var(--font-body);
+  padding:0 var(--vbg-space-3);
   font-size:var(--font-composer-size);
 }
 .composer input::placeholder{
@@ -173,49 +186,15 @@
   outline:none;
 }
 .composer:focus-within{
-  border-color:rgba(177, 213, 229, 0.46);
+  outline:2px solid var(--accent);
+  outline-offset:2px;
 }
 .composer button{
   width:var(--composer-button-size);
   height:var(--composer-button-size);
   flex-shrink:0;
   margin-left:auto;
-  border-radius:var(--radius-pill);
-  border:none;
-  background:rgba(171, 177, 255, 0.16);
-  color:var(--text);
-  box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(171, 177, 255, 0.30),
-    inset 0 -1px 0 rgba(171, 177, 255, 0.08);
-  -webkit-backdrop-filter:blur(18px) saturate(150%);
-  backdrop-filter:blur(18px) saturate(150%);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  transition:
-    background .18s ease,
-    box-shadow .18s ease,
-    transform .12s ease;
-}
-.composer button svg{
-  width:20px;
-  height:20px;
-  stroke-width:1.5;
-}
-.composer button:hover{
-  background:rgba(171, 177, 255, 0.24);
-  box-shadow:
-    0 14px 30px rgba(0, 0, 0, 0.34),
-    inset 0 1px 0 rgba(171, 177, 255, 0.44),
-    inset 0 -1px 0 rgba(171, 177, 255, 0.12);
-}
-.composer button:active{
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.24),
-    inset 0 1px 0 rgba(171, 177, 255, 0.26),
-    inset 0 -1px 0 rgba(171, 177, 255, 0.06);
+  padding:0;
 }
 
 /* ---------- disclaimer ---------- */
@@ -233,6 +212,38 @@
 }
 .disclaimer p{
   margin:0;
+  font-size:var(--vbg-type-metadata);
+  line-height:var(--vbg-leading-caption);
+}
+.disclaimer-trigger{
   color:var(--muted);
-  font-size:12px;
+  cursor:help;
+  text-align:center;
+}
+.disclaimer-trigger:focus-visible{
+  outline:2px solid var(--vbg-focus);
+  outline-offset:3px;
+}
+.disclaimer .disclaimer-tooltip{
+  position:absolute;
+  bottom:calc(100% + var(--vbg-space-2));
+  left:50%;
+  transform:translateX(-50%);
+  width:max-content;
+  max-width:min(100%, 17rem);
+  padding:var(--vbg-space-2) var(--vbg-space-3);
+  border:1px solid var(--vbg-border-default);
+  border-radius:var(--vbg-radius);
+  background:var(--vbg-surface-contrast);
+  color:var(--vbg-text-on-contrast);
+  visibility:hidden;
+}
+.disclaimer-tooltip::after{
+  content:"";
+  position:absolute;
+  inset:100% 0 auto;
+  height:var(--vbg-space-2);
+}
+.disclaimer:not([data-tooltip-dismissed]):has(.disclaimer-trigger:hover, .disclaimer-trigger:focus, .disclaimer-tooltip:hover) .disclaimer-tooltip{
+  visibility:visible;
 }
