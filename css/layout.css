@@ -22,48 +22,63 @@
   --fade-bottom:calc(clamp(136px, 20dvh, 176px) + env(safe-area-inset-bottom));
   --fade-top-dark:32px;
   --fade-bottom-dark:calc(76px + env(safe-area-inset-bottom));
-  --fade-top-span:calc(var(--fade-top) - var(--fade-top-dark));
-  --fade-bottom-span:calc(var(--fade-bottom) - var(--fade-bottom-dark));
 }
 
-/* ---------- edge fade: chat content blurs, then disappears ---------- */
-/* blur layers over the scroll edges; their own masks ramp the blur up
-   towards the header/composer, while .chat-scroll's mask fades the
-   content itself out */
-.app::before,
-.app::after{
-  content:"";
+/* ---------- progressive chat edge blur ---------- */
+.chat-edge{
   position:absolute;
-  left:0;
-  right:0;
+  inset-inline:0;
   z-index:1;
   pointer-events:none;
-  -webkit-backdrop-filter:blur(5px);
-  backdrop-filter:blur(5px);
-  /* End the blur while the chat is still fading, away from the clear edge. */
-  --blur-fade:linear-gradient(
-    var(--blur-direction),
-    #000 var(--blur-start),
-    #0008 calc(var(--blur-start) + 0.25 * var(--blur-span)),
-    #0001 calc(var(--blur-start) + 0.45 * var(--blur-span)),
-    transparent calc(var(--blur-start) + 0.6 * var(--blur-span))
-  );
-  -webkit-mask-image:var(--blur-fade);
-  mask-image:var(--blur-fade);
 }
-.app::before{
+.chat-edge--top{
   top:0;
   height:var(--fade-top);
-  --blur-direction:to bottom;
-  --blur-start:var(--fade-top-dark);
-  --blur-span:var(--fade-top-span);
+  --edge-inward:to bottom;
+  --edge-dark:var(--fade-top-dark);
 }
-.app::after{
+.chat-edge--bottom{
   bottom:0;
   height:var(--fade-bottom);
-  --blur-direction:to top;
-  --blur-start:var(--fade-bottom-dark);
-  --blur-span:var(--fade-bottom-span);
+  --edge-inward:to top;
+  --edge-dark:var(--fade-bottom-dark);
+}
+.chat-edge__blur,
+.chat-edge::after{
+  position:absolute;
+  inset:0;
+}
+.chat-edge__blur{
+  -webkit-backdrop-filter:blur(var(--edge-blur));
+  backdrop-filter:blur(var(--edge-blur));
+  -webkit-mask-image:linear-gradient(var(--edge-inward), var(--edge-band));
+  mask-image:linear-gradient(var(--edge-inward), var(--edge-band));
+}
+.chat-edge__blur--soft{
+  --edge-blur:1.5px;
+  --edge-band:transparent 25%, #000 50% 75%, transparent 100%;
+}
+.chat-edge__blur--medium{
+  --edge-blur:5px;
+  --edge-band:transparent 0%, #000 25% 50%, transparent 75%;
+}
+.chat-edge__blur--strong{
+  --edge-blur:14px;
+  --edge-band:#000 0% 25%, transparent 50%;
+}
+.chat-edge::after{
+  content:"";
+  --edge-fade-span:calc(100% - var(--edge-dark));
+  background:linear-gradient(
+    var(--edge-inward),
+    var(--bg) var(--edge-dark),
+    color-mix(in srgb, var(--bg) 97%, transparent) calc(var(--edge-dark) + .1 * var(--edge-fade-span)),
+    color-mix(in srgb, var(--bg) 78%, transparent) calc(var(--edge-dark) + .3 * var(--edge-fade-span)),
+    color-mix(in srgb, var(--bg) 50%, transparent) calc(var(--edge-dark) + .5 * var(--edge-fade-span)),
+    color-mix(in srgb, var(--bg) 22%, transparent) calc(var(--edge-dark) + .7 * var(--edge-fade-span)),
+    color-mix(in srgb, var(--bg) 3%, transparent) calc(100% - .1 * var(--edge-fade-span)),
+    transparent 100%
+  );
 }
 
 /* ---------- header ---------- */
@@ -123,30 +138,7 @@
   -ms-overflow-style:none;
   overscroll-behavior:contain;
   position:relative;
-  /* Ease opacity into both ends so the mask does not show a seam. */
-  --chat-fade:linear-gradient(
-    to bottom,
-    transparent var(--fade-top-dark),
-    rgb(0 0 0 / 2%) calc(var(--fade-top-dark) + 0.08 * var(--fade-top-span)),
-    #0001 calc(var(--fade-top-dark) + 0.15 * var(--fade-top-span)),
-    #0004 calc(var(--fade-top-dark) + 0.33 * var(--fade-top-span)),
-    #0008 calc(var(--fade-top-dark) + 0.5 * var(--fade-top-span)),
-    #000b calc(var(--fade-top) - 0.33 * var(--fade-top-span)),
-    #000e calc(var(--fade-top) - 0.15 * var(--fade-top-span)),
-    rgb(0 0 0 / 98%) calc(var(--fade-top) - 0.08 * var(--fade-top-span)),
-    #000 var(--fade-top),
-    #000 calc(100% - var(--fade-bottom)),
-    rgb(0 0 0 / 98%) calc(100% - var(--fade-bottom) + 0.08 * var(--fade-bottom-span)),
-    #000e calc(100% - var(--fade-bottom) + 0.15 * var(--fade-bottom-span)),
-    #000b calc(100% - var(--fade-bottom) + 0.33 * var(--fade-bottom-span)),
-    #0008 calc(100% - var(--fade-bottom-dark) - 0.5 * var(--fade-bottom-span)),
-    #0004 calc(100% - var(--fade-bottom-dark) - 0.33 * var(--fade-bottom-span)),
-    #0001 calc(100% - var(--fade-bottom-dark) - 0.15 * var(--fade-bottom-span)),
-    rgb(0 0 0 / 2%) calc(100% - var(--fade-bottom-dark) - 0.08 * var(--fade-bottom-span)),
-    transparent calc(100% - var(--fade-bottom-dark))
-  );
-  -webkit-mask-image:var(--chat-fade);
-  mask-image:var(--chat-fade);
+
 }
 .chat-scroll::-webkit-scrollbar{
   display:none;
