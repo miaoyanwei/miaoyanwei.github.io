@@ -216,7 +216,7 @@ body.project-page{
   margin-inline:auto;
   padding-inline:var(--page-gutter);
   padding-block:var(--case-page-padding);
-  gap:clamp(var(--vbg-space-12), 6vw, var(--vbg-space-16));
+  gap:clamp(var(--vbg-space-16), 8vw, calc(2 * var(--vbg-space-12)));
 }
 .case-overview,
 .case-section,
