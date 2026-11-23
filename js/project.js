@@ -23,34 +23,3 @@ if("IntersectionObserver" in window){
   items.forEach(el => observer.observe(el));
   document.documentElement.classList.add("js");
 }
-
-const sections = [...document.querySelectorAll(".case-study > section")];
-if(sections.length){
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let lastSnapWheel = -Infinity;
-
-  window.addEventListener("wheel", event=>{
-    if(event.ctrlKey || Math.abs(event.deltaX) >= Math.abs(event.deltaY)) return;
-    if(event.timeStamp - lastSnapWheel < 180){
-      event.preventDefault();
-      lastSnapWheel = event.timeStamp;
-      return;
-    }
-
-    const index = sections.findLastIndex(section => section.offsetTop <= window.scrollY + 1);
-    const section = sections[index];
-    const direction = Math.sign(event.deltaY);
-    const next = sections[index + direction];
-    if(!section || !next) return;
-
-    const top = section.offsetTop;
-    const bottom = top + section.offsetHeight - window.innerHeight;
-    // Let readers scroll through a section that is taller than the viewport.
-    if(direction > 0 && window.scrollY < bottom - 1) return;
-    if(direction < 0 && window.scrollY > top + 1) return;
-
-    event.preventDefault();
-    lastSnapWheel = event.timeStamp;
-    window.scrollTo({top:next.offsetTop, behavior:reducedMotion.matches ? "instant" : "smooth"});
-  }, {passive:false});
-}
