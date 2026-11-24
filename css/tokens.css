@@ -27,7 +27,7 @@
   --page-gutter:clamp(1.25rem, 7vw, 6.25rem);
   --radius-panel:var(--vbg-radius);
   --font-bubble-size:var(--vbg-type-body);
-  --font-composer-size:var(--vbg-type-body);
+  --font-composer-size:16px;
   --font-card-title-size:var(--vbg-type-body);
   --font-item-size:var(--vbg-type-lede);
   --font-subtitle-size:var(--vbg-type-subsection);
