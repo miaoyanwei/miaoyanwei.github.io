@@ -41,8 +41,8 @@
 }
 .msg.user .bubble{
   border-color:transparent;
-  background:var(--accent);
-  color:var(--bg);
+  background:var(--bg);
+  color:var(--text);
 }
 
 .bubble-image,
@@ -206,22 +206,21 @@
   gap:var(--gap-s);
 }
 .project-card{
+  display:block;
   position:relative;
-  aspect-ratio:3 / 4;
+  aspect-ratio:4 / 5;
   border-radius:var(--radius-media);
-  border:1px solid transparent;
+  border:0px solid transparent;
   overflow:hidden;
   color:var(--text);
   text-decoration:none;
   white-space:normal;
-  transition:border-color .15s ease;
 }
-.project-card:hover{ border-color:var(--vbg-border-strong); }
 .project-card::after{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(to bottom, transparent 45%, var(--bg) 100%);
+  background:linear-gradient(to bottom, transparent 45%, var(--chat-bg) 100%);
 }
 .project-card-image{
   position:absolute;
@@ -231,10 +230,9 @@
   object-fit:cover;
   display:block;
   opacity:0;
-  transition:transform .3s ease, opacity .3s ease;
+  transition:opacity .3s ease;
 }
 .project-card-image.is-loaded{ opacity:1; }
-.project-card:hover .project-card-image{ transform:scale(1.1); }
 .project-card-title{
   position:absolute;
   inset-inline:var(--gap-s);
@@ -248,6 +246,31 @@
   overflow:hidden;
 }
 a.project-card:focus-visible{ outline:2px solid var(--vbg-focus); outline-offset:-2px; }
+
+/* Transitions.dev card tilt. The outer hit area stays flat. */
+@media (prefers-reduced-motion:no-preference){
+  .t-tilt-card{
+    transform:perspective(var(--tilt-perspective))
+      rotateX(var(--tilt-rx, 0deg)) rotateY(var(--tilt-ry, 0deg));
+    transition:transform var(--tilt-return) var(--tilt-ease);
+  }
+  .t-tilt.is-tilting .t-tilt-card{
+    transition-duration:var(--tilt-follow);
+  }
+  .t-tilt-glare{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+    opacity:0;
+    background:radial-gradient(circle at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
+      var(--vbg-surface-primary), transparent 70%);
+    transition:opacity var(--tilt-glare-fade) var(--tilt-ease);
+  }
+  .t-tilt.is-tilting .t-tilt-glare{
+    opacity:var(--tilt-glare-opacity);
+  }
+}
 
 /* ---------- shimmer (loading / placeholder background) ---------- */
 /* used by project cards (no image, or until it loads) and by

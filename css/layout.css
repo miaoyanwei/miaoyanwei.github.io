@@ -6,6 +6,10 @@
    ========================================================= */
 
 /* ---------- app shell ---------- */
+:root{
+  background:var(--chat-bg);
+}
+
 .app{
   max-width:700px;
   width:100%;
@@ -20,8 +24,8 @@
   /* where chat content starts fading out: below the header, above the composer */
   --fade-top:clamp(104px, 16dvh, 144px);
   --fade-bottom:calc(clamp(136px, 20dvh, 176px) + env(safe-area-inset-bottom));
-  --fade-top-dark:32px;
-  --fade-bottom-dark:calc(76px + env(safe-area-inset-bottom));
+  --fade-top-solid:32px;
+  --fade-bottom-solid:calc(76px + env(safe-area-inset-bottom));
 }
 
 /* ---------- progressive chat edge blur ---------- */
@@ -35,13 +39,13 @@
   top:0;
   height:var(--fade-top);
   --edge-inward:to bottom;
-  --edge-dark:var(--fade-top-dark);
+  --edge-solid:var(--fade-top-solid);
 }
 .chat-edge--bottom{
   bottom:0;
   height:var(--fade-bottom);
   --edge-inward:to top;
-  --edge-dark:var(--fade-bottom-dark);
+  --edge-solid:var(--fade-bottom-solid);
 }
 .chat-edge__blur,
 .chat-edge::after{
@@ -68,15 +72,15 @@
 }
 .chat-edge::after{
   content:"";
-  --edge-fade-span:calc(100% - var(--edge-dark));
+  --edge-fade-span:calc(100% - var(--edge-solid));
   background:linear-gradient(
     var(--edge-inward),
-    var(--bg) var(--edge-dark),
-    color-mix(in srgb, var(--bg) 97%, transparent) calc(var(--edge-dark) + .1 * var(--edge-fade-span)),
-    color-mix(in srgb, var(--bg) 78%, transparent) calc(var(--edge-dark) + .3 * var(--edge-fade-span)),
-    color-mix(in srgb, var(--bg) 50%, transparent) calc(var(--edge-dark) + .5 * var(--edge-fade-span)),
-    color-mix(in srgb, var(--bg) 22%, transparent) calc(var(--edge-dark) + .7 * var(--edge-fade-span)),
-    color-mix(in srgb, var(--bg) 3%, transparent) calc(100% - .1 * var(--edge-fade-span)),
+    var(--chat-bg) var(--edge-solid),
+    color-mix(in srgb, var(--chat-bg) 97%, transparent) calc(var(--edge-solid) + .1 * var(--edge-fade-span)),
+    color-mix(in srgb, var(--chat-bg) 78%, transparent) calc(var(--edge-solid) + .3 * var(--edge-fade-span)),
+    color-mix(in srgb, var(--chat-bg) 50%, transparent) calc(var(--edge-solid) + .5 * var(--edge-fade-span)),
+    color-mix(in srgb, var(--chat-bg) 22%, transparent) calc(var(--edge-solid) + .7 * var(--edge-fade-span)),
+    color-mix(in srgb, var(--chat-bg) 3%, transparent) calc(100% - .1 * var(--edge-fade-span)),
     transparent 100%
   );
 }
@@ -178,7 +182,7 @@
   outline:none;
 }
 .composer:focus-within{
-  outline:2px solid var(--accent);
+  outline:2px solid var(--vbg-border-strong);
   outline-offset:2px;
 }
 .composer button{

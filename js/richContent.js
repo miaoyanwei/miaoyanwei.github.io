@@ -92,19 +92,23 @@ function buildLinkCard(label, url){
   return card;
 }
 
+const reducedTiltMotion = matchMedia("(prefers-reduced-motion: reduce)");
+
 /** Builds a project card: a cover image with a bottom gradient and a
  *  title clamped to 2 lines. Links out when `url` is given. Without an
  *  image, or until it loads, the card shows its shimmer background. */
 function buildProjectCard(title, image, url){
+  const hitArea = document.createElement("div");
+  hitArea.className = "t-tilt";
   const card = document.createElement(url ? "a" : "div");
-  card.className = "project-card shimmer";
+  card.className = "project-card shimmer t-tilt-card";
   if(url){
     card.href = url;
     card.target = "_blank";
     card.rel = "noopener noreferrer";
   }
 
-  card.innerHTML = `<span class="project-card-title"></span>`;
+  card.innerHTML = `<span class="t-tilt-glare" aria-hidden="true"></span><span class="project-card-title"></span>`;
   card.querySelector(".project-card-title").textContent = title;
 
   if(image){
@@ -119,7 +123,27 @@ function buildProjectCard(title, image, url){
     card.prepend(img);
   }
 
-  return card;
+  hitArea.appendChild(card);
+  hitArea.addEventListener("pointermove", event=>{
+    if(event.pointerType === "touch" || reducedTiltMotion.matches) return;
+
+    const { left, top, width, height } = hitArea.getBoundingClientRect();
+    const x = Math.min(1, Math.max(0, (event.clientX - left) / width));
+    const y = Math.min(1, Math.max(0, (event.clientY - top) / height));
+    hitArea.style.setProperty("--tilt-rx", `${(0.5 - y) * 16}deg`);
+    hitArea.style.setProperty("--tilt-ry", `${(x - 0.5) * 16}deg`);
+    hitArea.style.setProperty("--tilt-gx", `${x * 100}%`);
+    hitArea.style.setProperty("--tilt-gy", `${y * 100}%`);
+    hitArea.classList.add("is-tilting");
+  });
+  const resetTilt = ()=>{
+    hitArea.classList.remove("is-tilting");
+    hitArea.style.removeProperty("--tilt-rx");
+    hitArea.style.removeProperty("--tilt-ry");
+  };
+  hitArea.addEventListener("pointerleave", resetTilt);
+  hitArea.addEventListener("pointercancel", resetTilt);
+  return hitArea;
 }
 
 /** Appends `card` to the card row directly before it, or starts a new row,

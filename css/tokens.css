@@ -7,9 +7,11 @@
   --font-sans:"Inter", system-ui, sans-serif;
   --font-mono:var(--font-sans);
   --bg:var(--vbg-surface-primary);
+  --chat-bg:var(--vbg-gray-100);
   --bubble:var(--vbg-surface-secondary);
   --bubble-line:var(--vbg-border-default);
-  --accent:#ABB1FF;
+  --accent:var(--vbg-gray-600);
+  --smiley-fill:var(--accent);
   --text:var(--vbg-text-primary);
   --muted:var(--vbg-text-secondary);
   --overlay-bg:color-mix(in srgb, var(--vbg-surface-contrast) 92%, transparent);
@@ -36,6 +38,12 @@
   --stream-blur:1px;
   --stream-ease:cubic-bezier(0.22, 1, 0.36, 1);
   --stream-max-stagger:3s;
+  --tilt-perspective:1000px;
+  --tilt-return:1000ms;
+  --tilt-follow:400ms;
+  --tilt-glare-fade:300ms;
+  --tilt-ease:cubic-bezier(0.22, 1, 0.36, 1);
+  --tilt-glare-opacity:.32;
   --stagger-dur:500ms;
   --stagger-distance:12px;
   --stagger-stagger:40ms;
