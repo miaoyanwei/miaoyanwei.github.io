@@ -27,7 +27,13 @@
   position:absolute;
   top:20px;
   right:20px;
-  width:44px;
-  height:44px;
+  width:var(--vbg-control-height-touch);
+  height:var(--vbg-control-height-touch);
   padding:0;
+}
+.lightbox-close[data-variant="outline"]{
+  border-radius:var(--radius-pill);
+}
+.lightbox-close[data-variant="outline"]:where(:not(:hover, :active)){
+  background:transparent;
 }

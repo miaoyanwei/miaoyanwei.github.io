@@ -4,9 +4,19 @@
 - Explore the existing codebase before making changes.
 - Follow existing conventions and preserve the current architecture.
 - Keep changes minimal and focused; avoid unnecessary refactoring or dependencies.
-- Keep comments and commit messages short.
+- Keep comments short.
 - Follow accessibility, responsive design, and performance best practices.
 - Ask before making significant architectural or visual changes.
+
+## Commit Messages
+- Start the subject with an action verb, name what changed, and keep it under 72 characters.
+- Use a single line for most commits. Add a body after a blank line when the reason for the change would help future readers.
+- Skip prefixes such as `feat:` and `fix:` unless the repository adopts automated changelog generation.
+
+Examples:
+- Set chat composer text to 16px
+- Convert project card images to WebP
+- Use Vercel’s default border on overlay close buttons
 
 ## Project Structure
 - `index.html` — Homepage, landing page, and chatbot.

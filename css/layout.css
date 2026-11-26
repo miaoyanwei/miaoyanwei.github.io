@@ -60,15 +60,15 @@
 }
 .chat-edge__blur--soft{
   --edge-blur:1.5px;
-  --edge-band:transparent 25%, #000 50% 75%, transparent 100%;
+  --edge-band:transparent 25%, var(--vbg-surface-contrast) 50% 75%, transparent 100%;
 }
 .chat-edge__blur--medium{
   --edge-blur:5px;
-  --edge-band:transparent 0%, #000 25% 50%, transparent 75%;
+  --edge-band:transparent 0%, var(--vbg-surface-contrast) 25% 50%, transparent 75%;
 }
 .chat-edge__blur--strong{
   --edge-blur:14px;
-  --edge-band:#000 0% 25%, transparent 50%;
+  --edge-band:var(--vbg-surface-contrast) 0% 25%, transparent 50%;
 }
 .chat-edge::after{
   content:"";

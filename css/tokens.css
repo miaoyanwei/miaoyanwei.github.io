@@ -14,7 +14,7 @@
   --smiley-fill:var(--accent);
   --text:var(--vbg-text-primary);
   --muted:var(--vbg-text-secondary);
-  --overlay-bg:color-mix(in srgb, var(--vbg-surface-contrast) 92%, transparent);
+  --overlay-bg:color-mix(in srgb, var(--vbg-surface-primary) 92%, transparent);
   --radius-media:var(--vbg-radius);
   --radius-pill:999px;
   --icon-size:16px;

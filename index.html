@@ -79,7 +79,7 @@
   <div class="composer" id="composer">
     <input id="composerInput" type="text" autocomplete="off" placeholder="What are you curious about?" />
     <button type="button" id="sendBtn" data-variant="primary" aria-label="Send">
-      <i data-lucide="send-horizontal"></i>
+      <i data-lucide="arrow-up"></i>
     </button>
   </div>
 
@@ -97,7 +97,7 @@
      </head> and <body>, which browsers silently "fix" but which isn't
      valid HTML) -->
 <div id="lightbox" class="lightbox" hidden>
-  <button type="button" id="lightboxClose" class="lightbox-close" aria-label="Close">
+  <button type="button" id="lightboxClose" class="lightbox-close" data-variant="outline" aria-label="Close">
     <i data-lucide="x"></i>
   </button>
   <img id="lightboxImg" src="" alt="">
@@ -105,7 +105,7 @@
 
 <!-- project pages (projects/*.html) open here, see js/projectOverlay.js -->
 <div id="projectOverlay" class="project-overlay" hidden role="dialog" aria-modal="true" aria-label="Project">
-  <button type="button" id="projectOverlayClose" class="lightbox-close" aria-label="Close">
+  <button type="button" id="projectOverlayClose" class="lightbox-close" data-variant="outline" aria-label="Close">
     <i data-lucide="x"></i>
   </button>
   <div class="project-overlay-panel"></div>
