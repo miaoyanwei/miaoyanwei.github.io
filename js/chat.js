@@ -37,7 +37,7 @@ function prepareReplyStream(bubble, step){
       continue;
     }
 
-    const items = child.matches(".project-card-row, .chips-row") ? child.children : [child];
+    const items = child.matches(".project-card-row, .chips-row, .bubble-list") ? child.children : [child];
     for(const item of items){
       // Give each rich item a slightly longer beat than a word.
       step += step < 0 ? 1 : 3;

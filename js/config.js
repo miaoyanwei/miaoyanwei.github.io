@@ -27,6 +27,7 @@ export const QUICK_START = [
  *   bare https://...                -> link card (auto-labelled)
  *   [svg]                           -> inline brand-signature SVG
  *   [[card: title | image | url]]  -> project card (image and url optional; consecutive cards share a row)
+ * Lines starting with "- " form bullet lists in renderRichContent.
  * See BUBBLE_SPLIT_PATTERN below for splitting one answer into
  * multiple bubbles, and /data/sample-qna.json for worked examples.
  */

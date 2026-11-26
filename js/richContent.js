@@ -161,6 +161,27 @@ function appendProjectCard(container, card){
 /** Parses `text` for embedded rich content and appends the resulting
  *  DOM (text spans, images, file cards, link cards) into `container`. */
 export function renderRichContent(container, text){
+  const bulletBlocks = /^(?:-[ \t]+\S[^\r\n]*(?:\r?\n|$))+/gm;
+  let lastIndex = 0;
+
+  for(const block of text.matchAll(bulletBlocks)){
+    renderRichContentFragment(container, text.slice(lastIndex, block.index));
+
+    const list = document.createElement("ul");
+    list.className = "bubble-list";
+    for(const line of block[0].trimEnd().split(/\r?\n/)){
+      const item = document.createElement("li");
+      renderRichContentFragment(item, line.slice(1).trim());
+      list.appendChild(item);
+    }
+    container.appendChild(list);
+    lastIndex = block.index + block[0].length;
+  }
+
+  renderRichContentFragment(container, text.slice(lastIndex));
+}
+
+function renderRichContentFragment(container, text){
   const pattern = new RegExp(RICH_PATTERN.source, "g"); // fresh instance per call
   let lastIndex = 0;
   let match;

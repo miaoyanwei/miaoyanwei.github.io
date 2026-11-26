@@ -1,0 +1,34 @@
+{
+  "_comment": "Reference / test fixture for the answer syntax that js/richContent.js understands. Not fetched by the app at runtime — the live chat calls the API in js/config.js (API_URL). Keep this file in sync with the backend's supported syntax as it grows, and use it to sanity-check new answer formatting by hand or in a small test harness.",
+
+  "entries": [
+    {
+      "question": "Question 1?",
+      "answer": "Answer with an image.\n![Image Name](https://miaoyanwei.github.io/assets/image.jpg)"
+    },
+    {
+      "question": "Question 2?",
+      "answer": "Answer with an attached file.\n[[file: File Name | https://miaoyanwei.github.io/assets/file.pdf]]"
+    },
+    {
+      "question": "Question 3?",
+      "answer": "Answer with a hyperlink.\n[Link Name](https://example.com)"
+    },
+    {
+      "question": "Question 4?",
+      "answer": "Answer with a bunch of suggested questions.\n[[suggest: Suggestion A | Suggestion B]]"
+    },
+    {
+      "question": "Question 6?",
+      "answer": "Answer with a video.\n[[video: https://miaoyanwei.github.io/assets/video.mp4]]"
+    },
+    {
+      "question": "Question 7?",
+      "answer": "Answer sent as separate bubbles, like a follow-up message.\n[[bubble]]\nHere's the second bubble, on its own.\n[[bubble]]\nHere's the third bubble, on its own."
+    },
+    {
+      "question": "Question 8?",
+      "answer": "Answer with a bullet list. Start each item on a new line with a hyphen and a space.\n- First item\n- Second item\n- Third item"
+    }
+  ]
+}

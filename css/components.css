@@ -71,6 +71,12 @@
   overflow-wrap:anywhere;
 }
 
+.bubble-list{
+  margin-block:var(--vbg-space-2);
+  padding-inline-start:var(--vbg-space-5);
+  list-style:disc outside;
+}
+
 .bubble-signature{
   display:inline-block; /* was float:right — sits inline like a word,
                             not pulled out of the text flow */
